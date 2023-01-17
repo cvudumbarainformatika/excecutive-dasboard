@@ -9,7 +9,7 @@
 import HeaderDashboard from './dashboard/HeaderDashboard.vue'
 
 const height = window.innerHeight
-const heightHeader = height / 5
+const heightHeader = height * 0.2
 const contentHeight = height - heightHeader
 console.log('index height', height)
 </script>
