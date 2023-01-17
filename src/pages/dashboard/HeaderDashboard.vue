@@ -3,7 +3,7 @@
     <div class="row container items-center absolute-bottom  q-pb-lg q-pt-lg">
       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
         <div class="row items-center">
-          <q-avatar size="100px" font-size="52px" color="grey" text-color="white" icon="directions" />
+          <q-avatar size="100px" font-size="50px" color="grey" text-color="white" icon="directions" />
           <div class="column q-ml-md">
             <div class="text-h5 text-weight-bold">Nama Akun</div>
             <div class="text-grey">Executive Account</div>
