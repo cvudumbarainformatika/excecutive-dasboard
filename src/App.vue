@@ -11,7 +11,7 @@ const store = useAppStore()
 
 const txt50 = computed(() => store.txt50 + 'px')
 const txt100 = computed(() => store.txt100 + 'px')
-// const txtH5 = computed(() => store.txtH5+ 'px')
+const txtH5 = computed(() => store.txtH5 + 'px')
 const txtLg = computed(() => store.txtLg + 'px')
 const txtMd = computed(() => store.txtMd + 'px')
 const txtSm = computed(() => store.txtSm + 'px')
@@ -23,6 +23,7 @@ console.log('app:', store.height)
 <style lang="scss">
 
 $sizes: (
+  "h5": v-bind(txtH5),
   "lg": v-bind(txtLg),
   "md": v-bind(txtMd),
   "sm": v-bind(txtSm),
@@ -38,35 +39,35 @@ $sizes: (
       padding-bottom: #{$size};
   }
   .pt-#{$name} {
-      padding-top: #{$size}px;
+      padding-top: #{$size};
   }
   .pa-#{$name} {
-      padding: #{$size}px;
+      padding: #{$size};
   }
   .px-#{$name} {
-      padding-left: #{$size}px;
-      padding-right: #{$size}px;
+      padding-left: #{$size};
+      padding-right: #{$size};
   }
   .py-#{$name} {
-      padding-top: #{$size}px;
-      padding-bottom: #{$size}px;
+      padding-top: #{$size};
+      padding-bottom: #{$size};
   }
   .mb-#{$name} {
-      margin-bottom: #{$size}px !important;
+      margin-bottom: #{$size} !important;
   }
   .mt-#{$name} {
-      margin-top: #{$size}px !important;
+      margin-top: #{$size} !important;
   }
   .ma-#{$name} {
-      margin: #{$size}px !important;
+      margin: #{$size} !important;
   }
   .mx-#{$name} {
-      margin-left: #{$size}px !important;
-      margin-right: #{$size}px !important;
+      margin-left: #{$size} !important;
+      margin-right: #{$size} !important;
   }
   .my-#{$name} {
-      margin-top: #{$size}px !important;
-      margin-bottom: #{$size}px !important;
+      margin-top: #{$size} !important;
+      margin-bottom: #{$size} !important;
   }
 }
 
