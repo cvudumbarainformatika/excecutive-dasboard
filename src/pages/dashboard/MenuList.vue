@@ -44,7 +44,7 @@ const selected = ref('Keuangan')
 
 const menus = ref([
   { nama: 'Keuangan', anim: '122832-wallet.json', active: false },
-  { nama: 'SDM', anim: '122832-wallet.json', active: false },
+  { nama: 'SDM', anim: '121627-shaking-people.json', active: false },
   { nama: 'Layanan', anim: '122832-wallet.json', active: false },
   { nama: 'Sarpras', anim: '122832-wallet.json', active: false }
 ])
@@ -57,7 +57,7 @@ const menus = ref([
 }
 
 .my-menu-link{
-  color: white;
-  background: $primary;
+  // color: white;
+  background: $secondary;
 }
 </style>
