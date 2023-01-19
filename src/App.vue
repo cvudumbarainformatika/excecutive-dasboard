@@ -4,10 +4,13 @@
 
 <script setup>
 import { useAppStore } from 'src/stores/app/index'
+import { useQuasar } from 'quasar'
 import { computed } from 'vue'
 
 // INI DARI HEIGHT 800px
 const store = useAppStore()
+const $q = useQuasar()
+$q.dark.set(true)
 
 const txt50 = computed(() => store.txt50 + 'px')
 const txt100 = computed(() => store.txt100 + 'px')
@@ -78,12 +81,32 @@ $sizes: (
   font-size:v-bind(txt100);
 }
 
+.w-100 {
+  width: v-bind(txt100)
+}
+.w-md {
+  width: v-bind(txtMd);
+}
+
 .container {
   padding-left: 5%;
   padding-right: 10%;
 }
 
+.frame-dark {
+  border-radius:20px;
+  background-color: $dark;
+  height:90vh;
+  width:95vw;
+  overflow: hidden;
+}
+
 .my-card {
   border-radius:10px;
+}
+.my-card-dark {
+  border-radius:10px;
+  background: rgb(60,63,69);
+  background: linear-gradient(180deg, rgba(60,63,69,1) 0%, rgba(51,56,62,1) 50%, rgba(45,48,56,1) 100%);
 }
 </style>

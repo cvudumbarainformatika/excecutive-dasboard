@@ -26,9 +26,9 @@ onMounted(() => {
           animation: false
         }
       },
-      legend: {
-        data: ['Email']
-      },
+      // legend: {
+      //   data: ['Email']
+      // },
 
       grid: {
         left: '3%',

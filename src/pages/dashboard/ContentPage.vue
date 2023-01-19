@@ -6,13 +6,13 @@
     infinite
     >
       <q-tab-panel name="Keuangan">
-        <div class="row q-col-gutter-lg pa-sm">
-          <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+        <div class="flex flex-row">
+          <div class="w-8-12  pa-md">
             <q-card class="my-card shadow-4">
               <app-chart />
             </q-card>
           </div>
-          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+          <div class="w-4-12  pa-md">
             <q-card class="my-card shadow-4">
               fdskfdas
             </q-card>

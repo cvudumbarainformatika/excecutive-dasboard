@@ -3,12 +3,12 @@
     <header-dashboard :height="heightHeader" />
     <div>
       <!-- <div class="row q-col-gutter-lg relative-position q-pa-lg"> -->
-      <div class="row">
-        <div class="menu q-pa-lg" >
+      <div class="flex flex-row">
+        <div class="menu flex-1 q-pa-lg" :key="widthMenu"  >
           <menu-list @on-selected="(val)=> tabMenu = val" />
         </div>
         <!-- CONTENT -->
-        <div class="content">
+        <div class="content" :key="widthContent" >
           <content-page v-model="tabMenu" />
         </div>
       </div>
@@ -25,8 +25,8 @@ import MenuList from './dashboard/MenuList.vue'
 
 const app = useAppStore()
 const heightHeader = ref(app.height * 0.16)
-const widthMenu = ref('280px')
-const widthContent = ref(app.width - 280 + 'px')
+const widthMenu = ref('250px')
+const widthContent = ref((app.width - 250) + 'px')
 // const contentHeight = ref(app.height - heightHeader.value)
 // console.log('index height', app.height)
 
