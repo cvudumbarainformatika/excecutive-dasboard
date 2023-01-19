@@ -83,4 +83,7 @@ $sizes: (
   padding-right: 10%;
 }
 
+.my-card {
+  border-radius:10px;
+}
 </style>

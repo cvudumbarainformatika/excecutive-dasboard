@@ -11,7 +11,7 @@
     </div>
 
     <!-- menu -->
-    <q-list bordered class="rounded-borders q-pb-lg">
+    <q-list bordered padding class="rounded-borders q-pb-lg">
 
       <q-item
         clickable
@@ -19,14 +19,14 @@
         v-for="(item , i) in menus" :key=i
         dense
         style="padding: 0px !important"
-        @click="selected = item.nama"
+        @click="clickedSelected(item)"
         :class="`${selected === item.nama?'my-menu-link':'no-active'}`"
       >
         <div class="row items-center">
           <div class="q-pl-sm">
             <app-lottie :url="item.anim" :height="55" :active="selected === item.nama" />
           </div>
-          <div class="q-ml-md">{{item.nama}}</div>
+          <div class="q-ml-md txt-lg">{{item.nama}}</div>
         </div>
       </q-item>
 
@@ -48,18 +48,22 @@ const menus = ref([
   { nama: 'Sarpras', anim: '73799-worker.json', active: false }
 ])
 
+const emits = defineEmits(['onSelected'])
+
+function clickedSelected (item) {
+  selected.value = item.nama
+  emits('onSelected', item.nama)
+}
+
 </script>
 
 <style lang="scss" scoped>
-.my-card {
-  border-radius:10px;
-}
 
 .my-menu-link{
   color: white;
   background: $primary;
   margin-left: 20px !important;
-  border-radius: 10px 0px 0 10px;
+  border-radius: 20px 0px 0 20px;
   // border-left: 5px solid $grey;
   transition: all .3s;
 }
