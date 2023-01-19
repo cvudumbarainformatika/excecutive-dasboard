@@ -20,14 +20,13 @@
         dense
         style="padding: 0px !important"
         @click="selected = item.nama"
-        :active="selected === item.nama"
-        active-class="my-menu-link"
+        :class="`${selected === item.nama?'my-menu-link':'no-active'}`"
       >
         <div class="row items-center">
-          <div>
-            <app-lottie :url="item.anim" :height="50" :color="selected === item.nama ? 'white':null" />
+          <div class="q-pl-sm">
+            <app-lottie :url="item.anim" :height="55" :active="selected === item.nama" />
           </div>
-          <div class="q-ml-xs">{{item.nama}}</div>
+          <div class="q-ml-md">{{item.nama}}</div>
         </div>
       </q-item>
 
@@ -43,10 +42,10 @@ const app = useAppStore()
 const selected = ref('Keuangan')
 
 const menus = ref([
-  { nama: 'Keuangan', anim: '122832-wallet.json', active: false },
-  { nama: 'SDM', anim: '121627-shaking-people.json', active: false },
-  { nama: 'Layanan', anim: '122832-wallet.json', active: false },
-  { nama: 'Sarpras', anim: '122832-wallet.json', active: false }
+  { nama: 'Keuangan', anim: '116065-wallet-animation.json', active: false },
+  { nama: 'SDM', anim: '57946-profile-user-card.json', active: false },
+  { nama: 'Layanan', anim: '24897-customer-service.json', active: false },
+  { nama: 'Sarpras', anim: '73799-worker.json', active: false }
 ])
 
 </script>
@@ -57,7 +56,17 @@ const menus = ref([
 }
 
 .my-menu-link{
-  // color: white;
-  background: $secondary;
+  color: white;
+  background: $primary;
+  margin-left: 20px !important;
+  border-radius: 10px 0px 0 10px;
+  // border-left: 5px solid $grey;
+  transition: all .3s;
+}
+
+.no-active {
+  color: $grey-10;
+  margin-left: 0px;
+  transition: all .3s;
 }
 </style>

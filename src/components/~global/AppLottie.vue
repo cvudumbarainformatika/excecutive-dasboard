@@ -6,6 +6,9 @@
       :animationLink="getJson()"
       :height="height"
       :width="height"
+      :playOnHover="playOnHover"
+      :autoPlay="autoPlay"
+      :pauseAnimation="!active"
       direction="alternate"
     />
   </div>
@@ -29,6 +32,22 @@ const props = defineProps({
   height: {
     type: Number,
     default: 50
+  },
+  playOnHover: {
+    type: Boolean,
+    default: false
+  },
+  autoPlay: {
+    type: Boolean,
+    default: false
+  },
+  play: {
+    type: Boolean,
+    default: false
+  },
+  active: {
+    type: Boolean,
+    default: false
   }
 })
 
@@ -42,15 +61,21 @@ function getJson () {
   }
 }
 
-console.log('anima lottie: ', anim)
+// console.log('anima lottie: ', anim)
 
-watch(() => props.color, (obj) => {
-  getJson()
-  // changeColor()
+watch(() => props.active, (first, second) => {
+  // console.log(
+  //   'Watch props.selected function called with args:',
+  //   first,
+  //   second
+  // )
+  if (first === true) {
+    playAnim()
+  }
 })
-
-// function changeColor () {
-//   anim.value.updateDocumentData({ t: 'new text', s: 20 }, 0)
-// }
+function playAnim (col) {
+  console.log('active anim', anim.value)
+  // anim.value.updateDocumentData({ cs: 1 }, 0)
+}
 
 </script>
