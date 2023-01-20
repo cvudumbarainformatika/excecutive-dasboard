@@ -12,9 +12,11 @@ const store = useAppStore()
 const $q = useQuasar()
 $q.dark.set(true)
 
-const txt50 = computed(() => store.txt50 + 'px')
 const txt100 = computed(() => store.txt100 + 'px')
+const txt140 = computed(() => store.txt140 + 'px')
+const txt50 = computed(() => store.txt50 + 'px')
 const txtH5 = computed(() => store.txtH5 + 'px')
+const txtXl = computed(() => store.txtXl + 'px')
 const txtLg = computed(() => store.txtLg + 'px')
 const txtMd = computed(() => store.txtMd + 'px')
 const txtSm = computed(() => store.txtSm + 'px')
@@ -27,6 +29,7 @@ console.log('app:', store.height)
 
 $sizes: (
   "h5": v-bind(txtH5),
+  "xl": v-bind(txtXl),
   "lg": v-bind(txtLg),
   "md": v-bind(txtMd),
   "sm": v-bind(txtSm),
@@ -83,6 +86,9 @@ $sizes: (
 
 .w-100 {
   width: v-bind(txt100)
+}
+.w-140 {
+  width: v-bind(txt140)
 }
 .w-md {
   width: v-bind(txtMd);
