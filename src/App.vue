@@ -12,8 +12,10 @@ const store = useAppStore()
 const $q = useQuasar()
 $q.dark.set(true)
 
-const txt100 = computed(() => store.txt100 + 'px')
 const txt140 = computed(() => store.txt140 + 'px')
+const txt100 = computed(() => store.txt100 + 'px')
+const txt80 = computed(() => store.txt80 + 'px')
+const txt70 = computed(() => store.txt70 + 'px')
 const txt50 = computed(() => store.txt50 + 'px')
 const txtH5 = computed(() => store.txtH5 + 'px')
 const txtXl = computed(() => store.txtXl + 'px')
@@ -28,6 +30,11 @@ console.log('app:', store.height)
 <style lang="scss">
 
 $sizes: (
+  "140":v-bind(txt140),
+  "100":v-bind(txt100),
+  "80":v-bind(txt80),
+  "70":v-bind(txt70),
+  "50":v-bind(txt50),
   "h5": v-bind(txtH5),
   "xl": v-bind(txtXl),
   "lg": v-bind(txtLg),
@@ -54,6 +61,12 @@ $sizes: (
       padding-left: #{$size};
       padding-right: #{$size};
   }
+  .pl-#{$name} {
+      padding-left: #{$size};
+  }
+  .pr-#{$name} {
+      padding-right: #{$size};
+  }
   .py-#{$name} {
       padding-top: #{$size};
       padding-bottom: #{$size};
@@ -71,27 +84,26 @@ $sizes: (
       margin-left: #{$size} !important;
       margin-right: #{$size} !important;
   }
+  .ml-#{$name} {
+      margin-left: #{$size} !important;
+  }
+  .mr-#{$name} {
+      margin-right: #{$size} !important;
+  }
   .my-#{$name} {
       margin-top: #{$size} !important;
       margin-bottom: #{$size} !important;
   }
-}
 
-.txt-50 {
-  font-size:v-bind(txt50);
-}
-.txt-100 {
-  font-size:v-bind(txt100);
-}
-
-.w-100 {
-  width: v-bind(txt100)
-}
-.w-140 {
-  width: v-bind(txt140)
-}
-.w-md {
-  width: v-bind(txtMd);
+  .w-#{$name} {
+    width: #{$size} !important;
+  }
+  .h-#{$name} {
+    height: #{$size} !important;
+  }
+  .b-a-#{$name} {
+    border-radius: #{$size};
+  }
 }
 
 .container {
@@ -107,12 +119,4 @@ $sizes: (
   overflow: hidden;
 }
 
-.my-card {
-  border-radius:10px;
-}
-.my-card-dark {
-  border-radius:10px;
-  background: rgb(60,63,69);
-  background: linear-gradient(180deg, rgba(60,63,69,1) 0%, rgba(51,56,62,1) 50%, rgba(45,48,56,1) 100%);
-}
 </style>

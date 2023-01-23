@@ -4,7 +4,7 @@ import HeaderPage from './executive/HeaderPage.vue';
 <template>
   <q-page class="flex flex-center">
     <div class="frame-dark">
-      <HeaderPage :width="app.txt140" :key="app.txt140"/>
+      <HeaderPage :width="app.txt80" :key="app.txt80"/>
       <div class="__content flex flex-row">
         <div class="w-140 tempat__menu">
           <menu-draw :width="app.txtLg" @on-selected="handleMenu" />
@@ -27,7 +27,9 @@ import PagePanels from 'src/pages/executive/panels/IndexPage.vue'
 const app = useAppStore()
 // const widthMenu = ref('140px')
 // const widthContent = ref((app.width - 250) + 'px')
+// const date = new Date()
 const menu = ref('Keuangan')
+// const year = ref(date.getFullYear())
 function handleMenu (val) {
   menu.value = val
 }

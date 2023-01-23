@@ -8,6 +8,7 @@ export const useAppStore = defineStore('app', {
   getters: {
     txt140: (state) => state.height * 0.145, // 140px
     txt100: (state) => state.height * 0.104, // 100px
+    txt80: (state) => state.height * 0.083, // 80px
     txt70: (state) => state.height * 0.0729, // 70px
     txt50: (state) => state.height * 0.052, // 50px
     txtH5: (state) => state.height * 0.025, // text-h5 || 1.5rem || 24 px

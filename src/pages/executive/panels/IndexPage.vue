@@ -8,16 +8,7 @@
   >
     <q-tab-panel name="Keuangan">
       <!-- <div class="text-h6">Keuangan</div> -->
-      <div class="flex flex-row">
-        <div class="flex w-1-4">
-          <q-card flat class="my-card-dark full-width">
-            <div class="q-pa-lg">
-              dasdas
-            </div>
-          </q-card>
-        </div>
-        <div class="flex flex-1 bg-primary">2</div>
-      </div>
+      <panel-keuangan />
     </q-tab-panel>
 
     <q-tab-panel name="SDM">
@@ -38,5 +29,5 @@
 </template>
 
 <script setup>
-
+import PanelKeuangan from './PanelKeuangan.vue'
 </script>

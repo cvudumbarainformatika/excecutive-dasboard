@@ -4,9 +4,11 @@
         @click="clickedSelected(item)"
     >
       <div class="text-center">
-        <div class="tempat__icon q-pa-sm">
+        <div class="tempat__icon q-pa-md">
           <div :class="item.nama === selected?'active':'not-active'">
-            <q-btn flat padding="md" unelevated :class="item.nama === selected?'btn-dark-active':'btn-dark'" :icon="item.icon" :size="`${width}px`" />
+            <q-btn flat padding="md" unelevated :class="item.nama === selected?'menu-dark-active':'menu-dark'" :icon="item.icon" :size="`${width}px`">
+              <q-tooltip class="bg-primary" :offset="[0, 5]" style="font-size:9px;" >{{ item.nama }}</q-tooltip>
+            </q-btn>
           </div>
         </div>
       </div>
@@ -64,14 +66,5 @@ function clickedSelected (item) {
   }
 
 }
-.btn-dark {
-  border-radius:20px;
-  color:$grey;
-}
-.btn-dark-active {
-  border-radius:20px;
-  background: rgb(60,63,69);
-  background: linear-gradient(180deg, $dark-page 0%, $dark 70%, $dark 100%);
-  color:$primary;
-}
+
 </style>
