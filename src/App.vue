@@ -111,12 +111,4 @@ $sizes: (
   padding-right: 10%;
 }
 
-.frame-dark {
-  border-radius:20px;
-  background-color: $dark;
-  height:90vh;
-  width:95vw;
-  overflow: hidden;
-}
-
 </style>

@@ -1,5 +1,8 @@
 <template>
   <div class="">
+    <div class="flex flex-center q-px-md q-py-lg text-center">
+      <q-img :src="srcImg" :width="`${app.txt80}px`"></q-img>
+    </div>
     <div v-for="(item, i) in  menus" :key="i"
         @click="clickedSelected(item)"
     >
@@ -18,13 +21,17 @@
 
 <script setup>
 
-import { ref } from 'vue'
+import { useAppStore } from 'src/stores/app'
+import { ref, computed } from 'vue'
 defineProps({
   width: {
     type: Number,
     default: 50
   }
 })
+
+const srcImg = computed(() => new URL('../../../src/assets/images/logo-rsud.png', import.meta.url).href)
+const app = useAppStore()
 
 const emits = defineEmits(['onSelected'])
 const menus = ref([

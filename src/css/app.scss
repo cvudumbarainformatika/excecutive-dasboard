@@ -10,6 +10,13 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+
+
+.frame-dark {
+  border-radius:20px;
+  background-color: $dark;
+}
+
 .menu-dark {
   border-radius:20px;
   color:$grey;

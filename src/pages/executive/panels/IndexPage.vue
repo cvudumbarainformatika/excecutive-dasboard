@@ -4,16 +4,14 @@
     swipeable
     vertical
     infinite
-    class="full-width"
+    class="full-width full-height"
   >
     <q-tab-panel name="Keuangan">
-      <!-- <div class="text-h6">Keuangan</div> -->
       <panel-keuangan />
     </q-tab-panel>
 
     <q-tab-panel name="SDM">
-      <div class="text-h6">SDM</div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      <panel-sdm />
     </q-tab-panel>
 
     <q-tab-panel name="Layanan">
@@ -30,4 +28,5 @@
 
 <script setup>
 import PanelKeuangan from './PanelKeuangan.vue'
+import PanelSdm from './PanelSdm.vue'
 </script>

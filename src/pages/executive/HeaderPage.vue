@@ -1,10 +1,10 @@
 <template>
   <div class="">
-    <div class="flex flex-row">
-      <div class="flex q-pa-md text-center w-140 ">
+    <!-- <div class="flex flex-row"> -->
+      <!-- <div class="flex q-pa-md text-center w-140 ">
         <q-img :src="srcImg" :width="`${width}px`"></q-img>
-      </div>
-      <div class="flex flex-1 pa-lg">
+      </div> -->
+      <div class="flex flex-1">
         <div class="row items-center grow">
           <div class="pl-md" >
             <div class="txt-h5 text-weight-bold relative-position flex flex-row">
@@ -28,11 +28,11 @@
         </div>
       </div>
     </div>
-  </div>
+  <!-- </div> -->
 </template>
 
 <script setup>
-import { computed, onMounted, ref } from 'vue'
+import { onMounted, ref } from 'vue'
 
 defineProps({
   width: {
@@ -40,7 +40,6 @@ defineProps({
     default: 50
   }
 })
-const srcImg = computed(() => new URL('../../../src/assets/images/logo-rsud.png', import.meta.url).href)
 const currentYear = ref(null)
 const yearArray = ref([])
 

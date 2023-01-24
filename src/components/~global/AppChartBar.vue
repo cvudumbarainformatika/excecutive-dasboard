@@ -1,6 +1,6 @@
 <template>
-  <div class="q-pt-md q-px-sm">
-    <div ref="bar" :style="`width:100%; height: ${height}px;`"></div>
+  <div class="q-pt-md q-px-md">
+    <div ref="bar" :style="`width:100%; height: ${props.height}px;`"></div>
   </div>
 </template>
 
@@ -12,8 +12,14 @@ import { useAppStore } from 'src/stores/app'
 const bar = ref(null)
 
 const app = useAppStore()
-const height = ref(300)
 // const legendPos = ref(height.value - 80)
+
+const props = defineProps({
+  height: {
+    type: Number,
+    default: 300
+  }
+})
 
 onMounted(() => {
   echarts.registerTheme('dark', dark)
@@ -25,12 +31,12 @@ onMounted(() => {
       subtext: 'Data Perbandingan antara Pendapatan dan Anggaran Dalam 1 tahun per bulan',
       padding: 3,
       textStyle: {
-        fontSize: app.txtH5,
+        fontSize: app.txtLg,
         fontFamily: 'Poppins',
         fontWeight: 'bold'
       },
       subtextStyle: {
-        fontSize: app.txtLg,
+        fontSize: app.txtMd,
         fontFamily: 'Poppins',
         fontWeight: 'normal'
       }
@@ -61,6 +67,13 @@ onMounted(() => {
     },
     toolbox: {
       show: true,
+      left: 'auto',
+      top: 'auto',
+      right: 0,
+      bottom: 'auto',
+      width: 'auto',
+      height: 'auto',
+      showTitle: false,
       feature: {
         dataView: { show: true, readOnly: false },
         magicType: { show: true, type: ['line', 'bar'] },
