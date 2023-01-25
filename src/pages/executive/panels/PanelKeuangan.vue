@@ -3,7 +3,7 @@
     <div class="__my-panel">
       <!-- <q-scroll-area :style="`height:${height - 30}px`" > -->
         <panel-header />
-        <div class="row q-col-gutter-md">
+        <div class="row q-col-gutter-lg">
           <div class="col-md-2 col-lg-2 col-xl-2 col-sm-12 col-xs-12">
 
             <q-card flat class="my-card-dark2">

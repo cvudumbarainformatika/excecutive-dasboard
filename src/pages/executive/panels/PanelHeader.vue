@@ -10,7 +10,7 @@
       <div class="txt-md text-grey">Dashboard Khusus untuk direktur UOBK RSUD Mohamad Saleh</div>
     </div>
     <q-space />
-    <div class="flex flex-row-reverse">
+    <!-- <div class="flex flex-row-reverse">
       <div v-for="(item, i) in yearArray" :key="i" class="ml-lg">
         <q-btn flat dense unelevated :class="item === currentYear?'menu-dark-active':'menu-dark'"
           @click="currentYear = item"
@@ -18,12 +18,16 @@
           <div class="txt-lg pa-xs">{{ item }}</div>
         </q-btn>
       </div>
-    </div>
+    </div> -->
+
+    <years-pane @on-click-year="(val)=> currentYear = val" />
   </div>
+
 </template>
 
 <script setup>
 import { onMounted, ref } from 'vue'
+import YearsPane from './YearsPane.vue'
 
 defineProps({
   width: {
