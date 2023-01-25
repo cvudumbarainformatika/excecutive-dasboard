@@ -17,6 +17,9 @@ const txt100 = computed(() => store.txt100 + 'px')
 const txt80 = computed(() => store.txt80 + 'px')
 const txt70 = computed(() => store.txt70 + 'px')
 const txt50 = computed(() => store.txt50 + 'px')
+const txt48 = computed(() => store.txt48 + 'px')
+const txt32 = computed(() => store.txt32 + 'px')
+const txt28 = computed(() => store.txt28 + 'px')
 const txtH5 = computed(() => store.txtH5 + 'px')
 const txtXl = computed(() => store.txtXl + 'px')
 const txtLg = computed(() => store.txtLg + 'px')
@@ -24,7 +27,7 @@ const txtMd = computed(() => store.txtMd + 'px')
 const txtSm = computed(() => store.txtSm + 'px')
 const txtXs = computed(() => store.txtXs + 'px')
 
-console.log('app:', store.height)
+console.log('app:', store.width)
 </script>
 
 <style lang="scss">
@@ -35,6 +38,9 @@ $sizes: (
   "80":v-bind(txt80),
   "70":v-bind(txt70),
   "50":v-bind(txt50),
+  "48":v-bind(txt48),
+  "32":v-bind(txt32),
+  "28":v-bind(txt28),
   "h5": v-bind(txtH5),
   "xl": v-bind(txtXl),
   "lg": v-bind(txtLg),
@@ -78,7 +84,10 @@ $sizes: (
       margin-top: #{$size} !important;
   }
   .ma-#{$name} {
-      margin: #{$size} !important;
+      margin-top: #{$size};
+      margin-bottom: #{$size};
+      margin-left: #{$size};
+      margin-right: #{$size};
   }
   .mx-#{$name} {
       margin-left: #{$size} !important;

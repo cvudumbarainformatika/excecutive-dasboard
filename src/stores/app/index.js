@@ -6,17 +6,20 @@ export const useAppStore = defineStore('app', {
     width: window.innerWidth
   }),
   getters: {
-    txt140: (state) => state.height * 0.145, // 140px
-    txt100: (state) => state.height * 0.104, // 100px
-    txt80: (state) => state.height * 0.083, // 80px
-    txt70: (state) => state.height * 0.0729, // 70px
-    txt50: (state) => state.height * 0.052, // 50px
-    txtH5: (state) => state.height * 0.025, // text-h5 || 1.5rem || 24 px
-    txtXl: (state) => state.height * 0.0416, // 40px
-    txtLg: (state) => state.height * 0.01875, // 18px
-    txtMd: (state) => state.height * 0.0145, // 14px
-    txtSm: (state) => state.height * 0.0125, // 12px
-    txtXs: (state) => state.height * 0.0104 // 10px
+    txt140: (state) => state.width * 0.072916, // 140px
+    txt100: (state) => state.width * 0.052083, // 100px
+    txt80: (state) => state.width * 0.04166, // 80px
+    txt70: (state) => state.width * 0.0364583, // 70px
+    txt50: (state) => state.width * 0.0260416, // 50px
+    txt48: (state) => state.width * 0.025, // 48px
+    txt32: (state) => state.width * 0.016666, // 32px
+    txt28: (state) => state.width * 0.014583, // 28px
+    txtH5: (state) => state.width * 0.0125, // text-h5 || 1.5rem || 24 px
+    txtXl: (state) => state.width * 0.02083, // 40px
+    txtLg: (state) => state.width * 0.009375, // 18px
+    txtMd: (state) => state.width * 0.0072916, // 14px
+    txtSm: (state) => state.width * 0.00625, // 12px
+    txtXs: (state) => state.width * 0.0052083 // 10px
   },
   actions: {
     // increment () {
