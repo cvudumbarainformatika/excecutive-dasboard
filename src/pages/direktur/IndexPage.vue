@@ -7,24 +7,24 @@
       <div class="q-pt-lg">
         <div class="row items-center">
           <div class="columns">
-            <app-card>
-            <template #default>
-              <div class="columns q-py-xs q-px-md">
-                <div class="text-grey-7">Periode Tanggal</div>
-                <div class="row items-center">
-                  <q-icon name="event" size="sm" class="q-mr-sm" color="primary" />
-                  <div> Februari 2023</div>
+            <app-card @click="dateOpen = !dateOpen">
+              <template #default>
+                <div class="columns q-py-xs q-px-md">
+                  <div class="text-grey-7">Periode Tanggal</div>
+                  <div class="row items-center">
+                    <q-icon name="event" size="sm" class="q-mr-sm" color="primary" />
+                    <div> Februari 2023</div>
+                  </div>
                 </div>
-              </div>
-            </template>
-          </app-card>
-          <div v-if="dateOpen" class="q-mt-xs">
-            <q-date
-              v-model="date"
-              landscape
-              mask="YYYY-MM-DD"
-            />
-          </div>
+              </template>
+            </app-card>
+            <div v-if="dateOpen" class="q-mt-xs">
+              <q-date
+                v-model="date"
+                landscape
+                mask="YYYY-MM-DD"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -34,8 +34,10 @@
 
 <script setup>
 import { ref } from 'vue'
+import useDate from 'src/utility/useDate.js'
 
-const date = ref('2019/02/01')
+const { dateDbFormat } = useDate()
+const date = ref(dateDbFormat(new Date()))
 const dateOpen = ref(true)
 </script>
 

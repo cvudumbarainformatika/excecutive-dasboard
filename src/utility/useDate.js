@@ -1,5 +1,6 @@
 
 // import { reactive } from 'vue'
+import { date } from 'quasar'
 
 export default function useDate () {
   // const state = reactive({
@@ -24,5 +25,9 @@ export default function useDate () {
     return date.getFullYear().toString()
   }
 
-  return { currentYear, yearIntervals }
+  const dateDbFormat = (val) => {
+    return date.formatDate(val, 'YYYY-MM-DD')
+  }
+
+  return { currentYear, yearIntervals, dateDbFormat }
 }
