@@ -2,6 +2,7 @@
 import * as echarts from 'echarts'
 import { ref, onMounted } from 'vue'
 import useRandom from 'src/utility/useRandom.js'
+import dark from 'src/assets/themecharts/dark2.json'
 
 const line = ref(null)
 const data = ref([])
@@ -11,11 +12,12 @@ const { initialData, randomData } = useRandom(data)
 initialData()
 
 onMounted(() => {
+  echarts.registerTheme('dark', dark)
   if (line.value !== null) {
-    const echart = echarts.init(line.value)
+    const echart = echarts.init(line.value, 'dark')
     echart.setOption({
       title: {
-        text: 'Realisasi Pendapatan'
+        text: 'Realisasi Data Pasien'
       },
       tooltip: {
         trigger: 'axis',
@@ -77,6 +79,6 @@ onMounted(() => {
 
 <template>
   <div class="q-pa-md">
-    <div ref="line" style="width:100%; height: 400px;"></div>
+    <div ref="line" style="width:100%; height: 500px;"></div>
   </div>
 </template>

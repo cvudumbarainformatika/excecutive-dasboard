@@ -10,7 +10,7 @@ import { computed } from 'vue'
 // INI DARI HEIGHT 800px
 const store = useAppStore()
 const $q = useQuasar()
-$q.dark.set(true)
+$q.dark.set(false)
 
 const txt140 = computed(() => store.txt140 + 'px')
 const txt100 = computed(() => store.txt100 + 'px')
@@ -31,7 +31,6 @@ console.log('app:', store.width)
 </script>
 
 <style lang="scss">
-
 $sizes: (
   "140":v-bind(txt140),
   "100":v-bind(txt100),
@@ -47,69 +46,85 @@ $sizes: (
   "md": v-bind(txtMd),
   "sm": v-bind(txtSm),
   "xs": v-bind(txtXs)
-  );
+);
 
-@each $name, $size in $sizes {
+@each $name,
+$size in $sizes {
   .txt-#{$name} {
-      font-size: #{$size} !important;
+    font-size: #{$size} !important;
   }
 
   .pb-#{$name} {
-      padding-bottom: #{$size};
+    padding-bottom: #{$size};
   }
+
   .pt-#{$name} {
-      padding-top: #{$size};
+    padding-top: #{$size};
   }
+
   .pa-#{$name} {
-      padding: #{$size};
+    padding: #{$size};
   }
+
   .px-#{$name} {
-      padding-left: #{$size};
-      padding-right: #{$size};
+    padding-left: #{$size};
+    padding-right: #{$size};
   }
+
   .pl-#{$name} {
-      padding-left: #{$size};
+    padding-left: #{$size};
   }
+
   .pr-#{$name} {
-      padding-right: #{$size};
+    padding-right: #{$size};
   }
+
   .py-#{$name} {
-      padding-top: #{$size};
-      padding-bottom: #{$size};
+    padding-top: #{$size};
+    padding-bottom: #{$size};
   }
+
   .mb-#{$name} {
-      margin-bottom: #{$size} !important;
+    margin-bottom: #{$size} !important;
   }
+
   .mt-#{$name} {
-      margin-top: #{$size} !important;
+    margin-top: #{$size} !important;
   }
+
   .ma-#{$name} {
-      margin-top: #{$size};
-      margin-bottom: #{$size};
-      margin-left: #{$size};
-      margin-right: #{$size};
+    margin-top: #{$size};
+    margin-bottom: #{$size};
+    margin-left: #{$size};
+    margin-right: #{$size};
   }
+
   .mx-#{$name} {
-      margin-left: #{$size} !important;
-      margin-right: #{$size} !important;
+    margin-left: #{$size} !important;
+    margin-right: #{$size} !important;
   }
+
   .ml-#{$name} {
-      margin-left: #{$size} !important;
+    margin-left: #{$size} !important;
   }
+
   .mr-#{$name} {
-      margin-right: #{$size} !important;
+    margin-right: #{$size} !important;
   }
+
   .my-#{$name} {
-      margin-top: #{$size} !important;
-      margin-bottom: #{$size} !important;
+    margin-top: #{$size} !important;
+    margin-bottom: #{$size} !important;
   }
 
   .w-#{$name} {
     width: #{$size} !important;
   }
+
   .h-#{$name} {
     height: #{$size} !important;
   }
+
   .b-a-#{$name} {
     border-radius: #{$size};
   }
@@ -119,5 +134,4 @@ $sizes: (
   padding-left: 5%;
   padding-right: 10%;
 }
-
 </style>

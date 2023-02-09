@@ -155,50 +155,12 @@
                 </q-card>
               </div>
             </div>
-            <q-card flat class="my-card-dark">
-              <div class="pa-lg">
-                <div class="flex flex-row items-center">
-                  <q-avatar color="dark" text-color="grey" icon="person_4" font-size="32px" />
-                  <div class="text-right flex-col flex-1">
-                    <div class="txt-md text-grey-2">PNS</div>
-                    <div class="txt-h5 text-weight-bold">400</div>
-                  </div>
-                </div>
-              </div>
-            </q-card>
-          </div>
-          <div class="col-3">
-            <q-card flat class="my-card-dark">
-              <div class="pa-lg">
-                <div class="flex flex-row items-center">
-                  <q-avatar color="dark" text-color="grey" icon="perm_contact_calendar" font-size="32px" />
-                  <div class="text-right flex-col flex-1">
-                    <div class="txt-md text-grey-2">P3K</div>
-                    <div class="txt-h5 text-weight-bold">100</div>
-                  </div>
-                </div>
-              </div>
-            </q-card>
-          </div>
-          <div class="col-3">
-            <q-card flat class="my-card-dark">
-              <div class="pa-lg">
-                <div class="flex flex-row items-center">
-                  <q-avatar color="dark" text-color="grey" icon="perm_contact_calendar" font-size="32px" />
-                  <div class="text-right flex-col flex-1">
-                    <div class="txt-md text-grey-2">Non PNS</div>
-                    <div class="txt-h5 text-weight-bold">300</div>
-                  </div>
-                </div>
-              </div>
-            </q-card>
           </div>
         </div>
       </div>
       <div class="col-4">page2</div>
     </div>
     <div>
-      <app-chart />
     </div>
   </div>
 </template>

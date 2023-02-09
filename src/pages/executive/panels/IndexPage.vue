@@ -16,7 +16,8 @@
 
     <q-tab-panel name="Layanan">
       <div class="text-h6">Layanan</div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Dashboard executive Layanan UOBK RSUD DR MOHAMAD SALEH.
+      <panel-layanan />
     </q-tab-panel>
 
     <q-tab-panel name="Sarpras">
@@ -29,4 +30,5 @@
 <script setup>
 import PanelKeuangan from './PanelKeuangan.vue'
 import PanelSdm from './PanelSdm.vue'
+import PanelLayanan from './PanelLayanan.vue'
 </script>
