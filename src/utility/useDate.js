@@ -28,6 +28,9 @@ export default function useDate () {
   const dateDbFormat = (val) => {
     return date.formatDate(val, 'YYYY-MM-DD')
   }
+  const arrBulan = (val) => {
+    return ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']
+  }
 
-  return { currentYear, yearIntervals, dateDbFormat }
+  return { currentYear, yearIntervals, dateDbFormat, arrBulan }
 }
