@@ -1,32 +1,74 @@
 <template>
-  <q-page class="bg-grey-2">
-    <div class="q-pa-lg p-exe">
-      <div class="_judul_page text-weight-bold text-h6">Dashboard Executive</div>
-      <div class="_judul_page text-caption">Report Dashboard Khusus Direktur</div>
-      <div class="_judul_page text-caption">UOBK RSUD MOHAMAD SALEH KOTA PROBOLINGGO</div>
-      <div class="q-pt-lg">
-        <div class="row items-center">
-          <div class="columns">
-            <app-card @click="dateOpen = !dateOpen">
-              <template #default>
-                <div class="columns q-py-xs q-px-md">
-                  <div class="text-grey-7">Periode Tanggal</div>
-                  <div class="row items-center">
-                    <q-icon name="event" size="sm" class="q-mr-sm" color="primary" />
-                    <div> Februari 2023</div>
+  <q-page padding>
+    <div class="row q-col-gutter-md">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <div class="__judul text-h6">Data Keuangan</div>
+        <div class="__sub_judul text-grey">Data Keuangan Per Tanggal</div>
+        <div class="row q-col-gutter-md q-pt-md">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <q-card flat bordered>
+              <q-card-section class="bg-secondary text-white">
+                <div class="row items-center">
+                  <div class="col">
+                    <div class="text-weight-bold">Pendapatan</div>
+                    <div>Tahun 2023</div>
                   </div>
+                  <q-knob
+                    readonly
+                    v-model="percentagePendapatan"
+                    show-value
+                    size="80px"
+                    :thickness="0.22"
+                    color="white"
+                    track-color="grey"
+                    class="text-white q-ma-md"
+                  >
+                  {{ percentagePendapatan }} %
+                </q-knob>
                 </div>
-              </template>
-            </app-card>
-            <div v-if="dateOpen" class="q-mt-xs">
-              <q-date
-                v-model="date"
-                landscape
-                mask="YYYY-MM-DD"
-              />
-            </div>
+                <q-separator class="q-my-md bg-grey" />
+                <div class="text-weight-bold">Target Pendapatan</div>
+                <div class="text-h5 text-weight-light text-right">Rp. 100.000.000</div>
+                <q-separator class="q-my-md bg-grey" />
+                <div class="text-weight-bold">Realisasi Pendapatan</div>
+                <div class="text-h5 text-weight-light text-right">Rp. 100.000.000</div>
+              </q-card-section>
+            </q-card>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <q-card flat bordered>
+              <q-card-section class="bg-dark text-white">
+                <div class="row items-center">
+                  <div class="col">
+                    <div class="text-weight-bold">Belanja</div>
+                    <div>Tahun 2023</div>
+                  </div>
+                  <q-knob
+                    readonly
+                    v-model="percentagePendapatan"
+                    show-value
+                    size="80px"
+                    :thickness="0.22"
+                    color="white"
+                    track-color="grey"
+                    class="text-white q-ma-md"
+                  >
+                  {{ percentagePendapatan }} %
+                </q-knob>
+                </div>
+                <q-separator class="q-my-md bg-grey" />
+                <div class="text-weight-bold">Target Pendapatan</div>
+                <div class="text-h5 text-weight-light text-right">Rp. 100.000.000</div>
+                <q-separator class="q-my-md bg-grey" />
+                <div class="text-weight-bold">Realisasi Pendapatan</div>
+                <div class="text-h5 text-weight-light text-right">Rp. 100.000.000</div>
+              </q-card-section>
+            </q-card>
           </div>
         </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        dsgfds
       </div>
     </div>
   </q-page>
@@ -34,20 +76,8 @@
 
 <script setup>
 import { ref } from 'vue'
-import useDate from 'src/utility/useDate.js'
-
-const { dateDbFormat } = useDate()
-const date = ref(dateDbFormat(new Date()))
-const dateOpen = ref(true)
+const percentagePendapatan = ref(71)
 </script>
 
 <style lang="scss" scoped>
-.p-exen {
-  padding-left:5%;
-  padding-right:5%
-}
-
-.card__w {
-  min-width: 200px;
-}
 </style>
