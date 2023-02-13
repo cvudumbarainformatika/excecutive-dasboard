@@ -5,31 +5,6 @@
         <div class="__sub_judul text-grey">Data Keuangan Per Tanggal</div>
         <div class="row q-col-gutter-md q-pt-md">
           <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3 col-xl-3">
-            <!-- <q-card flat bordered>
-              <q-card-section class="bg-dark text-white">
-                <div class="row items-center">
-                  <q-avatar rounded size="34px" font-size="18px" color="secondary" text-color="white" icon="bar_chart" />
-                  <div class="q-ml-md ">
-                    <div class="text-weight-bold">Pendapatan</div>
-                    <div class="text-grey f-12"> tahun 2023</div>
-                  </div>
-                </div>
-                <div class="text-center">
-                  <app-gauge :value="percentagePendapatan" :height="150" />
-                  <div class="text-grey f-12"> {{ percentagePendapatan }}% Complete</div>
-                </div>
-                <q-separator class="q-my-md bg-grey" />
-                <div class="text-center">
-                  <div class="f-12">Target Pendapatan</div>
-                  <div class="text-h6 "><span class="text-grey">Rp. </span> <span>100.000.000</span></div>
-                </div>
-                <q-separator class="q-my-md bg-grey" />
-                <div class="text-center">
-                  <div class="f-12">Realisasi Pendapatan</div>
-                  <div class="text-h6 "><span class="text-grey">Rp. </span> <span>100.000.000</span></div>
-                </div>
-              </q-card-section>
-            </q-card> -->
             <card-comp
               :percent="percentagePendapatan"
               :target="1000000000"
@@ -203,11 +178,23 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import CardComp from './CardComp.vue'
 import CcCard from './CcCard.vue'
-// import useDate from 'src/utility/useDate.js'
+import useDate from 'src/utility/useDate.js'
+import { useKeuanganStore } from 'src/stores/keuangan/index'
 
-// const { arrBulan } = useDate()
+const { currentMonth, currentYear } = useDate()
 const percentagePendapatan = ref(82)
+
+const month = ref(currentMonth())
+const year = ref(currentYear())
+
+const store = useKeuanganStore()
+console.log(store)
+
+onMounted(() => {
+  const mYear = month.value + '-' + year.value
+  console.log(mYear)
+})
 </script>

@@ -11,6 +11,16 @@ export default function useDate () {
   const currentYear = () => {
     return new Date().getFullYear().toString()
   }
+  const currentMonth = (val) => {
+    const m = new Date().getMonth() + 1
+    // let month = null
+    if (val === null || val === undefined || val === 'undefined') {
+      // month = m <= 9 ? '0' + m : m
+      return m <= 9 ? '0' + m : m.toString()
+    }
+
+    return val <= 9 ? '0' + (val + 1) : (val + 1).toString()
+  }
   const yearIntervals = () => {
     const years = []
     for (let i = 0; i < 5; i++) {
@@ -32,5 +42,5 @@ export default function useDate () {
     return ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']
   }
 
-  return { currentYear, yearIntervals, dateDbFormat, arrBulan }
+  return { currentYear, yearIntervals, dateDbFormat, arrBulan, currentMonth }
 }
