@@ -1,10 +1,10 @@
 <template>
   <div class="row q-col-gutter-md">
-      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <div class="__judul text-h6">Data Keuangan</div>
         <div class="__sub_judul text-grey">Data Keuangan Per Tanggal</div>
         <div class="row q-col-gutter-md q-pt-md">
-          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+          <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3 col-xl-3">
             <!-- <q-card flat bordered>
               <q-card-section class="bg-dark text-white">
                 <div class="row items-center">
@@ -44,45 +44,9 @@
               target-name="Target Pendapatan"
               realisasi-name="Realisasi Pendapatan"
             />
-          </div>
-          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <!-- <q-card flat bordered>
-              <q-card-section class="bg-info text-dark">
-                <div class="row items-center">
-                  <q-avatar rounded size="34px" font-size="18px" color="dark" text-color="white" icon="local_mall" />
-                  <div class="q-ml-md ">
-                    <div class="text-weight-bold">Belanja</div>
-                    <div class="text-grey-9 f-12"> tahun 2023</div>
-                  </div>
-                </div>
-                <div class="text-center">
-                  <q-knob
-                    readonly
-                    v-model="percentagePendapatan"
-                    show-value
-                    size="100px"
-                    :thickness="0.2"
-                    color="dark"
-                    track-color="grey"
-                    class="text-dark q-ma-md"
-                  >
-                    {{ percentagePendapatan }}%
-                  </q-knob>
-                  <div class="text-dark f-12"> {{ percentagePendapatan }}% Complete</div>
-                </div>
-                <q-separator class="q-my-md bg-grey" />
-                <div class="text-center">
-                  <div class="f-12">Anggaran Belanja</div>
-                  <div class="text-h6 "><span class="text-grey-8">Rp. </span> <span>100.000.000</span></div>
-                </div>
-                <q-separator class="q-my-md bg-grey" />
-                <div class="text-center">
-                  <div class="f-12">Realisasi Belanja</div>
-                  <div class="text-h6 "><span class="text-grey-8">Rp. </span> <span>100.000.000</span></div>
-                </div>
-              </q-card-section>
-            </q-card> -->
-            <card-comp
+
+            <div class="q-pt-md">
+              <card-comp
               :percent="90"
               color="info"
               :target="1000000000"
@@ -97,60 +61,142 @@
               target-name="Anggaran Belanja"
               realisasi-name="Realisasi Pembelanjaan"
             />
+            </div>
+          </div>
+          <div class="col-sm-12 col-xs-12 col-md-4 col-lg-4 col-xl-4">
+            <q-card flat bordered class="my-card">
+              <q-list>
+                  <q-item class="q-mt-lg">
+                    <q-item-section avatar>
+                      <q-icon name="bar_chart" size="50px" color="primary" />
+                    </q-item-section>
+                    <q-item-section>
+                      <q-item-label class="">Target Pendapatan</q-item-label>
+                      <q-item-label caption lines="2" class="f-10 text-grey-8">Target Pendapatan tahun 2023</q-item-label>
+                      <q-item-label class="text-weight-bold f-16 q-pt-sm">
+                        <span class="text-grey">Rp. </span> 100.000.000.000
+                      </q-item-label>
+                    </q-item-section>
+                  </q-item>
+                  <q-separator />
+                  <q-item class="q-mt-md">
+                    <q-item-section avatar>
+                      <q-icon name="point_of_sale" size="50px" color="primary" />
+                    </q-item-section>
+                    <q-item-section>
+                      <q-item-label class="">Realisasi Pendapatan</q-item-label>
+                      <q-item-label caption lines="2" class="f-10">Realisasi Pendapatan tahun 2023</q-item-label>
+                      <q-item-label class="text-weight-bold f-16 q-pt-sm">
+                        <span class="text-grey">Rp. </span> 100.000.000.000
+                      </q-item-label>
+                    </q-item-section>
+                  </q-item>
+                  <q-separator />
+                  <q-item-section>
+                        <q-linear-progress color="primary" size="9px" :value="percentagePendapatan/100" class="q-mt-lg" />
+                    </q-item-section>
+                </q-list>
+            </q-card>
+            <div class="q-pt-md">
+              <q-card flat bordered class="my-card">
+                <q-list>
+                  <q-item class="q-mt-lg">
+                    <q-item-section avatar>
+                      <q-icon name="local_mall" size="50px" color="info" />
+                    </q-item-section>
+                    <q-item-section>
+                      <q-item-label class="">Anggaran Belanja</q-item-label>
+                      <q-item-label caption lines="2" class="f-10 text-grey-8">Anggaran Belanja tahun 2023</q-item-label>
+                      <q-item-label class="text-weight-bold f-16 q-pt-sm">
+                        <span class="text-grey">Rp. </span> 100.000.000.000
+                      </q-item-label>
+                    </q-item-section>
+                  </q-item>
+                  <q-separator />
+                  <q-item class="q-mt-md">
+                    <q-item-section avatar>
+                      <q-icon name="shopping_cart" size="50px" color="info" />
+                    </q-item-section>
+                    <q-item-section>
+                      <q-item-label class="">Realisasi Belanja</q-item-label>
+                      <q-item-label caption lines="2" class="f-10">Realisasi Belanja tahun 2023</q-item-label>
+                      <q-item-label class="text-weight-bold f-16 q-pt-sm">
+                        <span class="text-grey">Rp. </span> 100.000.000.000
+                      </q-item-label>
+                    </q-item-section>
+                  </q-item>
+                  <q-separator />
+                  <q-item-section>
+                        <q-linear-progress color="info" size="9px" :value="percentagePendapatan/100" class="q-mt-lg" />
+                    </q-item-section>
+                </q-list>
+              </q-card>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+            <div class="">
+              <div>Kas Bendahara Pengeluaran 💸</div>
+              <div class="text-h5 text-weight-bold">Rp 5.000.000</div>
+            </div>
+            <cc-card class="q-mt-md" color1="purple" color2="purple-4" title="Kas Induk" periode="Februari 2023" :total="5000000000" />
+            <cc-card class="q-mt-md" title="Kas Bendahara Penerimaan" periode="Februari 2023" :total="5340040000" />
+
           </div>
         </div>
       </div>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-        <q-card>
-          <div class="q-px-md q-pt-md">Laporan Per Bulan tahun 2023</div>
-        <div class="q-pa-md">
-          <q-card flat bordered class="q-mb-sm">
-            <q-card-section>
-              <div class="row items-center justify-between">
-                <div class="row items-center">
-                  <div>
-                    <q-avatar color="grey-2" text-color="grey-8">
-                      <div class="text-weight-bold">J</div>
-                    </q-avatar>
-                  </div>
-                  <div class="q-ml-md">
-                    <div>Januari</div>
-                    <div class="f-12 text-grey">Realisasi Pendapatan</div>
-                    <div class="f-12 text-grey">Realisasi Belanja</div>
-                  </div>
-                </div>
-                <div class="text-right">
-                  <div> <q-icon name="trending_up" size="18px" color="primary" /></div>
-                  <div class="f-12 text-grey">100.000.000</div>
-                  <div class="f-12 text-grey">200.000.000</div>
-                </div>
+      <div class="col-12">
+        <q-card class="my-card" >
+          <q-card-section>
+            <div class="">Hutang dan Piutang 📝</div>
+            <q-separator class="q-my-md"></q-separator>
+            <div class="row q-col-gutter-md">
+              <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <q-list>
+                  <q-item>
+                    <q-item-section avatar>
+                      <q-avatar rounded size="50px" font-size="40px" color="grey-4" text-color="dark" icon="paid" />
+                    </q-item-section>
+                    <q-item-section>
+                      <q-item-label class="text-grey-8">Hutang Farmasi</q-item-label>
+                      <q-item-label class="text-weight-bold">Rp 5.000.000</q-item-label>
+                    </q-item-section>
+                  </q-item>
+                  <q-item>
+                    <q-item-section avatar>
+                      <q-avatar rounded size="50px" font-size="40px" color="grey-4" text-color="negative" icon="bloodtype" />
+                    </q-item-section>
+                    <q-item-section>
+                      <q-item-label class="text-grey-8">Hutang Bank Darah</q-item-label>
+                      <q-item-label class="text-weight-bold">Rp 5.000.000</q-item-label>
+                    </q-item-section>
+                  </q-item>
+                </q-list>
               </div>
-            </q-card-section>
-          </q-card>
-          <q-card flat bordered>
-            <q-card-section class="bg-primary text-white">
-              <div class="row items-center justify-between">
-                <div class="row items-center">
-                  <div>
-                    <q-avatar color="grey-2" text-color="grey-8">
-                      <div class="text-weight-bold">F</div>
-                    </q-avatar>
-                  </div>
-                  <div class="q-ml-md">
-                    <div>Februari</div>
-                    <div class="f-12 text-grey">Realisasi Pendapatan</div>
-                    <div class="f-12 text-grey">Realisasi Belanja</div>
-                  </div>
-                </div>
-                <div class="text-right">
-                  <div> <q-icon name="trending_down" size="18px" color="negative" /></div>
-                  <div class="f-12 text-grey">100.000.000</div>
-                  <div class="f-12 text-grey">200.000.000</div>
-                </div>
+              <div class="col-12 col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <q-list>
+                  <q-item>
+                    <q-item-section avatar>
+                      <q-avatar rounded size="50px" font-size="40px" color="grey-4" text-color="cyan-10" icon="account_balance_wallet" />
+                    </q-item-section>
+                    <q-item-section>
+                      <q-item-label class="text-grey-8">Hutang Lainnya</q-item-label>
+                      <q-item-label class="text-weight-bold">Rp 5.000.000</q-item-label>
+                    </q-item-section>
+                  </q-item>
+                  <q-item>
+                    <q-item-section avatar>
+                      <q-avatar rounded size="50px" font-size="40px" color="grey-4" text-color="secondary" icon="payment" />
+                    </q-item-section>
+                    <q-item-section>
+                      <q-item-label class="text-grey-8">PIUTANG</q-item-label>
+                      <q-item-label class="text-weight-bold">Rp 5.000.000</q-item-label>
+                    </q-item-section>
+                  </q-item>
+                </q-list>
               </div>
-            </q-card-section>
-          </q-card>
-        </div>
+            </div>
+          </q-card-section>
+
         </q-card>
       </div>
     </div>
@@ -159,5 +205,9 @@
 <script setup>
 import { ref } from 'vue'
 import CardComp from './CardComp.vue'
+import CcCard from './CcCard.vue'
+// import useDate from 'src/utility/useDate.js'
+
+// const { arrBulan } = useDate()
 const percentagePendapatan = ref(82)
 </script>

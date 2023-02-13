@@ -43,6 +43,7 @@ body {
 .my-card {
   $bg:rgb(60,63,69);
   border-radius:10px;
+  overflow: hidden;
   &-dark {
     border-radius:10px;
     background: $bg;

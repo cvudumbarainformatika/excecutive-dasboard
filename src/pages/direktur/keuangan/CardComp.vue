@@ -19,7 +19,7 @@
         <app-gauge :value="percent" :height="150" :name="title" :color="boxIconColor" :title-color="boxIconColor" />
         <div :class="`text-${subtitleColor} f-12`"> {{ percent }}% Complete</div>
       </div>
-      <q-separator class="q-my-md bg-grey" />
+      <!-- <q-separator class="q-my-md bg-grey" />
       <div class="text-center">
         <div class="f-12">{{targetName}}</div>
         <div class="text-h6 "><span :class="`text-${subtitleColor}`">Rp. </span> <span>{{ target }}</span></div>
@@ -28,7 +28,7 @@
       <div class="text-center">
         <div class="f-12">{{realisasiName}}</div>
         <div class="text-h6 "><span :class="`text-${subtitleColor}`">Rp. </span> <span>{{ realisasi }}</span></div>
-      </div>
+      </div> -->
     </q-card-section>
   </q-card>
 </template>
@@ -95,6 +95,7 @@ defineProps({
 <style lang="scss" scoped>
 .my {
   overflow: hidden;
+  border-radius: 10px;
   .bayang{
     opacity: .05;
   }
