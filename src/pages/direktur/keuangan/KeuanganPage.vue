@@ -60,9 +60,9 @@
                     </q-item-section>
                     <q-item-section>
                       <q-item-label class="">Realisasi Pendapatan</q-item-label>
-                      <q-item-label caption lines="2" class="f-10">Realisasi Pendapatan tahun 2023</q-item-label>
+                      <q-item-label caption lines="2" class="f-10">Realisasi Pendapatan tahun {{ year }}</q-item-label>
                       <q-item-label class="text-weight-bold f-16 q-pt-sm">
-                        <span class="text-grey">Rp. </span> 100.000.000.000
+                        {{ formatRupiah(store.realisasiPendapatan) }}
                       </q-item-label>
                     </q-item-section>
                   </q-item>
@@ -183,6 +183,7 @@ import CardComp from './CardComp.vue'
 import CcCard from './CcCard.vue'
 import useDate from 'src/utility/useDate.js'
 import { useKeuanganStore } from 'src/stores/keuangan/index'
+import { formatRupiah } from 'src/utility/formatter'
 
 const { currentMonth, currentYear } = useDate()
 const percentagePendapatan = ref(82)
@@ -191,10 +192,11 @@ const month = ref(currentMonth())
 const year = ref(currentYear())
 
 const store = useKeuanganStore()
-console.log(store)
+console.log('store', store.realisasiPendapatan)
 
 onMounted(() => {
   const mYear = month.value + '-' + year.value
-  console.log(mYear)
+  // console.log(mYear)
+  store.getData(mYear)
 })
 </script>
