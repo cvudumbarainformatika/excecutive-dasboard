@@ -28,6 +28,9 @@ export const useKeuanganStore = defineStore('keuangan', {
             const data = resp.data
             const realisPend = data.penerimaan.length ? data.penerimaan[0].penerimaan : 0
             this.realisasiPendapatan = realisPend
+            this.targetPendapatan = data.targetPendapatan
+            this.anggaranBelanja = data.anggaranBelanja.length ? data.anggaranBelanja[0].anggaran : 0
+            this.realisasiBelanja = data.realisasiBelanja.length ? data.realisasiBelanja[0].realisasix : 0
           }
         })
     },

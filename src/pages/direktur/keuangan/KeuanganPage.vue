@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    <div class="row q-col-gutter-md">
+    <div class="row q-col-gutter-md" style="margin-bottom:100px">
       <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <div class="__judul text-h6">Data Keuangan</div>
         <div class="__sub_judul text-grey">Data Keuangan Per Tanggal</div>
@@ -23,7 +23,7 @@
 
             <div class="q-pt-md">
               <card-comp
-              :percent="90"
+              :percent="percentageBelanja"
               color="info"
               :target="1000000000"
               :realisasi="1000000000"
@@ -50,7 +50,7 @@
                       <q-item-label class="">Target Pendapatan</q-item-label>
                       <q-item-label caption lines="2" class="f-10 text-grey-8">Target Pendapatan tahun 2023</q-item-label>
                       <q-item-label class="text-weight-bold f-16 q-pt-sm">
-                        <span class="text-grey">Rp. </span> 100.000.000.000
+                         {{ formatRupiah(store.targetPendapatan) }}
                       </q-item-label>
                     </q-item-section>
                   </q-item>
@@ -82,9 +82,9 @@
                     </q-item-section>
                     <q-item-section>
                       <q-item-label class="">Anggaran Belanja</q-item-label>
-                      <q-item-label caption lines="2" class="f-10 text-grey-8">Anggaran Belanja tahun 2023</q-item-label>
+                      <q-item-label caption lines="2" class="f-10 text-grey-8">Anggaran Belanja tahun {{ year }}</q-item-label>
                       <q-item-label class="text-weight-bold f-16 q-pt-sm">
-                        <span class="text-grey">Rp. </span> 100.000.000.000
+                        {{ formatRupiah(store.anggaranBelanja) }}
                       </q-item-label>
                     </q-item-section>
                   </q-item>
@@ -95,9 +95,9 @@
                     </q-item-section>
                     <q-item-section>
                       <q-item-label class="">Realisasi Belanja</q-item-label>
-                      <q-item-label caption lines="2" class="f-10">Realisasi Belanja tahun 2023</q-item-label>
+                      <q-item-label caption lines="2" class="f-10">Realisasi Belanja tahun {{ year }}</q-item-label>
                       <q-item-label class="text-weight-bold f-16 q-pt-sm">
-                        <span class="text-grey">Rp. </span> 100.000.000.000
+                        {{ formatRupiah(store.realisasiBelanja) }}
                       </q-item-label>
                     </q-item-section>
                   </q-item>
@@ -180,24 +180,41 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted, computed } from 'vue'
 import CardComp from './CardComp.vue'
 import CcCard from './CcCard.vue'
-import useDate from 'src/utility/useDate.js'
+// import useDate from 'src/utility/useDate.js'
 import { useKeuanganStore } from 'src/stores/keuangan/index'
 import { formatRupiah } from 'src/utility/formatter'
+import { useAppStore } from 'src/stores/app'
 
-const { currentMonth, currentYear } = useDate()
-const percentagePendapatan = ref(82)
+// const { currentMonth, currentYear } = useDate()
+// const percentagePendapatan = ref(82)
 
-const month = ref(currentMonth())
-const year = ref(currentYear())
+const month = computed(() => app.currentMonth)
+const year = computed(() => app.currentYear)
+// const year = ref(currentYear())
 
 const store = useKeuanganStore()
-console.log('store', store.realisasiPendapatan)
+const app = useAppStore()
+// console.log('store', store.realisasiPendapatan)
+const percentagePendapatan = computed(() => {
+  const hitung = (store.realisasiPendapatan / store.targetPendapatan) * 100
+  const m = hitung.toFixed(0)
+  return parseInt(m)
+})
+const percentageBelanja = computed(() => {
+  const hitung = (store.realisasiBelanja / store.anggaranBelanja) * 100
+  const m = hitung.toFixed(0)
+  return parseInt(m)
+})
+
+function monthToString () {
+  return month.value <= 9 ? '0' + (month.value + 1) : (month.value + 1).toString()
+}
 
 onMounted(() => {
-  const mYear = month.value + '-' + year.value
+  const mYear = monthToString() + '-' + year.value
   // console.log(mYear)
   store.getData(mYear)
 })

@@ -1,9 +1,14 @@
 import { defineStore } from 'pinia'
+// import { date } from 'quasar'
 
 export const useAppStore = defineStore('app', {
   state: () => ({
     height: window.innerHeight,
-    width: window.innerWidth
+    width: window.innerWidth,
+    monts: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
+    currentDay: new Date().getDate(),
+    currentMonth: new Date().getMonth() + 1,
+    currentYear: new Date().getFullYear()
   }),
   getters: {
     txt140: (state) => state.width * 0.072916, // 140px
@@ -22,8 +27,11 @@ export const useAppStore = defineStore('app', {
     txtXs: (state) => state.width * 0.0052083 // 10px
   },
   actions: {
-    // increment () {
-    //   this.counter++
-    // }
+    setCurrentMonth (val) {
+      this.currentMonth = val
+    },
+    setCurrentYear (val) {
+      this.currentYear = val
+    }
   }
 })

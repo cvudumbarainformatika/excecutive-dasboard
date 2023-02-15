@@ -44,13 +44,37 @@
             <div class="_judul_page text-caption text-grey-5  ">UOBK RSUD MOHAMAD SALEH KOTA PROBOLINGGO</div>
           </div>
       </div>
+      <div class="absolute-bottom q-mb-lg" >
+          <!-- <q-separator class="bg-grey-8" /> -->
+          <div class="q-pa-md">
+            <q-card class="my-card text-dark">
+              <q-card-section>
+                <div class="row items-center justify-between">
+                  <q-btn @click="app.setCurrentYear(year - 1)" flat size="sm" round color="dark" icon="chevron_left" />
+                  <div class="text-weight-bold" >{{year}}</div>
+                  <q-btn @click="app.setCurrentYear(year + 1)" flat size="sm" round color="dark" icon="chevron_right" />
+                </div>
+              </q-card-section>
+              <q-separator />
+              <q-card-section>
+                <div class="row items-center q-col-gutter-md">
+                  <div v-for="(item, i) in bulans" :key="i" class="col-12 col-md-4 col-lg-4 col-xl-4 col-sm-4 col-xs-4">
+                    <!-- {{ month }} -->
+                    <q-btn @click="app.setCurrentMonth(i+1)" size="sm" class="glossy full-width" dense :color="(month-1) === i ? 'primary': 'dark'" :label="item.substring(0,3)" />
+                  </div>
+                </div>
+              </q-card-section>
+            </q-card>
+          </div>
+      </div>
     </q-drawer>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import useDate from 'src/utility/useDate.js'
 import { useRouter } from 'vue-router'
+import { useAppStore } from 'src/stores/app'
 
 const height = ref(110)
 const { dateDbFormat } = useDate()
@@ -58,11 +82,17 @@ const date = ref(dateDbFormat(new Date()))
 const menus = ref([
   { nama: 'Keuangan', url: '/keuangan', icon: 'dvr' },
   { nama: 'Kepegawaian', url: '/kepegawaian', icon: 'people' },
-  { nama: 'Layanan', url: '/layanan', icon: 'support_agent' }
+  { nama: 'Layanan', url: '/layanan', icon: 'support_agent' },
+  { nama: 'Sarpras', url: '/sarpras', icon: 'store' }
 ])
 
 // const active = ref('Keuangan')
+const month = computed(() => app.currentMonth)
+const year = computed(() => app.currentYear)
 const router = useRouter()
+const bulans = computed(() => app.monts)
+
+const app = useAppStore()
 // const dateOpen = ref(true)
 
 // function goTo (item) {
@@ -72,6 +102,11 @@ const router = useRouter()
 
 console.log(date)
 console.log(router)
+
+onMounted(() => {
+  // app.setCurrentMonth()
+  // app.setCurrentYear()
+})
 </script>
 
 <style lang="scss" scoped>

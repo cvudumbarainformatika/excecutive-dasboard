@@ -6,7 +6,7 @@
 
 <script setup>
 import * as echarts from 'echarts'
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import { colors } from 'quasar'
 // import dark from 'src/assets/themecharts/dark2.json'
 // import { useAppStore } from 'src/stores/app'
@@ -35,6 +35,8 @@ const props = defineProps({
     default: 'white'
   }
 })
+
+const newValue = computed(() => props.value === 0 ? 0 : parseInt(props.value))
 
 const opt = ref(
   {
@@ -97,7 +99,7 @@ const opt = ref(
         },
         data: [
           {
-            value: props.value
+            value: newValue
           }
         ]
       }
