@@ -26,7 +26,7 @@ export const useKeuanganStore = defineStore('keuangan', {
           console.log(resp)
           if (resp.status === 200) {
             const data = resp.data
-            const realisPend = data.reduce((x, y) => x + y.nilai, 0)
+            const realisPend = data.penerimaan.length ? data.penerimaan[0].penerimaan : 0
             this.realisasiPendapatan = realisPend
           }
         })

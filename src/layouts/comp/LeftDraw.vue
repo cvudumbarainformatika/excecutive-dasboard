@@ -24,11 +24,15 @@
           />
         </div> -->
         <q-list padding class="text-grey">
-          <q-item v-for="(item, i) in menus" :key="i" clickable v-ripple>
+          <q-item v-for="(item, i) in menus"
+            :to="item.url"
+            exact
+            :key="i" clickable v-ripple
+            >
             <q-item-section avatar>
-              <q-icon :color="item.nama === active?'primary':''" :name="item.icon" />
+              <q-icon class="__icon" :name="item.icon" />
             </q-item-section>
-            <q-item-section :class="item.nama === active?'text-white':''">{{item.nama}}</q-item-section>
+            <q-item-section class="__label" >{{item.nama}}</q-item-section>
           </q-item>
         </q-list>
 
@@ -46,19 +50,41 @@
 <script setup>
 import { ref } from 'vue'
 import useDate from 'src/utility/useDate.js'
+import { useRouter } from 'vue-router'
 
 const height = ref(110)
 const { dateDbFormat } = useDate()
 const date = ref(dateDbFormat(new Date()))
-
 const menus = ref([
-  { nama: 'Keuangan', icon: 'dvr' },
-  { nama: 'Kepegawaian', icon: 'people' },
-  { nama: 'Layanan', icon: 'support_agent' }
+  { nama: 'Keuangan', url: '/keuangan', icon: 'dvr' },
+  { nama: 'Kepegawaian', url: '/kepegawaian', icon: 'people' },
+  { nama: 'Layanan', url: '/layanan', icon: 'support_agent' }
 ])
 
-const active = ref('Keuangan')
+// const active = ref('Keuangan')
+const router = useRouter()
 // const dateOpen = ref(true)
 
+// function goTo (item) {
+//   active.value = item.nama
+//   router.push(item.url)
+// }
+
 console.log(date)
+console.log(router)
 </script>
+
+<style lang="scss" scoped>
+.url-active {
+  color:black;
+}
+
+.q-item.q-router-link--active, .q-item--active {
+  .__icon {
+    color:$primary
+  }
+  .__label {
+    color: white;
+  }
+}
+</style>

@@ -1,5 +1,6 @@
 <template>
-  <div class="row q-col-gutter-md">
+  <q-page padding>
+    <div class="row q-col-gutter-md">
       <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <div class="__judul text-h6">Data Keuangan</div>
         <div class="__sub_judul text-grey">Data Keuangan Per Tanggal</div>
@@ -174,7 +175,8 @@
 
         </q-card>
       </div>
-    </div>
+  </div>
+  </q-page>
 </template>
 
 <script setup>
