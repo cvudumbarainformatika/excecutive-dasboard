@@ -5,15 +5,23 @@ export const useKepegawaianStore = defineStore('kepegawaian', {
   state: () => ({
     kategoriPegawai: [],
     statusPegawai: [],
+    golonganPegawai: [],
     colorize: [
-      { id: 'PNS', color: 'info', txtColor: 'dark' },
-      { id: 'PTT', color: 'accent', txtColor: 'white' },
-      { id: 'PT', color: 'blue-4', txtColor: 'dark' },
-      { id: 'HonDa', color: 'light-green-10', txtColor: 'white' },
-      { id: 'CPNS', color: 'lime-10', txtColor: 'white' },
-      { id: 'MoU', color: 'primary', txtColor: 'white' },
-      { id: 'PPPK', color: 'blue-grey', txtColor: 'white' },
-      { id: 'ALL', color: 'dark', txtColor: 'white' }
+      { id: 'PNS', color: 'info', txtColor: 'dark', icon: 'diversity_3' },
+      { id: 'PTT', color: 'accent', txtColor: 'white', icon: 'groups_2' },
+      { id: 'PT', color: 'blue-4', txtColor: 'dark', icon: 'people' },
+      { id: 'HonDa', color: 'light-green-10', txtColor: 'white', icon: 'diversity_2' },
+      { id: 'CPNS', color: 'lime-10', txtColor: 'white', icon: 'diversity_3' },
+      { id: 'MoU', color: 'primary', txtColor: 'white', icon: 'transfer_within_a_station' },
+      { id: 'PPPK', color: 'blue-grey', txtColor: 'white', icon: 'diversity_3' },
+      { id: 'ALL', color: 'dark', txtColor: 'white', icon: 'people' }
+    ],
+
+    icons: [
+      { icon: 'medical_services', color: 'negative' },
+      { icon: 'local_pharmacy', color: 'negative' },
+      { icon: 'support_agent', color: 'indigo' },
+      { icon: 'medical_information', color: 'teal' }
     ],
 
     loading: false,
@@ -36,6 +44,7 @@ export const useKepegawaianStore = defineStore('kepegawaian', {
             const data = resp.data
             this.kategoriPegawai = data.kategori_pegawai.length ? data.kategori_pegawai : []
             this.statusPegawai = data.status_pegawai.length ? data.status_pegawai : []
+            this.golonganPegawai = data.golongan.length ? data.golongan : []
           }
         })
     },
