@@ -4,18 +4,35 @@
       <div class="absolute-bottom bayang">
         <q-icon :name="icon" size="200px" />
       </div>
+      <div class="q-pb-sm text-right">
+        <div class="f-18 text-weight-bold">{{txtShort}}</div>
+        <!-- <div class="f-14">{{ txt }}</div> -->
+      </div>
       <div class="row items-center justify-between">
         <q-avatar round size="60px" font-size="40px" :color="txtColor" :text-color="color" :icon="icon" />
         <div>
           <div class="text-h4 text-weight-bold">
             {{jumlah}}
           </div>
-          <div class="f-16 text-right">{{txtShort}}</div>
         </div>
       </div>
       <q-separator :class="`q-mt-md bg-${txtColor}`" />
-      <div class="f-14 q-pt-md text-right">
-          {{ txt }}
+
+        <div class="row items-center justify-between q-mt-md">
+          <div class="text-pink">
+            <div class="row items-center">
+              <q-icon name="woman" size="sm" />
+              <div class="text-weight-bold text-h5">{{jumlahP}}</div>
+            </div>
+            <div class="f-12">Perempuan</div>
+          </div>
+          <div class="text-cyan-12">
+            <div class="row items-center">
+              <q-icon name="man" size="sm" />
+              <div class="text-weight-bold text-h5">{{jumlahL}}</div>
+            </div>
+            <div class="f-12 text-right">Laki-laki</div>
+          </div>
         </div>
     </q-card-section>
   </q-card>
@@ -27,6 +44,14 @@ const { getPaletteColor } = colors
 
 defineProps({
   jumlah: {
+    type: Number,
+    default: 0
+  },
+  jumlahL: {
+    type: Number,
+    default: 0
+  },
+  jumlahP: {
     type: Number,
     default: 0
   },
@@ -61,7 +86,7 @@ $txt: v-bind(getPaletteColor(txtColor));
   background-color: $bg;
   color: $txt;
   .bayang {
-    opacity: .06;
+    opacity: .05;
   }
 }
 </style>
