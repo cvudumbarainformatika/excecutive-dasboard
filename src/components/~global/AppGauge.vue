@@ -36,7 +36,7 @@ const props = defineProps({
   }
 })
 
-const newValue = computed(() => props.value === 0 ? 0 : parseInt(props.value))
+const newValue = computed(() => isNaN(props.value) ? 0 : parseInt(props.value))
 
 const opt = ref(
   {

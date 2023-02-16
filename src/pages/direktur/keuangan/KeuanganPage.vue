@@ -3,11 +3,11 @@
     <div class="row q-col-gutter-md" style="margin-bottom:100px">
       <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <div class="__judul text-h6">Data Keuangan</div>
-        <div class="__sub_judul text-grey">Data Keuangan Per Tanggal</div>
+        <div class="__sub_judul text-grey">Data Keuangan Bulan {{ app.monts[month - 1] }} {{ year }}</div>
         <div class="row q-col-gutter-md q-pt-md">
           <div class="col-sm-12 col-xs-12 col-md-3 col-lg-3 col-xl-3">
             <card-comp
-              :percent="percentagePendapatan"
+              :percent="isNaN(percentagePendapatan)? 0: percentagePendapatan"
               :target="1000000000"
               :realisasi="1000000000"
               box-icon-color="secondary"
@@ -23,7 +23,7 @@
 
             <div class="q-pt-md">
               <card-comp
-              :percent="percentageBelanja"
+              :percent="isNaN(percentageBelanja)? 0: percentageBelanja"
               color="info"
               :target="1000000000"
               :realisasi="1000000000"
@@ -48,7 +48,7 @@
                     </q-item-section>
                     <q-item-section>
                       <q-item-label class="">Target Pendapatan</q-item-label>
-                      <q-item-label caption lines="2" class="f-10 text-grey-8">Target Pendapatan tahun 2023</q-item-label>
+                      <q-item-label caption lines="2" class="f-10 text-grey-8">Target Pendapatan tahun {{ year }}</q-item-label>
                       <q-item-label class="text-weight-bold f-16 q-pt-sm">
                          {{ formatRupiah(store.targetPendapatan) }}
                       </q-item-label>
@@ -103,7 +103,7 @@
                   </q-item>
                   <q-separator />
                   <q-item-section>
-                        <q-linear-progress color="info" size="9px" :value="percentagePendapatan/100" class="q-mt-lg" />
+                        <q-linear-progress color="info" size="9px" :value="percentageBelanja/100" class="q-mt-lg" />
                     </q-item-section>
                 </q-list>
               </q-card>
@@ -112,10 +112,10 @@
           <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
             <div class="">
               <div>Kas Bendahara Pengeluaran 💸</div>
-              <div class="text-h5 text-weight-bold">Rp 5.000.000</div>
+              <div class="text-h5 text-weight-bold">Rp 0</div>
             </div>
-            <cc-card class="q-mt-md" color1="purple" color2="purple-4" title="Kas Induk" periode="Februari 2023" :total="5000000000" />
-            <cc-card class="q-mt-md" title="Kas Bendahara Penerimaan" periode="Februari 2023" :total="5340040000" />
+            <cc-card class="q-mt-md" color1="purple" color2="purple-4" title="Kas Induk" :periode="app.monts[month - 1]+' '+ year" :total="0" />
+            <cc-card class="q-mt-md" title="Kas Bendahara Penerimaan" :periode="app.monts[month - 1]+' '+ year" :total="0" />
 
           </div>
         </div>
@@ -134,7 +134,7 @@
                     </q-item-section>
                     <q-item-section>
                       <q-item-label class="text-grey-8">Hutang Farmasi</q-item-label>
-                      <q-item-label class="text-weight-bold">Rp 5.000.000</q-item-label>
+                      <q-item-label class="text-weight-bold">Rp 0</q-item-label>
                     </q-item-section>
                   </q-item>
                   <q-item>
@@ -143,7 +143,7 @@
                     </q-item-section>
                     <q-item-section>
                       <q-item-label class="text-grey-8">Hutang Bank Darah</q-item-label>
-                      <q-item-label class="text-weight-bold">Rp 5.000.000</q-item-label>
+                      <q-item-label class="text-weight-bold">Rp 0</q-item-label>
                     </q-item-section>
                   </q-item>
                 </q-list>
@@ -156,7 +156,7 @@
                     </q-item-section>
                     <q-item-section>
                       <q-item-label class="text-grey-8">Hutang Lainnya</q-item-label>
-                      <q-item-label class="text-weight-bold">Rp 5.000.000</q-item-label>
+                      <q-item-label class="text-weight-bold">Rp 0</q-item-label>
                     </q-item-section>
                   </q-item>
                   <q-item>
@@ -165,7 +165,7 @@
                     </q-item-section>
                     <q-item-section>
                       <q-item-label class="text-grey-8">PIUTANG</q-item-label>
-                      <q-item-label class="text-weight-bold">Rp 5.000.000</q-item-label>
+                      <q-item-label class="text-weight-bold">Rp 0</q-item-label>
                     </q-item-section>
                   </q-item>
                 </q-list>
@@ -180,7 +180,7 @@
 </template>
 
 <script setup>
-import { onMounted, computed } from 'vue'
+import { onMounted, computed, watch } from 'vue'
 import CardComp from './CardComp.vue'
 import CcCard from './CcCard.vue'
 // import useDate from 'src/utility/useDate.js'
@@ -215,7 +215,18 @@ function monthToString () {
 
 onMounted(() => {
   const mYear = monthToString() + '-' + year.value
-  // console.log(mYear)
   store.getData(mYear)
 })
+
+watch([month, year], (newValue) => {
+  // console.log('watch', newValue)
+  trigerredWatch(newValue)
+})
+
+function trigerredWatch (val) {
+  console.log(val)
+  const m = val[0] <= 9 ? '0' + val[0] : (val[0]).toString()
+  const mYear = m + '-' + val[1]
+  store.getData(mYear)
+}
 </script>

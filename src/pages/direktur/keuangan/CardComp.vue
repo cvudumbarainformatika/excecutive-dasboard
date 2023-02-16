@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="text-center">
-        <app-gauge :key="percent" :value="percent" :height="150" :name="title" :color="boxIconColor" :title-color="boxIconColor" />
+        <app-gauge :key="percent" :value="isNaN(percent)?0:percent" :height="150" :name="title" :color="boxIconColor" :title-color="boxIconColor" />
         <div :class="`text-${subtitleColor} f-12`"> {{ percent }}% Complete</div>
       </div>
     </q-card-section>
