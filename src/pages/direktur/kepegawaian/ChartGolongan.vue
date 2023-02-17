@@ -57,6 +57,12 @@ const options = ref(
       padding: 0,
       itemGap: 0
     },
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: {
+        type: 'shadow'
+      }
+    },
     grid: {
       left: '5%',
       right: '3%',
