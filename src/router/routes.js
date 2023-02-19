@@ -7,7 +7,8 @@ const routes = [
       // { path: '', component: () => import('pages/direktur/IndexPage.vue') },
       { path: '', redirect: '/keuangan' },
       { path: '/keuangan', name: 'keuangan', component: () => import('pages/direktur/keuangan/KeuanganPage.vue') },
-      { path: '/kepegawaian', name: 'kepegawaian', component: () => import('pages/direktur/kepegawaian/KepegawaianPage.vue') }
+      { path: '/kepegawaian', name: 'kepegawaian', component: () => import('pages/direktur/kepegawaian/KepegawaianPage.vue') },
+      { path: '/layanan', name: 'layanan', component: () => import('pages/direktur/pelayanan/PelayananPage.vue') }
     ]
   },
 
