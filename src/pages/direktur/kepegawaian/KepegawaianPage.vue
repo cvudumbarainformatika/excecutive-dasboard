@@ -26,6 +26,9 @@
         </div>
 
         <div class="col-sm-12 col-xs-12 col-md-4 col-lg-4 col-xl-4">
+
+          <!-- kategori pegawai -->
+
           <q-card class="my-card">
             <q-list padding separator>
               <q-item-label header class="text-weight-bold text-dark">Kategori Pegawai</q-item-label>
@@ -38,7 +41,38 @@
                   <q-item-label class="text-grey-8 f-14">{{row.namakategoripeg}}</q-item-label>
                 </q-item-section>
                 <q-item-section side>
-                  <q-item-label class="text-weight-bold f-14 text-dark">{{ row.jumlah }}</q-item-label>
+                  <q-item-label class="text-weight-bold f-18 text-dark">{{ row.jumlah }}</q-item-label>
+                </q-item-section>
+              </q-item>
+            </q-list>
+          </q-card>
+
+          <!-- pegawai yg absen -->
+
+          <q-card class="my-card q-mt-md">
+            <q-list padding separator>
+              <q-item-label header class="text-weight-bold text-dark">Absensi Pegawai hari ini</q-item-label>
+              <q-separator />
+              <q-item>
+                <q-item-section avatar>
+                  <q-avatar rounded size="32px" font-size="26px" color="grey-2" text-color="primary" icon="perm_contact_calendar" />
+                </q-item-section>
+                <q-item-section>
+                  <q-item-label class="text-grey-8 f-14">Yang Masuk Hari ini</q-item-label>
+                </q-item-section>
+                <q-item-section side>
+                  <q-item-label class="text-weight-bold f-18 text-dark">{{ store.ygMasuk}}</q-item-label>
+                </q-item-section>
+              </q-item>
+              <q-item v-for="(cell, x) in store.flag" :key="x">
+                <q-item-section avatar>
+                  <q-avatar rounded size="32px" font-size="26px" color="grey-4" :text-color="cell.color" :icon="cell.icon" />
+                </q-item-section>
+                <q-item-section>
+                  <q-item-label class="text-grey-8 f-14">Hari ini {{cell.id}}</q-item-label>
+                </q-item-section>
+                <q-item-section side>
+                  <q-item-label class="text-weight-bold f-18 text-dark">{{ getIjin(cell.id) }}</q-item-label>
                 </q-item-section>
               </q-item>
             </q-list>
@@ -116,6 +150,12 @@ const data = computed(() => {
 
   return []
 })
+
+function getIjin (kat) {
+  const arr = store.ygIjin
+  const cek = arr.filter(x => x.flag === kat).length
+  return cek
+}
 
 onMounted(() => {
   store.getData()

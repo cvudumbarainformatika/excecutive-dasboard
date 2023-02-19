@@ -6,6 +6,8 @@ export const useKepegawaianStore = defineStore('kepegawaian', {
     kategoriPegawai: [],
     statusPegawai: [],
     golonganPegawai: [],
+    ygMasuk: 0,
+    ygIjin: [],
     colorize: [
       { id: 'PNS', color: 'info', txtColor: 'dark', icon: 'diversity_3' },
       { id: 'PTT', color: 'accent', txtColor: 'white', icon: 'groups_2' },
@@ -22,6 +24,13 @@ export const useKepegawaianStore = defineStore('kepegawaian', {
       { icon: 'local_pharmacy', color: 'negative' },
       { icon: 'support_agent', color: 'indigo' },
       { icon: 'medical_information', color: 'teal' }
+    ],
+
+    flag: [
+      { id: 'CUTI', color: 'negative', icon: 'person_3' },
+      { id: 'IJIN', color: 'negative', icon: 'person_add_disabled' },
+      { id: 'SAKIT', color: 'negative', icon: 'personal_injury' },
+      { id: 'DL', color: 'primary', icon: 'accessible' }
     ],
 
     loading: false,
@@ -45,6 +54,8 @@ export const useKepegawaianStore = defineStore('kepegawaian', {
             this.kategoriPegawai = data.kategori_pegawai.length ? data.kategori_pegawai : []
             this.statusPegawai = data.status_pegawai.length ? data.status_pegawai : []
             this.golonganPegawai = data.golongan.length ? data.golongan : []
+            this.ygMasuk = data.yg_absen.length
+            this.ygIjin = data.yg_libur.length ? data.yg_libur : []
           }
         })
     },
