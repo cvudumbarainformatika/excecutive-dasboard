@@ -44,6 +44,7 @@ export const useKepegawaianStore = defineStore('kepegawaian', {
   },
   actions: {
     async getData (payload) {
+      this.loading = true
       this.setParams(payload)
       const params = { params: this.params }
       await api.get('v1/dashboardexecutive/kepegawaian', params)
@@ -56,7 +57,10 @@ export const useKepegawaianStore = defineStore('kepegawaian', {
             this.golonganPegawai = data.golongan.length ? data.golongan : []
             this.ygMasuk = data.yg_absen.length
             this.ygIjin = data.yg_libur.length ? data.yg_libur : []
+
+            this.loading = false
           }
+          this.loading = false
         })
     },
 

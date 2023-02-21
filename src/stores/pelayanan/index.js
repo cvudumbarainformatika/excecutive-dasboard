@@ -12,6 +12,8 @@ export const usePelayananStore = defineStore('pelayanan', {
     poliHrIniBlm: 0,
     poliHrIniSdh: 0,
 
+    igd: 0,
+
     loading: false,
     params: {
       month: null,
@@ -24,6 +26,7 @@ export const usePelayananStore = defineStore('pelayanan', {
   actions: {
     async getData (payload) {
       // this.setParams(payload)
+      this.loading = true
       const params = { params: this.params }
       await api.get('v1/dashboardexecutive/pelayanan', params)
         .then(resp => {
@@ -40,7 +43,11 @@ export const usePelayananStore = defineStore('pelayanan', {
             this.poliHrIniBlm = resp.data.poli_hariinibelum ? resp.data.poli_hariinibelum.length : 0
             this.poliHrIniSdh = resp.data.poli_hariinisudah ? resp.data.poli_hariinisudah.length : 0
             this.poli = parseInt(this.poliHrIniBlm) + parseInt(this.poliHrIniSdh)
+            this.igd = resp.data.igd_harini.length
+            this.loading = false
           }
+
+          this.loading = false
         })
     },
 

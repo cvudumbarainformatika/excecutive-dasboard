@@ -1,6 +1,7 @@
 <template>
-  <q-page padding>
-    <div class="row q-col-gutter-md" style="margin-bottom:100px">
+  <q-page>
+    <app-loading v-if="store.loading" />
+    <div class="row q-col-gutter-md q-pa-lg" style="padding-bottom:100px">
       <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <div class="__judul text-h6">Data Keuangan</div>
         <div class="__sub_judul text-grey">Data Keuangan Bulan {{ app.monts[month - 1] }} {{ year }}</div>

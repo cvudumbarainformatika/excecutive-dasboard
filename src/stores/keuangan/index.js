@@ -19,6 +19,7 @@ export const useKeuanganStore = defineStore('keuangan', {
   },
   actions: {
     async getData (payload) {
+      this.loading = true
       this.setParams(payload)
       const params = { params: this.params }
       await api.get('v1/dashboardexecutive/pendapatan', params)
@@ -31,7 +32,10 @@ export const useKeuanganStore = defineStore('keuangan', {
             this.targetPendapatan = data.targetPendapatan
             this.anggaranBelanja = data.anggaranBelanja.length ? data.anggaranBelanja[0].anggaran : 0
             this.realisasiBelanja = data.realisasiBelanja.length ? data.realisasiBelanja[0].realisasix : 0
+            this.loading = false
           }
+
+          this.loading = false
         })
     },
 

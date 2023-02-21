@@ -1,6 +1,7 @@
 <template>
-  <q-page padding>
-    <div class="row q-col-gutter-md" style="margin-bottom:100px">
+  <q-page>
+    <app-loading v-if="store.loading" />
+    <div class="row q-col-gutter-md q-pa-lg" style="padding-bottom:100px">
       <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <div class="__judul text-h6">Data Layanan</div>
         <div class="__sub_judul f-14 text-grey">Data Layanan Per tanggal {{ app.currentDay }} {{ app.monts[month - 1] }} {{ year }}</div>
@@ -29,7 +30,38 @@
               :jumlah-terisi="store.poliHrIniBlm"
               :jumlah-tersedia="store.poliHrIniSdh"/>
           </div>
+          <div class="col-sm-6 col-xs-6 col-md-4 col-lg-4 col-xl-4">
+            <q-card class="my-card">
+              <q-card-section>
+                <div class="text-center q-pt-md">
+                  <q-icon name="local_hospital" color="negative" size="98px"></q-icon>
+                  <div class="text-h2 text-weight-bold text-negative q-pa-md">{{store.igd}}</div>
+                  <div class="f-14 q-pb-sm">Jumlah Pasien sedang di IGD</div>
+                </div>
+              </q-card-section>
+            </q-card>
+          </div>
 
+          <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6 col-xl-6">
+            <q-card class="my-card">
+              <q-card-section>
+                <div class="row items-center justify-between">
+                  <div>Jumlah Pasien Rawat Inap tahun 2023</div>
+                  <div class="text-right text-weight-bold text-h3">400</div>
+                </div>
+              </q-card-section>
+            </q-card>
+          </div>
+          <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6 col-xl-6">
+            <q-card class="my-card">
+              <q-card-section>
+                <div class="row items-center justify-between">
+                  <div>Jumlah Pasien Rawat Jalan tahun 2023</div>
+                  <div class="text-right text-weight-bold text-h3">400</div>
+                </div>
+              </q-card-section>
+            </q-card>
+          </div>
         </div>
       </div>
     </div>
