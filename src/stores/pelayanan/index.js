@@ -8,6 +8,10 @@ export const usePelayananStore = defineStore('pelayanan', {
     tempatTidurTersedia: 0,
     tempatTidurTerisi: 0,
 
+    poli: 0,
+    poliHrIniBlm: 0,
+    poliHrIniSdh: 0,
+
     loading: false,
     params: {
       month: null,
@@ -26,11 +30,16 @@ export const usePelayananStore = defineStore('pelayanan', {
           console.log('pelayanan :', resp)
           if (resp.status === 200) {
             // ...
-            const data = resp.data
+            const data = resp.data.tempat_tidur
             this.items = data.length > 0 ? data : []
             this.tempatTidur = data.length > 0 ? data.map(x => x.total).reduce((x, y) => x + y, 0) : 0
             this.tempatTidurTersedia = data.length > 0 ? data.map(x => parseInt(x.sisa)).reduce((x, y) => x + y, 0) : 0
             this.tempatTidurTerisi = data.length > 0 ? data.map(x => parseInt(x.terisi)).reduce((x, y) => x + y, 0) : 0
+
+            // const poliHrIniBlm = resp.data.poli_harinibelum
+            this.poliHrIniBlm = resp.data.poli_hariinibelum ? resp.data.poli_hariinibelum.length : 0
+            this.poliHrIniSdh = resp.data.poli_hariinisudah ? resp.data.poli_hariinisudah.length : 0
+            this.poli = parseInt(this.poliHrIniBlm) + parseInt(this.poliHrIniSdh)
           }
         })
     },

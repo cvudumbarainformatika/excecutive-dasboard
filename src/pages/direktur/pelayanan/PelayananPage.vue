@@ -9,9 +9,25 @@
       <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-12">
         <div class="row q-col-gutter-md">
           <div class="col-sm-6 col-xs-6 col-md-4 col-lg-4 col-xl-4">
-            <q-card class="my-card">
-              <card-layanan deskripsi="Jumlah Tempat Tidur" icon="king_bed" :jumlah="store.tempatTidur" :jumlah-terisi="store.tempatTidurTerisi" :jumlah-tersedia="store.tempatTidurTersedia"/>
-            </q-card>
+            <card-layanan
+              deskripsi="Jumlah Tempat Tidur"
+              icon="king_bed"
+              :jumlah="store.tempatTidur"
+              :jumlah-terisi="store.tempatTidurTerisi"
+              :jumlah-tersedia="store.tempatTidurTersedia"/>
+          </div>
+          <div class="col-sm-6 col-xs-6 col-md-4 col-lg-4 col-xl-4">
+            <card-layanan
+              deskripsi="Jumlah Pasien Poli"
+              txt1="Belum Terlayani"
+              txt2="Terlayani"
+              icon="personal_injury"
+              icon1="hourglass_bottom"
+              icon2="done_all"
+              color="primary"
+              :jumlah="store.poli"
+              :jumlah-terisi="store.poliHrIniBlm"
+              :jumlah-tersedia="store.poliHrIniSdh"/>
           </div>
 
         </div>
