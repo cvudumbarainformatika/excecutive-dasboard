@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import { api } from 'src/boot/axios'
+import { date } from 'quasar'
 
 export const usePelayananStore = defineStore('pelayanan', {
   state: () => ({
@@ -16,8 +17,10 @@ export const usePelayananStore = defineStore('pelayanan', {
 
     loading: false,
     params: {
+      d: date.formatDate(new Date(), 'DD'),
       month: null,
-      year: null
+      year: null,
+      tgl: null
     }
   }),
   getters: {
@@ -25,9 +28,10 @@ export const usePelayananStore = defineStore('pelayanan', {
   },
   actions: {
     async getData (payload) {
-      // this.setParams(payload)
       this.loading = true
+      this.setParams(payload)
       const params = { params: this.params }
+      console.log(params)
       await api.get('v1/dashboardexecutive/pelayanan', params)
         .then(resp => {
           console.log('pelayanan :', resp)
@@ -48,7 +52,20 @@ export const usePelayananStore = defineStore('pelayanan', {
           }
 
           this.loading = false
+        }).catch(e => {
+          this.loading = false
         })
+    },
+
+    setParams (payload) {
+      if (payload) {
+        const myArray = payload.split('-')
+
+        this.params.tgl = myArray[1] + '-' + myArray[0] + '-' + myArray[2]
+        this.params.month = myArray[0]
+        this.params.year = myArray[1]
+        this.d = myArray[2]
+      }
     },
 
     countData (data, jns) {

@@ -1,12 +1,12 @@
 import { defineStore } from 'pinia'
-// import { date } from 'quasar'
+import { date } from 'quasar'
 
 export const useAppStore = defineStore('app', {
   state: () => ({
     height: window.innerHeight,
     width: window.innerWidth,
     monts: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
-    currentDay: new Date().getDate(),
+    currentDay: date.formatDate(new Date(), 'DD'),
     currentMonth: new Date().getMonth() + 1,
     currentYear: new Date().getFullYear()
   }),

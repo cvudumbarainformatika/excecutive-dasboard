@@ -211,7 +211,7 @@ const percentageBelanja = computed(() => {
 })
 
 function monthToString () {
-  return month.value <= 9 ? '0' + (month.value + 1) : (month.value + 1).toString()
+  return month.value <= 9 ? '0' + (month.value) : (month.value).toString()
 }
 
 onMounted(() => {

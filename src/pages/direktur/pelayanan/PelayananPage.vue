@@ -47,7 +47,7 @@
               <q-card-section>
                 <div class="row items-center justify-between">
                   <div>Jumlah Pasien Rawat Inap tahun 2023</div>
-                  <div class="text-right text-weight-bold text-h3">400</div>
+                  <div class="text-right text-weight-bold text-h4">400</div>
                 </div>
               </q-card-section>
             </q-card>
@@ -57,7 +57,7 @@
               <q-card-section>
                 <div class="row items-center justify-between">
                   <div>Jumlah Pasien Rawat Jalan tahun 2023</div>
-                  <div class="text-right text-weight-bold text-h3">400</div>
+                  <div class="text-right text-weight-bold text-h4">400</div>
                 </div>
               </q-card-section>
             </q-card>
@@ -79,9 +79,16 @@ const store = usePelayananStore()
 const app = useAppStore()
 const month = computed(() => app.currentMonth)
 const year = computed(() => app.currentYear)
+const d = computed(() => app.currentDay)
 
 onMounted(() => {
-  store.getData()
+  monthToString()
 })
-// console.log('pelayanan')
+
+function monthToString () {
+  const m = month.value <= 9 ? '0' + (month.value) : (month.value).toString()
+  const mYear = m + '-' + year.value + '-' + d.value
+  store.getData(mYear)
+}
+// console.log('pelayanan', d.value)
 </script>
