@@ -12,6 +12,10 @@ export const usePelayananStore = defineStore('pelayanan', {
     poli: 0,
     poliHrIniBlm: 0,
     poliHrIniSdh: 0,
+    masterPoli: [],
+
+    poliTahun: [],
+    ranapTahun: [],
 
     igd: 0,
 
@@ -48,6 +52,11 @@ export const usePelayananStore = defineStore('pelayanan', {
             this.poliHrIniSdh = resp.data.poli_hariinisudah ? resp.data.poli_hariinisudah.length : 0
             this.poli = parseInt(this.poliHrIniBlm) + parseInt(this.poliHrIniSdh)
             this.igd = resp.data.igd_harini.length
+
+            this.poliTahun = resp.data.poli_tahun
+            this.ranapTahun = resp.data.ranap_tahun
+
+            this.masterPoli = resp.data.poli
             this.loading = false
           }
 

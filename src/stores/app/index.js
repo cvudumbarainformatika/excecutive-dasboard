@@ -6,6 +6,7 @@ export const useAppStore = defineStore('app', {
     height: window.innerHeight,
     width: window.innerWidth,
     monts: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
+    mm: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'],
     currentDay: date.formatDate(new Date(), 'DD'),
     currentMonth: new Date().getMonth() + 1,
     currentYear: new Date().getFullYear()
