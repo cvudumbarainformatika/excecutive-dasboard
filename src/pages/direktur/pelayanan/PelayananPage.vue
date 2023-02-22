@@ -55,7 +55,7 @@
             />
           </div>
 
-          <div class="col-sm-6 col-xs-6 col-md-4 col-lg-4 col-xl-4">
+          <!-- <div class="col-sm-6 col-xs-6 col-md-4 col-lg-4 col-xl-4">
             <q-card class="my-card">
               <q-card-section>
                 <div class="text-center q-pt-md">
@@ -65,20 +65,24 @@
                 </div>
               </q-card-section>
             </q-card>
-          </div>
-
-          <div class="col-sm-6 col-xs-6 col-md-4 col-lg-4 col-xl-4">
+          </div> -->
+          <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-12">
             <q-card class="my-card">
-              <q-card-section>
-                <div class="text-center q-pt-md">
-                  <q-icon name="local_hospital" color="negative" size="98px"></q-icon>
-                  <div class="text-h2 text-weight-bold text-negative q-pa-md">{{store.igd}}</div>
-                  <div class="f-14 q-pb-sm">Jumlah Pasien sedang di IGD</div>
+              <div class="q-pa-md">
+                <div class="q-pb-md">{{ `Data Pasien Berdasarkan Poli tgl ( ${app.currentDay} ${app.mm[month - 1]} ${ year } )` }}</div>
+                <div class="grid">
+                  <div class="item" v-for="(item, i) in store.masterPoli" :key="i">
+                    <div class="column flex-center text-center full-height">
+                      <div class="text-h4 q-pa-sm text-grey-9">{{cariJumlahPoli(item.rs1)}}</div>
+                      <!-- <div class="separator"></div> -->
+                      <div class="q-pa-xs">{{item.rs2}}</div>
+                    </div>
+                  </div>
                 </div>
-              </q-card-section>
+              </div>
             </q-card>
-          </div>
 
+          </div>
         </div>
       </div>
     </div>
@@ -126,9 +130,72 @@ function monthToString () {
   store.getData(mYear)
 }
 
+function cariJumlahPoli (kode) {
+  const arr = store.dataPoliHrIniSdh
+  return arr.filter(x => x.rs8 === kode).length
+}
+
 watch([month, year], (newValue) => {
   console.log('watch', newValue)
   monthToString()
 })
 // console.log('pelayanan', d.value)
+
 </script>
+
+<style lang="scss" scoped>
+.separator {
+  height: 1px;
+  width: 100%;
+  background-color: black;
+  opacity: .5;
+}
+.grid {
+  columns: 12rem;
+  gap: .5rem;
+  counter-reset: grid;
+}
+
+.item + .item {
+  margin-top: .5rem;
+}
+
+.item {
+  break-inside: avoid;
+  aspect-ratio: 16 / 9;
+  background: $cyan-2;
+  // padding: .5rem;
+  border-radius: 0.5rem;
+}
+
+.item::before {
+  counter-increment: grid;
+  // content: counter(grid);
+}
+
+.item:nth-child(3n) {
+  aspect-ratio: 16 / 9;
+  background: $pink-2;
+}
+
+.item:nth-child(3n - 1) {
+  aspect-ratio: 12 / 9;
+  background: $lime-2;
+}
+
+// INI RAPI
+// .item:nth-child(3n) {
+//   aspect-ratio: 16 / 9;
+//   background: lavender;
+// }
+
+// .item:nth-child(3n - 1) {
+//   aspect-ratio: 4 / 3;
+//   background: lightblue;
+// }
+
+// .item:nth-child(3n - 2) {
+//   aspect-ratio: 4 / 3;
+//   background: blue;
+// }
+</style>
