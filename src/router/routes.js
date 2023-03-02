@@ -13,6 +13,15 @@ const routes = [
       { path: '/sarpras', name: 'sarpras', component: () => import('pages/direktur/sarpras/SarprasPage.vue') }
     ]
   },
+  {
+    path: '/anjungan',
+    component: () => import('layouts/AnjunganLayout.vue'),
+    children: [
+      // { path: '', component: () => import('pages/direktur/IndexPage.vue') },
+      { path: '', redirect: '/anjungan/rsud' },
+      { path: '/anjungan/rsud', name: 'anjungan.rsud', component: () => import('pages/anjungan/IndexPage.vue') }
+    ]
+  },
 
   // Always leave this as last one,
   // but you can also remove it
