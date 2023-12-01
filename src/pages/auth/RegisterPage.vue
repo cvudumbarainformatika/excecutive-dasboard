@@ -2,7 +2,12 @@
   <q-page class="column bg-white">
 
     <app-loadingxenter v-if="app.loading" />
-    <ResultPencarian />
+    <ResultPencarian v-if="!app.loading && store.result !== null" :resp="store.result" @keluar="store.setResultNull" />
+    <AppErrorXenter v-if="!app.loading && store.error !== null"
+      :msg="store.error"
+      :status="store.status"
+      @ok="store.setErrorNull"
+    />
     <div class="q-pa-lg">
       <div class="f-12 text-weight-bold">Cari Data Kepegawaian</div>
       <div class="q-mt-lg row">
@@ -33,10 +38,19 @@
       <div class="q-mt-lg">
         <div class="q-pa-md">
           <q-input placeholder="Masukkan Nik Anda" dense outlined
-            v-model="search"
+            v-model="store.search"
             standout="bg-yellow-3"
             color="primary"
-          ></q-input>
+            :error="!isValid"
+            hint="Masukkan NIK Anda"
+            bottom-slots
+            lazy-rules="ondemand"
+            @update:model-value="(val)=> cekValid(val)"
+          >
+          <template v-slot:error>
+            <div class="f-10" style="margin-top:-5px;">Harap diisi.</div>
+          </template>
+        </q-input>
         </div>
       </div>
     </div>
@@ -50,22 +64,38 @@
 </template>
 
 <script setup>
+// import { api } from 'src/boot/axios'
 import ResultPencarian from '../xenter/register/ResultPencarian.vue'
 import { useXenterAppStore } from 'src/stores/xenter'
+import { useRegisterXenter } from 'src/stores/xenter/auth/register'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
-const search = ref('')
+const isValid = ref(true)
 
 const app = useXenterAppStore()
+const store = useRegisterXenter()
 
-function backToLogin () {
-  router.push({ path: '/login' })
+function cekValid (val) {
+  if (val <= 1) {
+    isValid.value = false
+  } else {
+    isValid.value = true
+  }
 }
 
-function cariData () {
-  app.setLoading()
+function backToLogin () {
+  router.replace({ path: '/auth' })
+}
+
+async function cariData () {
+  if (store.search.length < 1) {
+    isValid.value = false
+    return false
+  }
+
+  store.cariData()
 }
 
 function getImage () {

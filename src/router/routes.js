@@ -27,28 +27,37 @@ const routes = [
   {
     path: '/',
     component: () => import('layouts/XenterLayout.vue'),
+    meta: { requireAuth: true },
     children: [
-      { path: '', redirect: '/login' },
+      { path: '', redirect: '/main' },
+      { path: '/main', name: 'main', component: () => import('pages/xenter/main/MainPage.vue') }
+    ]
+  },
+
+  {
+    path: '/auth',
+    component: () => import('layouts/XenterLayout.vue'),
+    meta: { requireAuth: false },
+    children: [
+      { path: '', redirect: '/auth/login' },
       {
-        path: '/login',
+        path: '/auth/login',
         name: 'login',
         component: () => import('pages/auth/LoginPage.vue'),
-        meta: {
-          page: 1
-        }
+        meta: { page: 1 }
       },
       {
-        path: '/register',
+        path: '/auth/register',
         name: 'register',
         component: () => import('pages/auth/RegisterPage.vue'),
-        meta: {
-          page: 2
-        }
+        meta: { page: 2 }
+      },
+      {
+        path: '/auth/input-password',
+        name: 'input-password',
+        component: () => import('pages/auth/InputPassword.vue'),
+        meta: { page: 3 }
       }
-      // { path: '/keuangan', name: 'keuangan', component: () => import('pages/direktur/keuangan/KeuanganPage.vue') },
-      // { path: '/kepegawaian', name: 'kepegawaian', component: () => import('pages/direktur/kepegawaian/KepegawaianPage.vue') },
-      // { path: '/layanan', name: 'layanan', component: () => import('pages/direktur/pelayanan/PelayananPage.vue') },
-      // { path: '/sarpras', name: 'sarpras', component: () => import('pages/direktur/sarpras/SarprasPage.vue') }
     ]
   },
 

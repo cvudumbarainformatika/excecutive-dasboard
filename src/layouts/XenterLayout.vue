@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lff">
 
-    <q-page-container  class="bg-primary">
+    <q-page-container  class="bg-white">
       <router-view
           v-slot="{ Component }"
           class="transition"

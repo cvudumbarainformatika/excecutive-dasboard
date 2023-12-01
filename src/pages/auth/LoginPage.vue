@@ -5,7 +5,7 @@
         <img :src="getLogo()" style="width:50px; transform:scaleY(1.5) ;" />
         <div class="q-mt-lg text-center  text-white">
           <div class="f-20 q-mb-sm">XENTER</div>
-          <div class="f-12">UOBK RSUD MOHAMAD SALEH</div>
+          <div class="f-10" style="transform:scaleY(1.5);">UOBK RSUD MOHAMAD SALEH</div>
         </div>
       </div>
     </div>
@@ -21,7 +21,7 @@
               <q-icon name="eva-eye-outline" :class="focused? 'text-primary': ''" />
             </template>
           </q-input>
-          <q-input v-model="password" outlined standout="bg-yellow-3" dense class="full-width" @focus="focused = true" @blur="focused=false" placeholder="Username" :rules="[val => !!val || 'Harap diisi']">
+          <q-input v-model="password" outlined standout="bg-yellow-3" dense class="full-width" @focus="focused = true" @blur="focused=false" placeholder="Password" type="password" :rules="[val => !!val || 'Harap diisi']">
             <template v-slot:prepend>
               <q-icon class="f-14" name="key" :class="focused? 'text-primary': ''" />
             </template>
@@ -32,7 +32,7 @@
           </div>
         </q-form>
 
-        <div class="q-mt-lg f-12">
+        <div class="q-mt-lg f-10">
             Belum Register ? <q-btn dense class="q-pa-none" flat color="primary" no-caps @click="keRegister">Register disini</q-btn>
           </div>
       </div>
@@ -57,7 +57,7 @@ function getLogo () {
 const keRegister = () => {
   console.log('lll', router)
   // route
-  router.push({ path: '/register' })
+  router.push({ path: '/auth/register' })
 }
 </script>
 

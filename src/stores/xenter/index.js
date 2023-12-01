@@ -8,8 +8,8 @@ export const useXenterAppStore = defineStore('xenter-app', {
     doubleCount: (state) => state.counter * 2
   },
   actions: {
-    setLoading () {
-      this.loading = !this.loading
+    setLoading (val) {
+      this.loading = val
     }
   }
 })

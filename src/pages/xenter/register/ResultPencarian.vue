@@ -12,12 +12,15 @@
     <div class="tempat-tulisan column text-center relative-position">
         <div class="f-12" style="margin-top:70px">
 
-          <div class="text-weight-bold">NAMA ORANGNYA</div>
-          <div class="f-12 q-py-sm">Nip : </div>
-          <div>Status Register</div>
+          <div class="text-weight-bold">{{ resp?.nama }}</div>
+          <div class="f-12 q-py-sm">NIK : {{ resp?.nik }}</div>
+          <div :class="resp?.account_pass === ''? 'text-negative': 'text-primary'">{{resp?.account_pass === ''? 'ANDA BELUM REGISTRASI' : 'ANDA SUDAH TER REGISTRASI'}}</div>
         </div>
         <div class="absolute-bottom">
-          <q-btn color="primary" class="full-width" square>OK</q-btn>
+          <div class="row">
+            <q-btn color="dark" class="col full-width" square @click="keluar">Keluar</q-btn>
+            <q-btn color="primary" class="col full-width" square @click="lanjutkan">Lanjut</q-btn>
+          </div>
         </div>
     </div>
 
@@ -25,9 +28,30 @@
 </template>
 
 <script setup>
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+defineProps({
+  resp: {
+    type: Object,
+    default: null
+  }
+})
+
+const emits = defineEmits(['keluar'])
 
 function getImage () {
   return new URL('../../../assets/images/user-man.svg', import.meta.url).href
+}
+
+function lanjutkan () {
+  // console.log(router)
+  router.push({ path: '/input-password' })
+}
+
+function keluar () {
+  emits('keluar')
 }
 </script>
 
