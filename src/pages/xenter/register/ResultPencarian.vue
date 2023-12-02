@@ -47,7 +47,7 @@ function getImage () {
 
 function lanjutkan () {
   // console.log(router)
-  router.push({ path: '/input-password' })
+  router.push({ path: '/auth/input-password' })
 }
 
 function keluar () {

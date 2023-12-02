@@ -4,7 +4,7 @@ import { useXenterAppStore } from '..'
 
 export const useRegisterXenter = defineStore('register-xenter', {
   state: () => ({
-    search: null,
+    search: '',
     result: null,
     error: null,
     status: 'error',

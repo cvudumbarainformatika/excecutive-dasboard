@@ -1,5 +1,11 @@
 <template>
   <q-page class="column full-height bg-white cutter">
+    <app-loadingxenter v-if="app.loading" />
+    <AppErrorXenter v-if="!app.loading && app.error !== null"
+      :msg="app.error"
+      :status="app.status"
+      @ok="app.setError(null)"
+    />
     <div class="col bg-primary relative-position col-atas">
       <div class="column full-height full-width flex-center absolute">
         <img :src="getLogo()" style="width:50px; transform:scaleY(1.5) ;" />
@@ -12,7 +18,7 @@
     <div class="col full-height full-width relative-position">
       <div class="column full-height full-width flex-center absolute">
         <div class="f-10 text-weight-bold q-mb-lg text-primary">Login Xenter</div>
-        <q-form class="full-width" style="padding: 0 40px 0 40px">
+        <q-form @submit="onSubmit" class="full-width" style="padding: 0 40px 0 40px">
           <q-input v-model="username" outlined standout="bg-yellow-3" dense class="full-width q-mb-xs" @focus="focused = true" @blur="focused=false" placeholder="Username" :rules="[val => !!val || 'Harap diisi']" hide-bottom-space >
             <template v-slot:prepend>
               <q-icon class="f-14" name="person" :class="focused? 'text-primary': ''" />
@@ -28,7 +34,7 @@
           </q-input>
 
           <div class="mt-lg">
-            <q-btn label="Login" no-caps class="full-width bg-primary text-white" rounded uneleveted></q-btn>
+            <q-btn label="Login" no-caps class="full-width bg-primary text-white" rounded uneleveted type="submit"></q-btn>
           </div>
         </q-form>
 
@@ -43,8 +49,12 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+import { useLoginXenterStore } from 'src/stores/xenter/auth/login'
+import { useXenterAppStore } from 'src/stores/xenter'
 
 const router = useRouter()
+const store = useLoginXenterStore()
+const app = useXenterAppStore()
 
 const focused = ref(false)
 const username = ref('')
@@ -54,8 +64,24 @@ function getLogo () {
   return new URL('../../assets/images/logo-rsud.png', import.meta.url).href
 }
 
+function onSubmit () {
+  // console.log('ok', store)
+  const form = {
+    username: username.value,
+    email: username.value + '@app.com',
+    password: password.value,
+    device: 'ios'
+  }
+  store.login(form)
+    .then(() => {
+      setTimeout(() => {
+        router.replace({ path: '/' })
+      }, 500)
+    })
+}
+
 const keRegister = () => {
-  console.log('lll', router)
+  // console.log('lll', router)
   // route
   router.push({ path: '/auth/register' })
 }

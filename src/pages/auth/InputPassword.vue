@@ -48,7 +48,7 @@
     <div class="absolute-bottom">
       <div class="row">
         <q-btn class="col fullwidth" color="dark" square @click="backToLogin"><div class="f-12">Kembali Ke Login</div></q-btn>
-        <q-btn class="col fullwidth" color="primary" square @click="register"><div class="f-12">Simpan</div></q-btn>
+        <q-btn class="col fullwidth" color="primary" square @click="register"><div class="f-12">Register</div></q-btn>
       </div>
     </div>
   </q-page>
@@ -66,7 +66,7 @@ const store = useRegisterXenter()
 
 const app = useXenterAppStore()
 onMounted(() => {
-  if (store.result === null) {
+  if (store.result === null || store.result?.account_pass !== '' || store.result?.account_pass !== null) {
     backToLogin()
   }
 })

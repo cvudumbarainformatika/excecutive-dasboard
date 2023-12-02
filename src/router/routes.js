@@ -30,7 +30,8 @@ const routes = [
     meta: { requireAuth: true },
     children: [
       { path: '', redirect: '/main' },
-      { path: '/main', name: 'main', component: () => import('pages/xenter/main/MainPage.vue') }
+      { path: '/main', name: 'main', component: () => import('pages/xenter/main/MainPage.vue'), meta: { page: 4 } },
+      { path: '/scan-barcode', name: 'scan-barcode', component: () => import('pages/xenter/scan/ScanBarcodePage.vue'), meta: { page: 5 } }
     ]
   },
 
