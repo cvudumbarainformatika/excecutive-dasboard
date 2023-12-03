@@ -150,12 +150,16 @@ module.exports = configure(function (/* ctx */) {
       injectPwaMetaTags: true,
       swFilename: 'sw.js',
       manifestFilename: 'manifest.json',
-      useCredentialsForManifestTag: false
+      useCredentialsForManifestTag: false,
       // useFilenameHashes: true,
       // extendGenerateSWOptions (cfg) {}
       // extendInjectManifestOptions (cfg) {},
       // extendManifestJson (json) {}
       // extendPWACustomSWConf (esbuildConf) {}
+      workboxOptions: {
+        skipWaiting: true,
+        clientsClaim: true
+      }
     },
 
     // Full list of options: https://v2.quasar.dev/quasar-cli/developing-cordova-apps/configuring-cordova
@@ -193,7 +197,8 @@ module.exports = configure(function (/* ctx */) {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: 'excecutive-dasboard'
+        // appId: 'excecutive-dasboard'
+        appId: 'xenter'
       }
     },
 

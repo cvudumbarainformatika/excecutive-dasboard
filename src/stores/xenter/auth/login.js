@@ -22,6 +22,11 @@ export const useLoginXenterStore = defineStore('login-xenter', {
           storage.setUser(resp?.data?.user)
           storage.setLocalToken(resp?.data?.token)
 
+          setTimeout(() => {
+            this.user = storage.getUser()
+            this.token = storage.getLocalToken()
+          }, 300)
+
           return new Promise((resolve, reject) => {
             app.setError(null)
             app.setLoading(false)

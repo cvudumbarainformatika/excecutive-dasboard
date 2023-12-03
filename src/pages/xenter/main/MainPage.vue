@@ -8,7 +8,7 @@
     />
     <!-- head -->
     <div class="col-auto">
-      <header-main :user="user" />
+      <header-main :user="user?.pegawai" />
     </div>
     <!-- content -->
     <div class="col full-height relative-position">
@@ -29,7 +29,7 @@
 <script setup>
 import { useLoginXenterStore } from 'src/stores/xenter/auth/login'
 import HeaderMain from './HeaderMain.vue'
-import { computed } from 'vue'
+import { computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useXenterAppStore } from 'src/stores/xenter'
 
@@ -39,9 +39,9 @@ const user = computed(() => {
   return auth?.user
 })
 const router = useRouter()
-// onMounted(() => {
-//   user.value = auth.user
-// })
+onMounted(() => {
+  console.log('user', user.value)
+})
 
 function toScan () {
   router.push({ path: '/scan-barcode' })

@@ -2,9 +2,10 @@
   <div class="row justify-between items-center bg-primary text-white q-px-sm q-py-sm">
     <div class="kanan">
       <div class="row items-center">
-        <q-avatar size="32px" color="white">
+        <!-- <q-avatar size="32px" color="white">
           <img src="https://cdn.quasar.dev/img/avatar.png">
-        </q-avatar>
+        </q-avatar> -->
+        <app-avatar :user="user" width="32px"></app-avatar>
         <div class="column q-ml-sm">
           <div class="f-10">Selamat Datang, 👋</div>
           <div class="f-12">{{user?.nama}}</div>
