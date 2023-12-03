@@ -1,8 +1,8 @@
 {
-  "name": "excecutive-dasboard",
+  "name": "xenter",
   "version": "0.0.1",
-  "description": "Executive Dashboard UOBK RSUD MOH SALEH",
-  "productName": "Executive Dashboard",
+  "description": "Xenter UOBK RSUD MOH SALEH",
+  "productName": "Xenter",
   "author": "cvudumbarainformatika <cvudumbarainformatika@gmail.com>",
   "private": true,
   "scripts": {
