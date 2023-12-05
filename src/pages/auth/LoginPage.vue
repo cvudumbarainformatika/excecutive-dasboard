@@ -23,13 +23,15 @@
             <template v-slot:prepend>
               <q-icon class="f-14" name="person" :class="focused? 'text-primary': ''" />
             </template>
-            <template v-slot:append>
-              <q-icon name="eva-eye-outline" :class="focused? 'text-primary': ''" />
-            </template>
+
           </q-input>
-          <q-input v-model="password" outlined standout="bg-yellow-3" dense class="full-width" @focus="focused = true" @blur="focused=false" placeholder="Password" type="password" :rules="[val => !!val || 'Harap diisi']">
+          <q-input v-model="password" outlined standout="bg-yellow-3" dense class="full-width" @focus="focused = true" @blur="focused=false" placeholder="Password" type="password"
+          :rules="[val => !!val || 'Harap diisi']">
             <template v-slot:prepend>
               <q-icon class="f-14" name="key" :class="focused? 'text-primary': ''" />
+            </template>
+            <template v-slot:append>
+              <q-icon name="eva-eye-outline" :class="focused? 'text-primary': ''" class="cursor-pointer" />
             </template>
           </q-input>
 
