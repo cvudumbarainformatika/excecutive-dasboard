@@ -49,14 +49,21 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { useLoginXenterStore } from 'src/stores/xenter/auth/login'
 import { useXenterAppStore } from 'src/stores/xenter'
+import { useQuasar } from 'quasar'
 
 const router = useRouter()
 const store = useLoginXenterStore()
 const app = useXenterAppStore()
+const auth = useLoginXenterStore()
+
+// eslint-disable-next-line no-unused-vars
+const $q = useQuasar()
+
+// console.log('q', $q)
 
 const focused = ref(false)
 const username = ref('')
@@ -75,18 +82,30 @@ function onSubmit () {
     device: 'ios'
   }
   store.login(form)
-    .then(() => {
-      setTimeout(() => {
-        router.replace({ path: '/' })
-      }, 500)
-    })
+  // .then(() => {
+  //   setTimeout(() => {
+  //     router.replace({ path: '/' })
+  //   }, 500)
+  // })
 }
+
+const user = computed(() => {
+  return auth.user
+})
 
 const keRegister = () => {
   // console.log('lll', router)
   // route
   router.push({ path: '/auth/register' })
 }
+
+watch(user, (n, o) => {
+  console.log('new', n)
+  console.log('old', o)
+  if (n !== null) {
+    router.replace({ path: '/' })
+  }
+}, { deep: true })
 </script>
 
 <style lang="scss" scoped>

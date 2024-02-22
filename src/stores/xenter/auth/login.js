@@ -5,8 +5,8 @@ import { useXenterAppStore } from 'src/stores/xenter/index'
 
 export const useLoginXenterStore = defineStore('login-xenter', {
   state: () => ({
-    token: storage.getLocalToken() ? storage.getLocalToken() : null,
-    user: storage.getUser() ? storage.getUser() : null
+    token: storage.getLocalToken() ?? null,
+    user: storage.getUser() ?? null
   }),
   // getters: {
   //   doubleCount: (state) => state.counter * 2
@@ -22,10 +22,10 @@ export const useLoginXenterStore = defineStore('login-xenter', {
           storage.setUser(resp?.data?.user)
           storage.setLocalToken(resp?.data?.token)
 
-          setTimeout(() => {
-            this.user = storage.getUser()
-            this.token = storage.getLocalToken()
-          }, 300)
+          // setTimeout(() => {
+          this.user = storage.getUser()
+          this.token = storage.getLocalToken()
+          // }, 300)
 
           return new Promise((resolve, reject) => {
             app.setError(null)
@@ -51,24 +51,6 @@ export const useLoginXenterStore = defineStore('login-xenter', {
         app.setLoading(false)
         resolve()
       })
-      // }, 300)
-      // try {
-      //   await api.post('/v1/logout').then(resp => {
-      //     console.log('store logout', resp)
-      //     if (resp.status === 200) {
-      //       return new Promise((resolve, reject) => {
-      //         storage.clearStore()
-      //         app.setLoading(false)
-      //         resolve()
-      //       })
-      //     }
-      //   })
-      // } catch (error) {
-      //   console.log(error)
-      //   app.setError('Maaf Ada Kesalahan!')
-      //   app.setStatus('error')
-      //   app.setLoading(false)
-      // }
     }
 
   }

@@ -67,9 +67,9 @@ const store = useRegisterXenter()
 const app = useXenterAppStore()
 onMounted(() => {
   console.log('onMounted', store.result)
-  if (!store.result || store.result?.account_pass !== '' || store.result?.account_pass !== null) {
-    backToLogin()
-  }
+  // if (!store.result || store.result?.account_pass !== '' || store.result?.account_pass !== null) {
+  //   backToLogin()
+  // }
 })
 
 function backToLogin () {
