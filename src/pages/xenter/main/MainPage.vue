@@ -1,5 +1,5 @@
 <template>
-  <q-page class="column bg-grey-2">
+  <q-page class="column bg-dark">
     <app-loadingxenter v-if="app.loading" />
     <AppErrorXenter v-if="!app.loading && app.error !== null"
       :msg="app.error"

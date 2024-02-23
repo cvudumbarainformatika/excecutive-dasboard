@@ -1,7 +1,14 @@
 <template>
-  <q-layout view="lHh Lpr lff">
+  <q-layout view="hHr LpR fFr">
 
-    <q-page-container  class="bg-white">
+    <q-drawer v-model="leftDrawerOpen" side="left" behavior="mobile" bordered>
+      <!-- drawer content -->
+    </q-drawer>
+
+    <q-drawer v-model="rightDrawerOpen" side="right" overlay behavior="mobile" bordered>
+      <!-- drawer content -->
+    </q-drawer>
+    <q-page-container >
       <router-view
           v-slot="{ Component }"
           class="transition"
@@ -14,16 +21,24 @@
         </router-view>
     </q-page-container>
 
+    <q-footer>
+      <BottomMenu />
+    </q-footer>
+
   </q-layout>
 </template>
 
 <script setup>
+// eslint-disable-next-line no-unused-vars
+import BottomMenu from './xentercomp/BottomMenu.vue'
+
 import { ref } from 'vue'
 import { onBeforeRouteUpdate } from 'vue-router'
 // import { useXenterAppStore } from 'src/stores/xenter/index'
 
 const transitionName = ref('')
-
+const leftDrawerOpen = ref(false)
+const rightDrawerOpen = ref(false)
 // const app = useXenterAppStore()
 
 function debug (data) {
