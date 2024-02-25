@@ -1,6 +1,8 @@
 
 // import { reactive } from 'vue'
 import { date } from 'quasar'
+import dayjs from 'dayjs'
+import 'dayjs/locale/id'
 
 export default function useDate () {
   // const state = reactive({
@@ -42,5 +44,16 @@ export default function useDate () {
     return ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']
   }
 
-  return { currentYear, yearIntervals, dateDbFormat, arrBulan, currentMonth }
+  const tgl = {
+    fromJs: dayjs().locale('id'),
+    formatDb: dayjs().locale('id').format('YYYY-MM-DD'),
+    pukul: dayjs().locale('id').format('HH:mm'),
+    hari: dayjs().locale('id').format('dddd'),
+    bulan: dayjs().locale('id').format('MMMM'),
+    blnnNstring: dayjs().locale('id').format('MM'),
+    currentmonth: dayjs().locale('id').month(),
+    currentYear: dayjs().locale('id').year()
+  }
+
+  return { currentYear, yearIntervals, dateDbFormat, arrBulan, currentMonth, tgl }
 }

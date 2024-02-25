@@ -1,44 +1,40 @@
 <template>
   <ul class="navigation">
-        <li class="active">
-            <a href="#">
-                <q-icon class="icon" name="home" />
-                <span class="text">Home</span>
-            </a>
-        </li>
-
-        <li>
-            <a href="#">
-                <q-icon class="icon" name="person" />
-                <span class="text">Person</span>
-            </a>
-        </li>
-
-        <li>
-            <a href="#">
-                <span class="icon"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></span>
-                <span class="text">Search</span>
-            </a>
-        </li>
-
-        <li>
-            <a href="#">
-                <span class="icon"><i class="fa-solid fa-cart-shopping"></i></span>
-                <span class="text">Cart</span>
-            </a>
-        </li>
-
-        <li>
-            <a href="#">
-                <span class="icon"><i class="fa-solid fa-user"></i></span>
-                <span class="text">Account</span>
-            </a>
-        </li>
-    </ul>
+      <li v-for="(item, i) in menus" :key="i" :class="route.name===item.nama?'active':''" @click="goTo(item.nama)">
+          <div >
+              <q-icon class="icon" :name="item.icon" v-ripple />
+              <span class="text">{{ item.nama }}</span>
+          </div>
+      </li>
+  </ul>
 </template>
 
 <script setup>
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
+const props = defineProps({
+  route: {
+    type: Object,
+    default: null
+  }
+})
+
+const router = useRouter()
+console.log('bottom', props.route.name)
+
+// const active = ref('Home')
+const menus = ref([
+  { nama: 'Home', icon: 'dashboard' },
+  { nama: 'Jadwal', icon: 'pending_actions' },
+  { nama: 'Absen', icon: 'qr_code_scanner' },
+  { nama: 'History', icon: 'event_note' },
+  { nama: 'Account', icon: 'manage_accounts' }
+])
+
+function goTo (path) {
+  router.push({ path })
+}
 </script>
 
 <style lang="scss" scoped>
@@ -46,7 +42,7 @@ ul.navigation{
     display: flex;
     justify-content: center;
     align-items: center;
-    // height: 20px;
+    height: 50px;
     width: 100%;
     list-style: none;
     // box-shadow: 25px 25px 75px rgba(0,0,0,0.25),
@@ -56,13 +52,15 @@ ul.navigation{
     // inset -5px -5px 15px rgba(0,0,0,0.7);
     // // padding: 0 20px;
     // border-radius: 20px;
+    margin:0 !important;
+    padding:0 !important;
 }
 
 ul.navigation li{
     width: 20%;
 }
 
-ul.navigation li a{
+ul.navigation li div{
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -71,44 +69,46 @@ ul.navigation li a{
 
 }
 
-ul.navigation li a .icon{
+ul.navigation li div .icon{
     color: rgba(255,255, 255,0.8);
     padding: 5px;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     position: absolute;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     transition: 0.5s;
 }
 
-ul.navigation li.active a .icon{
-    transform: translateY(-28px);
+ul.navigation li.active div .icon{
+    transform: translateY(-29px);
     background-color: #2d2d2d;
     color: white;
     box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25), inset -3px -3px 5px rgba(0, 0, 0, 0.5), inset 3px 3px 15px rgba(255, 255, 255, 0.2);
-    border: 3px solid #c7dd00;
+    border: 2px solid #c7dd00;
 }
 
-ul.navigation li a .text{
+ul.navigation li div .text{
     color: white;
     // font-family: 'Poppins', sans-serif;
     transition: 0.5s;
     display: none;
 }
 
-ul.navigation li.active a .text{
+ul.navigation li.active div .text{
     display: block;
-    // background-color: rgba(255,255,255,1);
-    color: black;
-    font-size: 0.8rem;
-    padding: 2px 15px;
-    border-radius: 10px;
-    box-shadow: 4px 4px 5px rgba(0,0,0,0.25),
-    inset -2px -2px 3px rgba(0,0,0,0.5),
-    inset 3px 3px 15px rgba(255,255,255,0.2);
+    background-color: $dark;
+    color: #fff;
+    font-size: 0.6rem;
+    padding: 2px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: 0.5s;
+    // box-shadow: 4px 4px 5px rgba(0,0,0,0.25),
+    // inset -2px -2px 3px rgba(0,0,0,0.5),
+    // inset 3px 3px 15px rgba(255,255,255,0.2);
 }
 </style>

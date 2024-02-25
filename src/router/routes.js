@@ -30,8 +30,25 @@ const routes = [
     meta: { requireAuth: true },
     children: [
       { path: '', redirect: '/main' },
-      { path: '/main', name: 'main', component: () => import('pages/xenter/main/MainPage.vue'), meta: { page: 4 } },
-      { path: '/scan-barcode', name: 'scan-barcode', component: () => import('pages/xenter/scan/ScanBarcodePage.vue'), meta: { page: 5 } }
+      {
+        path: '/main',
+        name: 'Home',
+        component: () => import('pages/xenter/main/MainPage.vue'),
+        meta: { page: 4 },
+        children: [
+          {
+            path: '/main/scan-e-xenter',
+            name: 'Scan Barcode e-Xenter',
+            component: () => import('pages/xenter/main/children/ScanBarcodePage.vue'),
+            meta: { page: 41 }
+          }
+        ]
+      },
+      { path: '/jadwal', name: 'Jadwal', component: () => import('pages/xenter/jadwal/MainPage.vue'), meta: { page: 5 } },
+      { path: '/absen', name: 'Absen', component: () => import('pages/xenter/absen/MainPage.vue'), meta: { page: 6 } },
+      { path: '/history', name: 'History', component: () => import('pages/xenter/history/MainPage.vue'), meta: { page: 7 } },
+      { path: '/account', name: 'Account', component: () => import('pages/xenter/account/MainPage.vue'), meta: { page: 8 } }
+      // { path: '/scan-barcode', name: 'scan-barcode', component: () => import('pages/xenter/scan/ScanBarcodePage.vue'), meta: { page: 9 } }
     ]
   },
 
