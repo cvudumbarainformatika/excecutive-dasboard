@@ -7,7 +7,7 @@
       <div class="col-6">
         <q-card flat bordered>
           <div class="column flex-center q-pa-md">
-            <div class="f-14">🕘 07:30 </div>
+            <div class="f-14">🕘 {{currentJadwal?.masuk}} </div>
             <div class="f-12 q-mt-sm">Jam Masuk</div>
           </div>
         </q-card>
@@ -15,14 +15,14 @@
       <div class="col-6">
         <q-card flat bordered>
           <div class="column flex-center q-pa-md">
-            <div class="f-14">🕘 07:30 </div>
+            <div class="f-14">🕘 {{ currentJadwal?.pulang }} </div>
             <div class="f-12 q-mt-sm">Jam Pulang</div>
           </div>
         </q-card>
       </div>
     </div>
     <div v-else>
-      <q-card flat bordered class="bg-negative text-white">
+      <q-card flat bordered class="text-red" style="border: 1px solid red;">
         <div class="column flex-center q-pa-md">
           <div class="f-14">☕ Libur </div>
           <div class="f-12 q-mt-sm">Tidak Ada Jadwal</div>

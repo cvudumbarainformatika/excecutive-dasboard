@@ -21,9 +21,9 @@
           enter-active-class="animated slideInRight"
           leave-active-class="animated slideOutRight"
         > -->
-        <keep-alive>
+        <!-- <keep-alive> -->
           <component :is="Component" />
-        </keep-alive>
+        <!-- </keep-alive> -->
         <!-- </transition> -->
       </router-view>
     </q-page-container>

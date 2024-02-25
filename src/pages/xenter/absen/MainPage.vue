@@ -1,28 +1,17 @@
 <template>
-  <q-page class="column">
-    <app-loadingxenter v-if="app.loading" />
-    <AppErrorXenter v-if="!app.loading && app.error !== null"
-      :msg="app.error"
-      :status="app.status"
-      @ok="app.setError(null)"
-    />
-    <!-- head -->
+  <q-page class="column bg-grey-4">
     <div class="col-auto">
-      <header-main :user="user?.pegawai" />
+      <HeaderMain />
     </div>
-    <!-- content -->
+     <!-- content -->
     <div class="col full-height relative-position">
-      <div class="absolute full-height full-width scroll">
-        <div class="column full-height flex-center">
-          <q-btn color="primary" class="q-mb-md" @click="toScan">Login E-Xenter</q-btn>
-          <div class="q-my-lg">
-            <q-btn color="negative" icon="power_settings_new" @click="logout">
-              <div class="q-ml-sm">Logout</div>
-            </q-btn>
-          </div>
-          <div class="q-my-lg">
-            MAIN PAGE
-          </div>
+      <div class="column full-height flex-center">
+        <div>{{tgl}}</div>
+
+        <div class="absolute-bottom full-width" >
+          <q-card flat>
+            {{cond}}
+          </q-card>
         </div>
       </div>
     </div>
@@ -30,32 +19,14 @@
 </template>
 
 <script setup>
-import { useLoginXenterStore } from 'src/stores/xenter/auth/login'
+// import { useDater } from 'src/composable/dater'
 import HeaderMain from './HeaderMain.vue'
-import { computed, onMounted } from 'vue'
-import { useRouter } from 'vue-router'
-import { useXenterAppStore } from 'src/stores/xenter'
-import { useQuasar } from 'quasar'
+// import { onUnmounted } from 'vue'
 
-const app = useXenterAppStore()
-const $q = useQuasar()
-const auth = useLoginXenterStore()
-const user = computed(() => {
-  return auth?.user
-})
-const router = useRouter()
-onMounted(() => {
-  console.log('q', $q)
-})
+import { useAbsenContext } from './absenContext'
 
-function toScan () {
-  router.push({ path: '/scan-barcode' })
-}
+const { tgl, cond } = useAbsenContext()
 
-function logout () {
-  console.log('logout')
-  auth.logout().then(() => {
-    router.replace({ path: '/auth' })
-  })
-}
+console.log(tgl.value)
+console.log(cond.value)
 </script>

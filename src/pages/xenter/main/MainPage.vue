@@ -1,13 +1,18 @@
 <template>
-  <app-page @page-activated="callFirst('loading')">
+  <app-page>
     <template #header>
       <header-main :user="user?.pegawai" />
     </template>
     <template #content>
+      <div class="grad column flex-center">
+        <div class="text-h4 text-weight-bold text-white">{{ tgl?.pukuls }}</div>
+        <div class="f-14 text-dark">{{ tgl?.hari }} {{ tgl?.tanggal }} {{ tgl?.bulan }} {{ tgl?.currentYear }}</div>
+      </div>
       <ContentOne />
       <JadwalHarian :key="currentJadwal" :current-jadwal="currentJadwal" />
       <HistoryAbsensi />
       <CalendarSection />
+      <div style="margin-bottom: 100px;"></div>
     </template>
   </app-page>
 </template>
@@ -39,7 +44,7 @@ const rekap = useRekapAbsen()
 const currentJadwal = computed(() => store.getCurrentJadwal(tgl?.value?.hari))
 
 onMounted(() => {
-  console.log('main')
+  console.log('main', tgl)
   callFirst('loading')
 })
 
@@ -48,3 +53,13 @@ function callFirst (val) {
   rekap.getRekap(dayjs().locale('id').format('MM'), val)
 }
 </script>
+
+<style lang="scss" scoped>
+.grad{
+  border: none;
+  width: 100%;
+  height: 100px;
+  background: $primary;
+  background: linear-gradient(180deg, $primary 0%, rgba(6,195,233,1) 52%, rgba(255,255,255,1) 86%);
+}
+</style>
