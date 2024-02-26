@@ -15,7 +15,11 @@
           @init="onInit"
           @detect="onDetect"
           @decode="onDecodeString"
-        />
+        >
+        <!-- <div class="column fit bg-">
+
+        </div> -->
+      </qrcode-stream>
       </q-card>
     </q-dialog>
 </template>
