@@ -38,12 +38,12 @@
                 <q-btn class="col-6 " color="teal" label="Scan Wajah" square size="md"/>
               </div>
             </q-card>
-            <q-card v-else flat>
+            <!-- <q-card v-else flat>
               <div class="row full-width">
                 <q-btn class="col-6 q-py-md" color="dark" label="Scan Qr" square size="md" to="/absen/lihat-lokasi"/>
                 <q-btn class="col-6 " color="teal" label="Scan Wajah" square size="md"/>
               </div>
-            </q-card>
+            </q-card> -->
           </div>
         </div>
       </div>

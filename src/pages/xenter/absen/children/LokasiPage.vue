@@ -9,7 +9,7 @@
               <span v-else>Kamu Berada di Area Kantor</span>
             </div>
             <!-- <div>{{ jarak }}</div> -->
-            <q-btn v-if="jarak < radius" class="q-mb-lg" color="negative" to="/absen">Kembali</q-btn>
+            <q-btn v-if="jarak > radius" class="q-mb-lg" color="negative" to="/absen">Kembali</q-btn>
             <q-btn v-else class="q-mb-lg" color="primary" @click="scan = !scan">Lanjut Absen</q-btn>
           </div>
         </q-card-section>
