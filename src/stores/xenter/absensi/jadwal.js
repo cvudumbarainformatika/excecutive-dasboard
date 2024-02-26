@@ -29,20 +29,36 @@ export const useJadwal = defineStore('jadwal-xenter', {
     }
   },
   actions: {
-    async getJadwals (val) {
+    getJadwals (val) {
       console.log('jadwl loading', val)
       const app = useXenterAppStore()
       app.error = null
       val === 'loading' ? app.loading = true : app.loading = false
-      try {
-        const resp = await api.get('/v2/absensi/jadwal/by-user')
-        console.log('jadwal by user', resp)
-        this.jadwalReducer(resp?.data, app)
-      } catch (error) {
-        console.error(error)
-        app.error = 'error response'
-        app.loading = false
-      }
+
+      return new Promise((resolve, reject) => {
+        api.get('/v2/absensi/jadwal/by-user')
+          .then(resp => {
+            console.log('jadwal by user', resp)
+            this.jadwalReducer(resp?.data, app)
+            resolve(resp)
+          })
+          .catch(error => {
+            console.error(error)
+            app.error = 'error response'
+            app.loading = false
+            reject(error)
+          })
+      })
+
+      // try {
+      //   const resp = await api.get('/v2/absensi/jadwal/by-user')
+      //   console.log('jadwal by user', resp)
+      //   this.jadwalReducer(resp?.data, app)
+      // } catch (error) {
+      //   console.error(error)
+      //   app.error = 'error response'
+      //   app.loading = false
+      // }
     },
     jadwalReducer (payload, app) {
       const jadwalss = payload

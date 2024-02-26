@@ -16,15 +16,15 @@
         <!-- <transition
           :name="transitionName" v-on:before-enter="debug" v-on:before-leave="debug"
         > -->
-        <!-- <transition
+        <transition
           appear
           enter-active-class="animated slideInRight"
           leave-active-class="animated slideOutRight"
-        > -->
+        >
         <!-- <keep-alive> -->
           <component :is="Component" />
         <!-- </keep-alive> -->
-        <!-- </transition> -->
+        </transition>
       </router-view>
     </q-page-container>
 

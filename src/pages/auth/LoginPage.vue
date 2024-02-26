@@ -54,6 +54,7 @@ import { useRouter } from 'vue-router'
 import { useLoginXenterStore } from 'src/stores/xenter/auth/login'
 import { useXenterAppStore } from 'src/stores/xenter'
 import { useQuasar } from 'quasar'
+// import { setLocalToken } from 'src/utility/storrage'
 
 const router = useRouter()
 const store = useLoginXenterStore()
@@ -81,7 +82,14 @@ function onSubmit () {
     password: password.value,
     device: 'ios'
   }
-  store.login(form)
+  store.login(form).then(() => {
+    console.log('cek state', auth.token)
+    setTimeout(() => {
+      window.location.reload()
+    }, 500)
+  })
+
+  // console.log('')
   // .then(() => {
   //   setTimeout(() => {
   //     router.replace({ path: '/' })
@@ -89,8 +97,8 @@ function onSubmit () {
   // })
 }
 
-const user = computed(() => {
-  return auth.user
+const token = computed(() => {
+  return auth.token
 })
 
 const keRegister = () => {
@@ -99,11 +107,15 @@ const keRegister = () => {
   router.push({ path: '/auth/register' })
 }
 
-watch(user, (n, o) => {
+watch(token, (n, o) => {
   console.log('new', n)
   console.log('old', o)
   if (n !== null) {
-    router.replace({ path: '/' })
+    // setLocalToken(n)
+    // setTimeout(() => {
+    //   router.push({ path: '/' })
+    // }, 1000)
+    // router.push({ path: '/' })
   }
 }, { deep: true })
 </script>

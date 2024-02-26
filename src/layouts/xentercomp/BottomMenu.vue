@@ -1,6 +1,6 @@
 <template>
   <ul class="navigation">
-      <li v-for="(item, i) in menus" :key="i" :class="route.name===item.nama?'active':''" @click="goTo(item.nama)">
+      <li v-for="(item, i) in menus" :key="i" :class="route.name===item.nama?'active':''" @click="goTo(item.path)">
           <div >
               <q-icon class="icon" :name="item.icon" v-ripple />
               <span class="text">{{ item.nama }}</span>
@@ -25,14 +25,15 @@ console.log('bottom', props.route.name)
 
 // const active = ref('Home')
 const menus = ref([
-  { nama: 'Home', icon: 'dashboard' },
-  { nama: 'Jadwal', icon: 'pending_actions' },
-  { nama: 'Absen', icon: 'qr_code_scanner' },
-  { nama: 'History', icon: 'event_note' },
-  { nama: 'Account', icon: 'manage_accounts' }
+  { nama: 'Home', icon: 'dashboard', path: '/home' },
+  { nama: 'Jadwal', icon: 'pending_actions', path: '/jadwal' },
+  { nama: 'Absen', icon: 'qr_code_scanner', path: '/absen' },
+  { nama: 'History', icon: 'event_note', path: '/history' },
+  { nama: 'Account', icon: 'manage_accounts', path: '/account' }
 ])
 
 function goTo (path) {
+  // const path = val?.toLowerCase()
   router.push({ path })
 }
 </script>
