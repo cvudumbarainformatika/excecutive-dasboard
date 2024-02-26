@@ -1,5 +1,5 @@
 <template>
-  <q-page class="page fit bg-grey-4" >
+  <q-page class="page fit bg-grey-4 shadow-4" >
     <div class="absolute-top full-height page-effect column shadow-4" :class="{'effect-left': hasLeaveFromHere}">
       <div class="col-auto">
         <HeaderMain />
@@ -51,7 +51,6 @@
 
     <router-view
       v-slot="{ Component }"
-      class="transition"
       >
       <transition
         appear
@@ -60,8 +59,6 @@
       >
           <component
             :is="Component"
-              @page-activated="hasActiveChildPage=true"
-              @page-deactivated="hasActiveChildPage=false"
           />
       </transition>
     </router-view>
@@ -77,7 +74,6 @@ import HeaderMain from './HeaderMain.vue'
 // import { onUnmounted } from 'vue'
 
 import { useAbsenContext } from './absenContext'
-import { onBeforeRouteLeave } from 'vue-router'
 
 const { tgl, cond, scheduleStorrage, start } = useAbsenContext()
 
@@ -90,9 +86,6 @@ onMounted(() => {
 const setTimer = setInterval(start, 1000)
 
 onUnmounted(() => {
-  clearInterval(setTimer)
-})
-onBeforeRouteLeave(() => {
   clearInterval(setTimer)
 })
 
