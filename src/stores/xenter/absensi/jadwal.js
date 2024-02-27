@@ -6,6 +6,7 @@ import { useXenterAppStore } from '..'
 export const useJadwal = defineStore('jadwal-xenter', {
   state: () => ({
     jadwals: [],
+    kategories: [],
     error: null,
     loading: false,
     currentJadwal: null,
@@ -49,16 +50,6 @@ export const useJadwal = defineStore('jadwal-xenter', {
             reject(error)
           })
       })
-
-      // try {
-      //   const resp = await api.get('/v2/absensi/jadwal/by-user')
-      //   console.log('jadwal by user', resp)
-      //   this.jadwalReducer(resp?.data, app)
-      // } catch (error) {
-      //   console.error(error)
-      //   app.error = 'error response'
-      //   app.loading = false
-      // }
     },
     jadwalReducer (payload, app) {
       const jadwalss = payload
@@ -70,6 +61,18 @@ export const useJadwal = defineStore('jadwal-xenter', {
       this.totalMenit = this.jadwals.length > 0 ? this.jadwals.map(x => x.status === '2' || x.status === 2 ? x.menit : 0).reduce((r, x) => r + x, 0) : 0
 
       app.loading = false
+    },
+
+    getKategories () {
+      return new Promise((resolve, reject) => {
+        api.get('/v2/absensi/jadwal/kategori')
+          .then(resp => {
+            console.log('get Kategories', resp)
+            this.kategories = resp.data
+          }).catch(err => {
+            console.log(err)
+          })
+      })
     }
   }
 })

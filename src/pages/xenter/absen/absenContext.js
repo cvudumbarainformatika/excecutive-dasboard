@@ -15,7 +15,9 @@ export function useAbsenContext (time = 1000) {
   const jam = ref(dayjs().locale('id').format('HH:mm:ss'))
   const hari = ref(dayjs().locale('id').format('dddd'))
   const tgl = ref(dayjs().locale('id').format('YYYY-MM-DD HH:mm:ss'))
+  const tanggalAbsen = ref(dayjs().locale('id').format('YYYY-MM-DD'))
   const cond = ref('idle')
+  const condAbsen = ref('idle')
   const scheduleStorrage = ref(null)
 
   const jadwal = useJadwal()
@@ -27,17 +29,9 @@ export function useAbsenContext (time = 1000) {
       cond.value = 'idle'
       cariSchedule()
     } else {
-      // cond.value = 'start'
-      // console.log('local storage jadwal', schedule)
       if (cond.value === 'idle') {
         cond.value = 'start'
       }
-      // if (cond.value !== 'idle') {
-      //   // start interval
-      //   timerId = setInterval(start, 1000)
-      // } else {
-      //   clearInterval(timerId)
-      // }
     }
   }
 
@@ -124,18 +118,32 @@ export function useAbsenContext (time = 1000) {
           cond.value = 'pulang'
         } else if (finish) {
           cond.value = 'idle'
+          saveStore('idle')
         }
       } else {
         cond.value = 'idle'
       }
 
-      console.log('Timer is running...')
+      console.log('Timer is running...', cond.value)
     }
+  }
+
+  const saveStore = (txt) => {
+    $q.localStorage.set('condAbsen', txt)
+    condAbsen.value = txt
+  }
+
+  const setCondAbsen = (val) => {
+    condAbsen.value = val
   }
 
   onMounted(() => {
     jadwal.getJadwals('no')
-      .then(() => init())
+      .then(() => {
+        console.log('onMounted absenContext')
+        condAbsen.value = $q.localStorage.getItem('condAbsen')
+        init()
+      })
   })
 
   onUnmounted(() => {
@@ -147,6 +155,10 @@ export function useAbsenContext (time = 1000) {
     // console.log('old watch', old)
     init()
   })
+  watch(condAbsen, (n, old) => {
+    console.log('new watch', n)
+    console.log('old watch', old)
+  })
 
   return {
     jam,
@@ -154,7 +166,12 @@ export function useAbsenContext (time = 1000) {
     dayjs,
     hari,
     cond,
+    condAbsen,
     scheduleStorrage,
-    start
+    tanggalAbsen,
+    start,
+    saveStore,
+    setCondAbsen,
+    $q
   }
 }

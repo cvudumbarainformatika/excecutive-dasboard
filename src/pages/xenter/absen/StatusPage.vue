@@ -11,17 +11,23 @@
             <div class="column full-height flex-center">
               <div v-if="scheduleStorrage?.statusStorrage !== '1'">
                 <div v-if="cond==='masuk'" class="column flex-center">
-                  <q-icon name="doorbell" color="negative" size="60px" />
-                  <div class="f-12 text-weight-bold text-negative q-mt-md">Saatnya Absen</div>
+                  <q-icon :name="hasAbsen==='checkIn'?'verified':'notifications_active' " :color="hasAbsen==='checkIn'?'primary':'negative'" size="60px" />
+                  <div class="f-12 text-weight-bold q-mt-md"
+                    :class="hasAbsen==='checkIn'?'primary':'negative'"
+                  >{{ hasAbsen==='checkIn'?'Absensi Masuk Valid':'Saatnya Absen' }}</div>
                 </div>
                 <div v-else-if="cond==='pulang'" class="column flex-center">
-                  <q-icon name="timer" color="negative" size="60px" />
-                  <div class="f-12 text-weight-bold text-negative q-mt-md">Saatnya Pulang</div>
+                  <q-icon :name="hasAbsen==='checkOut'?'verified':'circle_notifications' " :color="hasAbsen==='checkOut'?'primary':'negative'" size="60px" />
+                  <div class="f-12 text-weight-bold q-mt-md"
+                  :class="hasAbsen==='checkOut'?'primary':'negative'"
+                  >{{ hasAbsen==='checkOut'?'Absensi Pulang Valid':'Saatnya Pulang' }}</div>
                 </div>
                 <div v-else class="column flex-center">
                   <q-icon name="verified" color="teal" size="60px" />
                   <div class="f-12 text-weight-bold text-teal q-mt-md">Belum Ada Jadwal</div>
                 </div>
+
+                <!-- <q-btn @click="saveStore('idle')">hapus local</q-btn> -->
               </div>
               <div v-else class="column flex-center">
                 <q-icon name="local_cafe" color="primary" size="60px" />
@@ -32,8 +38,14 @@
           </div>
 
           <div class="col-auto full-width" >
-            <q-card v-if="cond==='masuk' || cond==='pulang'" flat>
-              <div class="row full-width">
+            <q-card v-if="cond==='masuk'" flat>
+              <div v-if="hasAbsen !== 'checkIn'" class="row full-width">
+                <q-btn class="col-6 q-py-md" color="dark" label="Scan Qr" square size="md" to="/absen/lihat-lokasi"/>
+                <q-btn class="col-6 " color="teal" label="Scan Wajah" square size="md"/>
+              </div>
+            </q-card>
+            <q-card v-if="cond==='pulang'" flat>
+              <div v-if="hasAbsen !== 'checkOut'" class="row full-width">
                 <q-btn class="col-6 q-py-md" color="dark" label="Scan Qr" square size="md" to="/absen/lihat-lokasi"/>
                 <q-btn class="col-6 " color="teal" label="Scan Wajah" square size="md"/>
               </div>
@@ -59,6 +71,11 @@
       >
           <component
             :is="Component"
+            :key="cond"
+            :kondisi="cond"
+            :tanggal="tanggalAbsen"
+            :jam="jam"
+            :kategory="scheduleStorrage?.kategoryStorrage"
           />
       </transition>
     </router-view>
@@ -69,26 +86,41 @@
 
 <script setup>
 // import { useDater } from 'src/composable/dater'
-import { onMounted, onUnmounted, ref } from 'vue'
+import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
 import HeaderMain from './HeaderMain.vue'
 // import { onUnmounted } from 'vue'
 
 import { useAbsenContext } from './absenContext'
+import { useRoute } from 'vue-router'
 
-const { tgl, cond, scheduleStorrage, start } = useAbsenContext()
+const { cond, condAbsen, scheduleStorrage, start, tanggalAbsen, jam, setCondAbsen, $q } = useAbsenContext()
 
 const hasLeaveFromHere = ref(false)
+const route = useRoute()
 
 onMounted(() => {
   hasLeaveFromHere.value = false
+  console.log('mounted local', condAbsen.value)
 })
 
 const setTimer = setInterval(start, 1000)
 
 onUnmounted(() => {
+  console.log('unMounted')
   clearInterval(setTimer)
 })
 
-console.log(tgl.value)
-console.log(cond.value)
+const hasAbsen = computed(() => {
+  return condAbsen.value
+})
+
+watch(route, (nw) => {
+  // console.log('n', nw.path)
+  if (nw.path === '/absen') {
+    setCondAbsen($q.localStorage.getItem('condAbsen'))
+  }
+})
+
+// console.log(tgl.value)
+// console.log(cond.value)
 </script>

@@ -5,20 +5,37 @@
       transition-show="slide-up"
       transition-hide="slide-down"
     >
-      <q-card class="bg-dark text-white">
+      <q-card class="bg-dark text-white full-height full-width">
         <AppErrorXenter v-if="!app.loading && err !== null"
           :msg="err"
           :status="app.status"
           @ok="onErrorOk"
         />
+        <div v-else-if="kirimQr" class="column fit flex-center">
+          <div v-if="waiting">
+            <q-spinner-dots
+              color="white"
+              size="2em"
+            />
+            <div>Harap tunggu</div>
+          </div>
+
+          <div v-else>
+
+            <div v-if="err===null">Absensi Berhasil</div>
+            <div v-else>{{ err }}</div>
+            <q-btn label="Kembali" color="primary" size="lg" @click="backTo()" />
+
+          </div>
+        </div>
         <qrcode-stream v-else
           @init="onInit"
           @detect="onDetect"
           @decode="onDecodeString"
         >
-        <!-- <div class="column fit bg-">
-
-        </div> -->
+        <div class="column fit flex-center">
+          <!-- <div>{{ form }}</div> -->
+        </div>
       </qrcode-stream>
       </q-card>
     </q-dialog>
@@ -31,14 +48,46 @@ import { useRouter } from 'vue-router'
 import { useXenterAppStore } from 'src/stores/xenter'
 import { useLoginXenterStore } from 'src/stores/xenter/auth/login'
 import { onUnmounted, ref, onMounted } from 'vue'
+import { api } from 'src/boot/axios'
+import { useAbsenContext } from '../../absenContext'
+
+const { saveStore } = useAbsenContext()
 
 const router = useRouter()
 const store = useScanXenterStore()
 const app = useXenterAppStore()
+// eslint-disable-next-line no-unused-vars
 const auth = useLoginXenterStore()
-console.log(router)
+
+// console.log(router)
+const waiting = ref(false)
+const kirimQr = ref(false)
+const dataqr = ref(null)
+const content = ref(null)
+const location = ref(null)
+
+const form = ref(null)
 
 const err = ref(null)
+
+const props = defineProps({
+  kondisi: {
+    type: String,
+    default: null
+  },
+  tanggal: {
+    type: String,
+    default: null
+  },
+  jam: {
+    type: String,
+    default: null
+  },
+  kategory: {
+    type: [Number, String],
+    default: null
+  }
+})
 
 onMounted(() => {
   callFirst()
@@ -48,6 +97,11 @@ function callFirst () {
   console.log('scan page')
   err.value = null
   store.setCode(null)
+  dataqr.value = null
+  content.value = null
+  location.value = null
+  kirimQr.value = false
+  waiting.value = false
 }
 
 // eslint-disable-next-line no-unused-vars
@@ -92,6 +146,7 @@ function onError (error) {
 
 // eslint-disable-next-line no-unused-vars
 async function onInit (promise) {
+  // kirimQr.value = false
   console.log('promise', promise)
   app.setLoading(true)
   try {
@@ -110,18 +165,52 @@ function onErrorOk () {
   router.push({ path: '/absen' })
 }
 
+function backTo () {
+  router.replace({ path: '/absen' })
+  // window.location.reload()
+}
+
 // eslint-disable-next-line no-unused-vars
 function onDecodeString (val) {
-  store.setCode(val)
-  if (val) {
-    const form = {
-      qr: val,
-      token: auth.token
-    }
-    store.kirimQr(form).then(() => {
-      router.replace({ path: '/' })
-    })
+  // store.setCode(val)
+  // if (val) {
+  //   const form = {
+  //     qr: val,
+  //     token: auth.token
+  //   }
+  //   store.kirimQr(form).then(() => {
+  //     router.replace({ path: '/' })
+  //   })
+  // }
+  form.value = null
+  dataqr.value = null
+  dataqr.value = val
+  const formData = {
+    // id: id,
+    qr: val,
+    tanggal: props.tanggal,
+    jam: props.jam,
+    status: props.kondisi,
+    kategory_id: props.kategory,
+    lokasi: 'ok'
   }
+
+  form.value = formData
+  kirimQr.value = true
+  waiting.value = true
+  sendData(formData)
+}
+
+async function sendData (data) {
+  await api.post('/v2/absensi/scan/qr', data)
+    .then((resp) => {
+      // console.log('ok')
+      props.kondisi === 'masuk' ? saveStore('checkIn') : saveStore('checkOut')
+      waiting.value = false
+    }).catch((err) => {
+      err.value = 'Ada Kesalahan Harap Ulangi'
+      waiting.value = false
+    })
 }
 
 async function onDetect (promise) {
@@ -132,8 +221,10 @@ async function onDetect (promise) {
     } = await promise
 
     // ...
-    console.log('content', content)
-    console.log('location', location)
+    // console.log('content', content)
+    // console.log('location', location)
+    content.value = content
+    location.value = location
   } catch (error) {
     // ...
     console.log(error)

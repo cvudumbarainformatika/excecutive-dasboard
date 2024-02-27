@@ -4,13 +4,22 @@
       <q-card>
         <q-card-section>
           <div class="column flex-center">
+
+              <!-- <div>{{ kondisi }}</div>
+              <div>{{ tanggal }}</div>
+              <div>{{ jam }}</div>
+              <div>{{ kategory }}</div> -->
+
             <div class="q-my-lg text-weight-bold">
               <span v-if="jarak > radius">Kamu Jauh Dari Kantor</span>
               <span v-else>Kamu Berada di Area Kantor</span>
             </div>
             <!-- <div>{{ jarak }}</div> -->
             <q-btn v-if="jarak > radius" class="q-mb-lg" color="negative" to="/absen">Kembali</q-btn>
-            <q-btn v-else class="q-mb-lg" color="primary" @click="scan = !scan">Lanjut Absen</q-btn>
+            <div v-else class="q-gutter-md">
+              <q-btn class="q-mb-lg" color="negative" to="/absen">Kembali</q-btn>
+              <q-btn class="q-mb-lg" color="primary" @click="scan = !scan">Lanjut Absen</q-btn>
+            </div>
           </div>
         </q-card-section>
       </q-card>
@@ -18,7 +27,12 @@
     <div ref="mapRef" class="absolute-top fit"></div>
 
     <!-- dialog -->
-    <scan-barcode-dialog v-model="scan" class="z-top" />
+    <scan-barcode-dialog v-model="scan" class="z-top"
+      :kondisi="kondisi"
+      :tanggal="tanggal"
+      :jam="jam"
+      :kategory="kategory"
+    />
   </q-page>
 </template>
 <script setup>
@@ -28,6 +42,25 @@ import { useGeolocation } from '@vueuse/core'
 // import L from 'leaflet'
 
 // const emits = defineEmits(['activated', 'deactivated'])
+
+defineProps({
+  kondisi: {
+    type: String,
+    default: null
+  },
+  tanggal: {
+    type: String,
+    default: null
+  },
+  jam: {
+    type: String,
+    default: null
+  },
+  kategory: {
+    type: [Number, String],
+    default: null
+  }
+})
 const scan = ref(false)
 const mapRef = ref()
 // const map = ref()
