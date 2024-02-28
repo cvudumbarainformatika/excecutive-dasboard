@@ -86,7 +86,7 @@ export function useAbsenContext (time = 1000) {
       kategoryStorrage
     }
 
-    console.log('cari schedule ...', newJadwals)
+    // console.log('cari schedule ...', newJadwals)
     saveScheduleToStorrage(newJadwals)
   }
 
@@ -126,7 +126,7 @@ export function useAbsenContext (time = 1000) {
         cond.value = 'idle'
       }
 
-      console.log('Timer is running...', cond.value)
+      // console.log('Timer is running...', cond.value)
     }
   }
 
@@ -158,8 +158,8 @@ export function useAbsenContext (time = 1000) {
     init()
   })
   watch(condAbsen, (n, old) => {
-    console.log('new watch', n)
-    console.log('old watch', old)
+    // console.log('new watch', n)
+    // console.log('old watch', old)
   })
 
   return {

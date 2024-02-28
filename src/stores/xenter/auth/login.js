@@ -38,7 +38,7 @@ export const useLoginXenterStore = defineStore('login-xenter', {
       } catch (error) {
         console.log(error)
         app.setLoading(false)
-        app.setError('Maaf Ada Kesalahan Harap Ulangi!')
+        app.setError(error?.response?.data?.message || 'Maaf Ada Kesalahan Harap Ulangi!')
       }
     },
 

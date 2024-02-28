@@ -1,8 +1,8 @@
 <template>
   <q-card flat bordered class="br-color">
-    <q-card-section class="q-px-sm q-py-lg">
-      <div class="row items-center justify-between">
-        <q-icon :name="icon" size="25px" color="primary"></q-icon>
+    <q-card-section class="q-px-sm q-py-md">
+      <div class="row items-center justify-arround flex-center">
+        <q-icon :name="icon" size="28px" color="primary"></q-icon>
         <div class="q-ml-sm column flex-center justify-end">
           <div class="f-18 text-weight-bold">{{ qty }}</div>
           <div class="f-10">{{txt}}</div>

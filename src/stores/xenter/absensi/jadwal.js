@@ -39,7 +39,7 @@ export const useJadwal = defineStore('jadwal-xenter', {
       return new Promise((resolve, reject) => {
         api.get('/v2/absensi/jadwal/by-user')
           .then(resp => {
-            console.log('jadwal by user', resp)
+            // console.log('jadwal by user', resp)
             this.jadwalReducer(resp?.data, app)
             resolve(resp)
           })
@@ -67,7 +67,7 @@ export const useJadwal = defineStore('jadwal-xenter', {
       return new Promise((resolve, reject) => {
         api.get('/v2/absensi/jadwal/kategori')
           .then(resp => {
-            console.log('get Kategories', resp)
+            // console.log('get Kategories', resp)
             this.kategories = resp.data
           }).catch(err => {
             console.log(err)

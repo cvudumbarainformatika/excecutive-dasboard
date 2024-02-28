@@ -46,7 +46,7 @@ export const useRekapAbsen = defineStore('rekap-absen', {
         const resp = await api.get(`/v2/absensi/history/data?bulan=${bulan}`)
         // console.log('rekap absen bulan ini', resp)
         this.rekapReducer(resp?.data, app)
-        console.log('rekap absen bulan ini', this.details)
+        // console.log('rekap absen bulan ini', this.details)
       } catch (error) {
         console.error(error)
         app.error = 'error response'

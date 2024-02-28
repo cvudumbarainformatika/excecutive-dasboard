@@ -2,7 +2,7 @@
   <q-card flat square class="q-pa-md">
     <div class="f-12">Absensi Bulan Ini 📅</div>
   </q-card>
-  <div class="q-pa-md">
+  <div class="q-pa-sm">
     <div class="row q-col-gutter-sm">
       <div class="col-4">
         <card-rekap txt="Hadir" icon="launch" :qty="rekap.HADIR" />

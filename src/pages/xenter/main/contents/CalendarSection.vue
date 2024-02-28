@@ -2,7 +2,7 @@
   <q-card flat square class="q-pa-md">
     <div class="f-12">Kalender Bulan ini ⏰</div>
   </q-card>
-  <div class="row q-pa-md bg-grey-4">
+  <div class="row q-pa-sm bg-grey-4">
     <q-date
       v-model="tgl"
       flat
