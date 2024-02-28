@@ -1,61 +1,39 @@
 <template>
-  <q-page class="column">
-    <app-loadingxenter v-if="app.loading" />
-    <AppErrorXenter v-if="!app.loading && app.error !== null"
-      :msg="app.error"
-      :status="app.status"
-      @ok="app.setError(null)"
-    />
-    <!-- head -->
-    <div class="col-auto">
-      <header-main :user="user?.pegawai" />
-    </div>
-    <!-- content -->
-    <div class="col full-height relative-position">
-      <div class="absolute full-height full-width scroll">
-        <div class="column full-height flex-center">
-          <q-btn color="primary" class="q-mb-md" @click="toScan">Login E-Xenter</q-btn>
-          <div class="q-my-lg">
-            <q-btn color="negative" icon="power_settings_new" @click="logout">
-              <div class="q-ml-sm">Logout</div>
-            </q-btn>
-          </div>
-          <div class="q-my-lg">
-            MAIN PAGE
-          </div>
-        </div>
-      </div>
-    </div>
-  </q-page>
+  <app-page>
+    <template #header>
+      <HeaderMain :user="user" @prev-month="rekap.setPrevMonth" @next-month="rekap.setNextMonth" :date="rekap.date"/>
+    </template>
+    <template #content>
+      <ListHistory :items="rekap?.details"  />
+      <div style="margin-bottom: 200px;"></div>
+    </template>
+  </app-page>
 </template>
 
 <script setup>
 import { useLoginXenterStore } from 'src/stores/xenter/auth/login'
 import HeaderMain from './HeaderMain.vue'
+import ListHistory from './comp/ListHistory.vue'
 import { computed, onMounted } from 'vue'
-import { useRouter } from 'vue-router'
 import { useXenterAppStore } from 'src/stores/xenter'
 import { useQuasar } from 'quasar'
+import { useRekapAbsen } from 'src/stores/xenter/absensi/rekap'
+import dayjs from 'dayjs'
+import 'dayjs/locale/id'
 
+// eslint-disable-next-line no-unused-vars
 const app = useXenterAppStore()
 const $q = useQuasar()
 const auth = useLoginXenterStore()
+const rekap = useRekapAbsen()
 const user = computed(() => {
   return auth?.user
 })
-const router = useRouter()
 onMounted(() => {
   console.log('q', $q)
+  callFirst('loading')
 })
-
-function toScan () {
-  router.push({ path: '/scan-barcode' })
-}
-
-function logout () {
-  console.log('logout')
-  auth.logout().then(() => {
-    router.replace({ path: '/auth' })
-  })
+function callFirst (val) {
+  rekap.getRekap(dayjs().locale('id').format('MM'), val)
 }
 </script>

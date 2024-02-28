@@ -119,6 +119,8 @@ export function useAbsenContext (time = 1000) {
         } else if (finish) {
           cond.value = 'idle'
           saveStore('idle')
+          const asyncStorrage = $q.localStorage
+          asyncStorrage.remove('newSchedule')
         }
       } else {
         cond.value = 'idle'

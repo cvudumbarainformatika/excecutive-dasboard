@@ -73,6 +73,25 @@ export const useJadwal = defineStore('jadwal-xenter', {
             console.log(err)
           })
       })
+    },
+
+    updateJadwal (form) {
+      return new Promise((resolve, reject) => {
+        api.post('/v2/absensi/jadwal/update', form)
+          .then(resp => {
+            // const res = resp.data.data
+            // const ada = this.jadwals.filter(x => x.id === res.id)
+            // if (ada.length) {
+            //   ada[0] = res
+            // }
+            // console.log('update jadwal', ada[0])
+            this.getJadwals('no')
+            resolve(resp)
+          }).catch(err => {
+            console.log(err)
+            reject(err)
+          })
+      })
     }
   }
 })

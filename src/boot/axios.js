@@ -15,8 +15,6 @@ const SERVER = SERV + '/api'
 const api = axios.create({ baseURL: SERVER })
 api.defaults.headers.get.Accepts = 'application/json'
 
-console.log(getLocalToken())
-
 api.defaults.headers.common.Authorization = `Bearer ${getLocalToken()}`
 
 const interceptResErrors = (err) => {

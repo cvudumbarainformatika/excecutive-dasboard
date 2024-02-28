@@ -6,7 +6,9 @@
     <template #content>
       <list-jadwal :items="store.jadwals" @clicked="clickedItem" />
       <!-- dialog -->
-      <DialogPilihJadwal v-model="bukaDialog" :items="store.kategories" @pilih-jadwal="pilihjadwal" />
+      <DialogPilihJadwal v-model="bukaDialog" :items="store.kategories" :hari="selectHari"
+      @close="bukaDialog = !bukaDialog"  />
+
     </template>
   </app-page>
 </template>
@@ -29,33 +31,37 @@ const auth = useLoginXenterStore()
 
 const bukaDialog = ref(false)
 const selectJadwal = ref(null)
+const selectHari = ref(null)
 
 const user = computed(() => {
   return auth?.user
 })
 // const router = useRouter()
 onMounted(() => {
-  console.log('jadwal')
+  // console.log('jadwal', $q)
+
   callFirst('no')
 })
 
 function callFirst (val) {
   selectJadwal.value = null
+  selectHari.value = null
   store.getJadwals(val)
   store.getKategories()
 }
 
 function clickedItem (val) {
   // console.log(val)
+  selectHari.value = val
   if (val.kategory_id > 2 || !val.kategory) {
-    console.log('bisa click')
+    console.log('bisa click', val)
     bukaDialog.value = true
   } else {
     console.log('patent')
   }
 }
 
-function pilihjadwal (item) {
-  selectJadwal.value = item
-}
+// function pilihjadwal (item) {
+//   selectJadwal.value = item
+// }
 </script>

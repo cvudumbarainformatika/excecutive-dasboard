@@ -26,8 +26,8 @@ export const useRekapAbsen = defineStore('rekap-absen', {
     TERLAMBAT: '0',
     HADIR: 0,
 
-    currentmonth: dayjs().month(),
-    currentYear: dayjs().year(),
+    currentmonth: dayjs().locale('id').month(),
+    currentYear: dayjs().locale('id').year(),
     date: dayjs().locale('id'),
 
     days: dayjs().daysInMonth(),
@@ -44,8 +44,9 @@ export const useRekapAbsen = defineStore('rekap-absen', {
       val === 'loading' ? app.loading = true : app.loading = false
       try {
         const resp = await api.get(`/v2/absensi/history/data?bulan=${bulan}`)
-        console.log('rekap absen bulan ini', resp)
+        // console.log('rekap absen bulan ini', resp)
         this.rekapReducer(resp?.data, app)
+        console.log('rekap absen bulan ini', this.details)
       } catch (error) {
         console.error(error)
         app.error = 'error response'
@@ -176,6 +177,28 @@ export const useRekapAbsen = defineStore('rekap-absen', {
 
       return `${hours > 0 ? ` ${hours} jam` : ''}` +
         `${minutes > 0 ? ` ${minutes.toFixed(0)} mnt` : ''}`
+    },
+
+    setPrevMonth () {
+      if (this.currentmonth > 0) {
+        const month = this.currentmonth - 1
+        this.currentmonth = month
+        this.date = dayjs().month(month).locale('id')
+
+        const bulan = dayjs().month(month).locale('id').format('MM')
+        this.getRekap(bulan, 'loading')
+      }
+    },
+
+    setNextMonth () {
+      const m = dayjs().month()
+      if (this.currentmonth !== m) {
+        const month = this.currentmonth + 1
+        this.currentmonth = month
+        this.date = dayjs().month(month).locale('id')
+        const bulan = dayjs().month(month).locale('id').format('MM')
+        this.getRekap(bulan, 'loading')
+      }
     }
 
   }
