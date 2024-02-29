@@ -2,7 +2,7 @@
   <div class="column flex-center fullscreen mellek">
     <!-- <div class="text-white">sadas</div> -->
     <div>
-      <div class="bulatan column flex-center z-top" :class="status==='error'? 'bg-negative': 'bg-primary'">
+      <div class="bulatan column flex-center z-top" :class="status==='error'? 'bg-negative': 'bg-primary'" @click="logout">
        <q-icon :name="status==='error'? 'close': 'verified'" size="md" class="text-white"></q-icon>
       </div>
 
@@ -24,7 +24,12 @@
 </template>
 
 <script setup>
-defineProps({
+import { useLoginXenterStore } from 'src/stores/xenter/auth/login'
+import { useRouter } from 'vue-router'
+
+const auth = useLoginXenterStore()
+const router = useRouter()
+const props = defineProps({
   msg: {
     type: String,
     default: 'Error'
@@ -39,6 +44,14 @@ const emits = defineEmits(['ok'])
 
 function ok () {
   emits('ok')
+}
+
+function logout () {
+  if (props.status === 'error') {
+    auth.logout().then(() => {
+      router.replace({ path: '/auth' })
+    })
+  }
 }
 </script>
 
