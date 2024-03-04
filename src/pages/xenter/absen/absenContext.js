@@ -30,6 +30,7 @@ export function useAbsenContext (time = 1000) {
       cariSchedule()
     } else {
       if (cond.value === 'idle') {
+        // console.log('sdh mampir ke init')
         cond.value = 'start'
       }
     }
@@ -86,7 +87,7 @@ export function useAbsenContext (time = 1000) {
       kategoryStorrage
     }
 
-    // console.log('cari schedule ...', newJadwals)
+    // console.log('cari schedule ...')
     saveScheduleToStorrage(newJadwals)
   }
 
@@ -94,6 +95,14 @@ export function useAbsenContext (time = 1000) {
     cond.value = 'start'
     const asyncStorrage = $q.localStorage
     asyncStorrage.set('newSchedule', val)
+  }
+
+  function deleteSaveSchedule () {
+    // console.log('delete store')
+    const asyncStorrage = $q.localStorage
+    asyncStorrage.remove('newSchedule')
+    cond.value = 'idle'
+    saveStore('idle')
   }
 
   // eslint-disable-next-line no-unused-vars
@@ -117,16 +126,13 @@ export function useAbsenContext (time = 1000) {
         } else if (intervalJamPulang) {
           cond.value = 'pulang'
         } else if (finish) {
-          cond.value = 'idle'
-          saveStore('idle')
-          const asyncStorrage = $q.localStorage
-          asyncStorrage.remove('newSchedule')
+          deleteSaveSchedule()
         }
       } else {
-        cond.value = 'idle'
+        deleteSaveSchedule()
       }
 
-      // console.log('Timer is running...', cond.value)
+      // console.log('Timer is running...', schedule.statusStorrage)
     }
   }
 
