@@ -32,6 +32,7 @@ const store = useScanXenterStore()
 
 onMounted(() => {
   store.setCode(null)
+  // console.log('cek state', auth)
 })
 
 async function onInit (promise) {
