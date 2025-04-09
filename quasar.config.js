@@ -54,8 +54,8 @@ module.exports = configure(function (/* ctx */) {
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#build
     build: {
       target: {
-        browser: ['es2019', 'edge88', 'firefox78', 'chrome87', 'safari13.1'],
-        node: 'node16'
+        browser: ['es2022', 'edge100', 'firefox100', 'chrome100', 'safari15'],
+        node: 'node22'
       },
 
       vueRouterMode: 'history' // available values: 'hash', 'history'
@@ -84,7 +84,7 @@ module.exports = configure(function (/* ctx */) {
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#devServer
     devServer: {
-      // https: true
+      port: 9002,
       open: true // opens browser window automatically
     },
 
