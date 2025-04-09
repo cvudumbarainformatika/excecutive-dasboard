@@ -1,4 +1,3 @@
-
 import HeaderPage from './executive/HeaderPage.vue';
 
 <template>

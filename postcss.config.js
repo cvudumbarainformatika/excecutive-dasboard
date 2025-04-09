@@ -6,14 +6,14 @@ module.exports = {
     // https://github.com/postcss/autoprefixer
     require('autoprefixer')({
       overrideBrowserslist: [
-        'last 4 Chrome versions',
-        'last 4 Firefox versions',
-        'last 4 Edge versions',
-        'last 4 Safari versions',
-        'last 4 Android versions',
-        'last 4 ChromeAndroid versions',
-        'last 4 FirefoxAndroid versions',
-        'last 4 iOS versions'
+        'last 2 Chrome versions',
+        'last 2 Firefox versions',
+        'last 2 Edge versions',
+        'last 2 Safari versions',
+        'last 2 Android versions',
+        'last 2 ChromeAndroid versions',
+        'last 2 FirefoxAndroid versions',
+        'last 2 iOS versions'
       ]
     })
 

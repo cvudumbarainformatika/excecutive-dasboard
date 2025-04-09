@@ -103,7 +103,7 @@ const auth = useLoginXenterStore()
 
 // eslint-disable-next-line no-unused-vars
 const bisaLogin = ref([
-  '3574041305820002@app.com', 'sa@app.com'
+  '3574041305820002@app.com', 'sa@app.com', '3574031107840006@app.com'
 ])
 
 onMounted(() => {
@@ -112,7 +112,7 @@ onMounted(() => {
   console.log('mounted local', bisaLogin.value.includes(auth.user.email))
 })
 
-const setTimer = setInterval(start, 1000)
+const setTimer = setInterval(start, 100)
 
 onUnmounted(() => {
   console.log('unMounted')
