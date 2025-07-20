@@ -12,7 +12,7 @@
             <div class="col-sm-6 col-xs-6 col-md-3 col-lg-3 col-xl-3">
               <card-kepeg :jumlah="allPegawai" :jumlah-l="allPegawaiMan" :jumlah-p="allPegawaiWoman" txt="Seluruh Pegawai" icon="groups" />
             </div>
-            <div v-for="(item, i) in store.statusPegawai" :key="i" class="col-sm-6 col-xs-6 col-md-3 col-lg-3 col-xl-3">
+            <div v-for="(item, i) in statusPegawaiSorted" :key="i" class="col-sm-6 col-xs-6 col-md-3 col-lg-3 col-xl-3">
               <card-kepeg
                 :jumlah="item.jumlah"
                 :jumlah-l="item.l"
@@ -34,7 +34,7 @@
             <q-list padding separator>
               <q-item-label header class="text-weight-bold text-dark">Kategori Pegawai</q-item-label>
               <q-separator />
-              <q-item v-for="(row, n) in store.kategoriPegawai" :key="n">
+              <q-item v-for="(row, n) in kategoriPegawaiSorted" :key="n">
                 <q-item-section avatar>
                   <q-avatar rounded size="32px" font-size="26px" color="grey-2" :text-color="store.icons[n].color" :icon="store.icons[n].icon" />
                 </q-item-section>
@@ -50,7 +50,7 @@
 
           <!-- pegawai yg absen -->
 
-          <q-card class="my-card q-mt-md">
+          <!-- <q-card class="my-card q-mt-md">
             <q-list padding separator>
               <q-item-label header class="text-weight-bold text-dark">Absensi Pegawai hari ini</q-item-label>
               <q-separator />
@@ -77,7 +77,7 @@
                 </q-item-section>
               </q-item>
             </q-list>
-          </q-card>
+          </q-card> -->
         </div>
 
         <div class="col-sm-12 col-xs-12 col-md-8 col-lg-8 col-xl-8">
@@ -152,11 +152,11 @@ const data = computed(() => {
   return []
 })
 
-function getIjin (kat) {
-  const arr = store.ygIjin
-  const cek = arr.filter(x => x.flag === kat).length
-  return cek
-}
+// function getIjin (kat) {
+//   const arr = store.ygIjin
+//   const cek = arr.filter(x => x.flag === kat).length
+//   return cek
+// }
 
 onMounted(() => {
   store.getData()
@@ -180,5 +180,35 @@ function setIcon (item) {
   const cc = colorx.filter(x => x.id === jns)
   return cc.length ? cc[0].icon : null
 }
+
+const urutanpegawai = [
+  'PNS',
+  'PPPK',
+  'HonDa',
+  'PT',
+  'PTT',
+  'MoU'
+]
+
+const statusPegawaiSorted = computed(() => {
+  const data = store.statusPegawai || []
+  return [...data].sort((a, b) => {
+    return urutanpegawai.indexOf(a.jenispegawai) - urutanpegawai.indexOf(b.jenispegawai)
+  })
+})
+
+const urutan = [
+  'MEDIS',
+  'PARAMEDIS',
+  'TENAGA KESEHATAN LAINNYA',
+  'NON MEDIS'
+]
+
+const kategoriPegawaiSorted = computed(() => {
+  const data = store.kategoriPegawai || []
+  return [...data].sort((a, b) => {
+    return urutan.indexOf(a.namakategoripeg) - urutan.indexOf(b.namakategoripeg)
+  })
+})
 
 </script>

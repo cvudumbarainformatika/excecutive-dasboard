@@ -17,7 +17,7 @@
               title="Pendapatan"
               title-color="white"
               subtitle-color="grey"
-              tahun="2023"
+              :tahun=store.params.year
               target-name="Target Pendapatan"
               realisasi-name="Realisasi Pendapatan"
             />
@@ -34,7 +34,7 @@
               title="Belanja"
               title-color="dark"
               subtitle-color="grey-9"
-              tahun="2023"
+              :tahun=store.params.year
               target-name="Anggaran Belanja"
               realisasi-name="Realisasi Pembelanjaan"
             />
@@ -110,7 +110,7 @@
               </q-card>
             </div>
           </div>
-          <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+          <!-- <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
             <div class="">
               <div>Kas Bendahara Pengeluaran 💸</div>
               <div class="text-h5 text-weight-bold">Rp 0</div>
@@ -118,10 +118,10 @@
             <cc-card class="q-mt-md" color1="purple" color2="purple-4" title="Kas Induk" :periode="app.monts[month - 1]+' '+ year" :total="0" />
             <cc-card class="q-mt-md" title="Kas Bendahara Penerimaan" :periode="app.monts[month - 1]+' '+ year" :total="0" />
 
-          </div>
+          </div> -->
         </div>
       </div>
-      <div class="col-12">
+      <!-- <div class="col-12">
         <q-card class="my-card" >
           <q-card-section>
             <div class="">Hutang dan Piutang 📝</div>
@@ -175,7 +175,7 @@
           </q-card-section>
 
         </q-card>
-      </div>
+      </div> -->
   </div>
   </q-page>
 </template>
@@ -183,7 +183,7 @@
 <script setup>
 import { onMounted, computed, watch } from 'vue'
 import CardComp from './CardComp.vue'
-import CcCard from './CcCard.vue'
+// import CcCard from './CcCard.vue'
 // import useDate from 'src/utility/useDate.js'
 import { useKeuanganStore } from 'src/stores/keuangan/index'
 import { formatRupiah } from 'src/utility/formatter'
@@ -230,4 +230,5 @@ function trigerredWatch (val) {
   const mYear = m + '-' + val[1]
   store.getData(mYear)
 }
+
 </script>

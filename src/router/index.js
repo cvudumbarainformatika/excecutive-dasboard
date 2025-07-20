@@ -28,15 +28,22 @@ export default route(function (/* { store, ssrContext } */) {
   })
 
   Router.beforeEach((to, from, next) => {
-    // console.log(LocalStorage.getItem('token'))
-    if (to.matched.some(record => record.meta.requireAuth) && !LocalStorage.getItem('token')) {
-      next({ path: '/auth' })
-    } else if (!to.matched.some(record => record.meta.requireAuth) && LocalStorage.getItem('token')) {
-      next({ path: '/' })
-    } else {
-      next()
-    }
+    console.log(LocalStorage.getItem('token'))
+    // Contoh log aktivitas routing (opsional)
+    console.log(`Navigasi dari ${from.path} ke ${to.path}`)
+    next() // selalu lanjutkan
   })
+
+  // Router.beforeEach((to, from, next) => {
+  //   console.log(LocalStorage.getItem('token'))
+  //   if (to.matched.some(record => record.meta.requireAuth) && !LocalStorage.getItem('token')) {
+  //     next({ path: '/auth' })
+  //   } else if (!to.matched.some(record => record.meta.requireAuth) && LocalStorage.getItem('token')) {
+  //     next({ path: '/' })
+  //   } else {
+  //     next()
+  //   }
+  // })
 
   Router.onError(error => {
     console.log('router', error)
