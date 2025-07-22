@@ -10,6 +10,7 @@ const SERV = 'https://xenter.my.id'
 // const SERV = 'http://192.168.150.103:3501'
 // const SERV = 'http://localhost:8080'
 // const SERV = 'https://rsudmochsaleh.my.id'
+// const SERV = 'http://192.168.150.112:3501' // IP RSUD Moch Saleh
 
 const SERVER = SERV + '/api'
 const api = axios.create({ baseURL: SERVER })

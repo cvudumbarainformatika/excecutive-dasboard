@@ -54,7 +54,17 @@
               label="Rajal"
             />
           </div>
-
+          <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-12">
+            <q-card class="my-card">
+              <div class="q-pa-md">
+                <div class="q-pb-md">{{ `Data Rincian Tempat Tidur Tangal ( ${app.currentDay} ${app.mm[month - 1]} ${ year } )` }}</div>
+                <!-- <div class="grid">
+                  <rincian-t-t-page />
+                </div> -->
+                <rincian-t-t-page />
+              </div>
+            </q-card>
+          </div>
           <!-- <div class="col-sm-6 col-xs-6 col-md-4 col-lg-4 col-xl-4">
             <q-card class="my-card">
               <q-card-section>
@@ -96,6 +106,7 @@ import { onMounted, computed, watch } from 'vue'
 
 import CardLayanan from './CardLayanan.vue'
 import CardRanap from './CardRanap.vue'
+import RincianTTPage from './RincianTTPage.vue'
 
 const store = usePelayananStore()
 const app = useAppStore()

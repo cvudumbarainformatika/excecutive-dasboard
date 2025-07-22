@@ -5,6 +5,7 @@ import { date } from 'quasar'
 export const usePelayananStore = defineStore('pelayanan', {
   state: () => ({
     items: [],
+    data: [],
     tempatTidur: 0,
     tempatTidurTersedia: 0,
     tempatTidurTerisi: 0,
@@ -44,6 +45,7 @@ export const usePelayananStore = defineStore('pelayanan', {
             // ...
             const data = resp.data.tempat_tidur
             this.items = data.length > 0 ? data : []
+            this.data = data
             this.tempatTidur = data.length > 0 ? data.map(x => x.total).reduce((x, y) => x + y, 0) : 0
             this.tempatTidurTersedia = data.length > 0 ? data.map(x => parseInt(x.sisa)).reduce((x, y) => x + y, 0) : 0
             this.tempatTidurTerisi = data.length > 0 ? data.map(x => parseInt(x.terisi)).reduce((x, y) => x + y, 0) : 0
