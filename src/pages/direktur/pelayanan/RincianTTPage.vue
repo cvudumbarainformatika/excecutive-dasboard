@@ -10,7 +10,7 @@
       <div class="table-wrapper">
         <q-markup-table flat bordered class="full-table">
           <thead>
-            <tr>
+            <tr class="bg-primary text-white">
               <th class="text-left">No.</th>
               <th class="text-left">Nama Poli</th>
               <th class="text-center">Jumlah TT</th>

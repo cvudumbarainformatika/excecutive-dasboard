@@ -1,5 +1,5 @@
 <template>
-  <q-page class="column flex-center items-center fullscreen text-white" :style="backgroundStyle">
+  <q-page class="column flex-center items-center fullscreen text-white"  :style="backgroundStyle">
     <div class="full-width q-pa-sm text-center">
       <text-anim :height="100" txt="Dashboard Executive" />
       <text-anim :height="100" />
@@ -18,6 +18,7 @@ const backgroundStyle = {
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat'
+
 }
 console.log('splash')
 </script>

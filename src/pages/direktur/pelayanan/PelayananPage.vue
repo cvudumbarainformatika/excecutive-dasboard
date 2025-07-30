@@ -79,7 +79,7 @@
           <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-12">
             <q-card class="my-card">
               <div class="q-pa-md">
-                <div class="q-pb-md">{{ `Data Pasien Berdasarkan Poli tgl ( ${app.currentDay} ${app.mm[month - 1]} ${ year } )` }}</div>
+                <div class="q-pb-md">{{ `Data Pasien Terlayani Berdasarkan Poli tgl ( ${app.currentDay} ${app.mm[month - 1]} ${ year } )` }}</div>
                 <div class="grid">
                   <div class="item" v-for="(item, i) in store.masterPoli" :key="i">
                     <div class="column flex-center text-center full-height">
