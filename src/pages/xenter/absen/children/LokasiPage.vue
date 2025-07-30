@@ -1,20 +1,15 @@
 <template>
   <q-page  class="column fit absolute-top flex-center bg-white shadow-4" style="overflow: hidden;">
-    <div class="absolute-bottom full-width z-top">
+    <app-loadingxenter v-show="loading" />
+    <div v-if="!loading" class="absolute-bottom full-width z-top">
       <q-card>
         <q-card-section>
           <div class="column flex-center">
-
-              <!-- <div>{{ kondisi }}</div>
-              <div>{{ tanggal }}</div>
-              <div>{{ jam }}</div>
-              <div>{{ kategory }}</div> -->
 
             <div class="q-my-lg text-weight-bold">
               <span v-if="jarak > radius">Kamu Jauh Dari Kantor</span>
               <span v-else>Kamu Berada di Area Kantor</span>
             </div>
-            <!-- <div>{{ jarak }}</div> -->
             <q-btn v-if="jarak > radius" class="q-mb-lg" color="negative" to="/absen">Kembali</q-btn>
             <div v-else class="q-gutter-md">
               <q-btn class="q-mb-lg" color="negative" to="/absen">Kembali</q-btn>
@@ -37,7 +32,7 @@
 </template>
 <script setup>
 import ScanBarcodeDialog from './complokasi/ScanBarcodeDialog.vue'
-import { computed, ref, watchEffect } from 'vue'
+import { computed, onMounted, ref, watchEffect } from 'vue'
 import { useGeolocation } from '@vueuse/core'
 // import L from 'leaflet'
 
@@ -61,11 +56,18 @@ defineProps({
     default: null
   }
 })
+
+onMounted(() => {
+  // console.log('mounted', props.jam)
+})
+
 const scan = ref(false)
 const mapRef = ref()
 // const map = ref()
 const lat = ref(0)
 const lang = ref(0)
+
+const loading = ref(true)
 
 const lokasiKantor = ref({
   lat: -7.745527419472046,
@@ -99,7 +101,7 @@ watchEffect(() => {
 
   const res = hitungJarak(lokasiku.value, lokasiKantor.value)
   jarak.value = res
-  console.log('watch effect', res)
+  // console.log('watch effect', res)
   // map.value?.setView([koordinat.value?.latitude, koordinat.value?.longitude], 13)
 })
 
