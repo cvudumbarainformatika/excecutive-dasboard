@@ -1,5 +1,6 @@
 <template>
-  <q-card class="my-card __anjay">
+  <div class="q-card clickable-card" @click="onClick(xxx)">
+  <q-card class="my-card __anjay" >
     <q-card-section >
       <div class="absolute-bottom bayang">
         <q-icon :name="icon" size="150px" />
@@ -49,11 +50,19 @@
       </div>
     <!-- </q-card-actions> -->
   </q-card>
+  </div>
+  <rincian-t-t-ranap/>
+  <rincian-poli/>
 </template>
 
 <script setup>
 import { colors } from 'quasar'
+import RincianTTRanap from './RincianTTRanap.vue'
+import RincianPoli from './RincianPoli.vue'
+import { usePelayananStore } from 'src/stores/pelayanan'
 const { getPaletteColor } = colors
+
+const storelayanan = usePelayananStore()
 
 defineProps({
   jumlah: {
@@ -99,9 +108,23 @@ defineProps({
   icon2: {
     type: String,
     default: 'bed'
+  },
+  xxx: {
+    type: String,
+    default: 'bed'
   }
 
 })
+
+function onClick (x) {
+  if (x === 'bed') {
+    storelayanan.dialogtt = true
+  } else if (x === 'jmlpasienpoli') {
+    alert('jmlpasienpoli')
+    storelayanan.dialogrincianpoli = true
+    console.log('jmlpasienpoli', storelayanan.dialogrincianpoli)
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -113,5 +136,15 @@ $txt: v-bind(getPaletteColor(txtColor));
   .bayang {
     opacity: .05;
   }
+}
+
+.clickable-card {
+  cursor: pointer; /* Jadi ikon tangan saat hover */
+  transition: transform 0.2s ease; /* Opsional: animasi saat hover */
+}
+
+.clickable-card:hover {
+  transform: scale(1.02); /* Efek mengangkat sedikit */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 </style>

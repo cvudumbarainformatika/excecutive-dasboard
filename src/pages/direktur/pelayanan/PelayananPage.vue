@@ -1,10 +1,15 @@
 <template>
   <q-page>
     <app-loading v-if="store.loading" />
-    <div class="row q-col-gutter-md q-pa-lg" style="padding-bottom:100px">
+    <div class="row q-col-gutter-md q-pa-lg" style="padding-bottom: 100px">
       <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <div class="__judul text-h6">Data Layanan</div>
-        <div class="__sub_judul f-14 text-grey-7">Data Layanan Per tanggal <span class="text-negative">{{ app.currentDay }} {{ app.monts[month - 1] }} {{ year }}</span></div>
+        <div class="__sub_judul f-14 text-grey-7">
+          Data Layanan Per tanggal
+          <span class="text-negative"
+            >{{ app.currentDay }} {{ app.monts[month - 1] }} {{ year }}</span
+          >
+        </div>
       </div>
 
       <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-12">
@@ -15,7 +20,8 @@
               icon="king_bed"
               :jumlah="store.tempatTidur"
               :jumlah-terisi="store.tempatTidurTerisi"
-              :jumlah-tersedia="store.tempatTidurTersedia"/>
+              :jumlah-tersedia="store.tempatTidurTersedia"
+            />
           </div>
           <div class="col-sm-12 col-xs-12 col-md-8 col-lg-8 col-xl-8">
             <card-ranap
@@ -31,16 +37,20 @@
 
           <div class="col-sm-6 col-xs-6 col-md-4 col-lg-4 col-xl-4">
             <card-layanan
-              :deskripsi="`Pasien Poli tgl ( ${app.currentDay} ${app.mm[month - 1]} ${ year } )`"
+              :deskripsi="`Pasien Poli tgl ( ${app.currentDay} ${
+                app.mm[month - 1]
+              } ${year} )`"
               txt1="Belum Terlayani"
               txt2="Terlayani"
               icon="personal_injury"
               icon1="hourglass_bottom"
               icon2="done_all"
               color="primary"
+              xxx="jmlpasienpoli"
               :jumlah="store.poli"
               :jumlah-terisi="store.poliHrIniBlm"
-              :jumlah-tersedia="store.poliHrIniSdh"/>
+              :jumlah-tersedia="store.poliHrIniSdh"
+            />
           </div>
           <div class="col-sm-12 col-xs-12 col-md-8 col-lg-8 col-xl-8">
             <card-ranap
@@ -54,17 +64,36 @@
               label="Rajal"
             />
           </div>
-          <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-12">
-            <q-card class="my-card">
-              <div class="q-pa-md">
-                <div class="q-pb-md">{{ `Data Rincian Tempat Tidur Tangal ( ${app.currentDay} ${app.mm[month - 1]} ${ year } )` }}</div>
-                <!-- <div class="grid">
-                  <rincian-t-t-page />
-                </div> -->
-                <rincian-t-t-page />
-              </div>
-            </q-card>
+
+          <div class="col-sm-6 col-xs-6 col-md-4 col-lg-4 col-xl-4">
+            <card-layanan
+              :deskripsi="`Pasien IGD tgl ( ${app.currentDay} ${
+                app.mm[month - 1]
+              } ${year} )`"
+              txt1="Belum Terlayani"
+              txt2="Terlayani"
+              icon="personal_injury"
+              icon1="hourglass_bottom"
+              icon2="done_all"
+              color="red"
+              :jumlah="store.igd"
+              :jumlah-terisi="store.igdHrIniBlm"
+              :jumlah-tersedia="store.igdHrIniSdh"
+            />
           </div>
+          <div class="col-sm-12 col-xs-12 col-md-8 col-lg-8 col-xl-8">
+            <card-ranap
+              txt-jumlah="Jumlah Pasien IGD"
+              :key="store.igdTahun"
+              :jumlah-ranap-tahun="jumlahIgdTahun"
+              :value-list="store.igdTahun"
+              :tahun="year"
+              primary="red"
+              secondary="transparent"
+              label="IGD"
+            />
+          </div>
+
           <!-- <div class="col-sm-6 col-xs-6 col-md-4 col-lg-4 col-xl-4">
             <q-card class="my-card">
               <q-card-section>
@@ -76,7 +105,7 @@
               </q-card-section>
             </q-card>
           </div> -->
-          <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-12">
+          <!-- <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-12">
             <q-card class="my-card">
               <div class="q-pa-md">
                 <div class="q-pb-md">{{ `Data Pasien Terlayani Berdasarkan Poli tgl ( ${app.currentDay} ${app.mm[month - 1]} ${ year } )` }}</div>
@@ -84,15 +113,26 @@
                   <div class="item" v-for="(item, i) in store.masterPoli" :key="i">
                     <div class="column flex-center text-center full-height">
                       <div class="text-h4 q-pa-sm text-grey-9">{{cariJumlahPoli(item.rs1)}}</div>
-                      <!-- <div class="separator"></div> -->
-                      <div class="q-pa-xs">{{item.rs2}}</div>
+                       <div class="text-subtitle9 text-weight-medium q-mb-sm">{{item.rs2}}</div>
+
+                       <div class="text-caption text-left">
+
+                        <div class="q-mb-xs">
+                          ✅ <strong>Sudah dilayani:</strong>
+                          ({{ cariJumlahPoliTerlayani(item.rs1) }})
+                        </div>
+                        <div>
+                          ⏳ <strong>Belum dilayani:</strong>
+                          ({{ cariJumlahPoliBelum(item.rs1) }})
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </q-card>
 
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -104,9 +144,10 @@ import { useAppStore } from 'src/stores/app'
 import { usePelayananStore } from 'src/stores/pelayanan'
 import { onMounted, computed, watch } from 'vue'
 
+// import EChart from 'src/components/charts/EChart.vue'
 import CardLayanan from './CardLayanan.vue'
 import CardRanap from './CardRanap.vue'
-import RincianTTPage from './RincianTTPage.vue'
+// import RincianTTPage from './RincianTTPage.vue'
 
 const store = usePelayananStore()
 const app = useAppStore()
@@ -117,15 +158,32 @@ const d = computed(() => app.currentDay)
 const jumlahRanapTahun = computed(() => {
   const ranap = store.ranapTahun
   if (ranap.length > 0) {
-    return ranap.map(x => x.jumlah).reduce((x, y) => x + y, 0)
+    return ranap.map((x) => x.jumlah).reduce((x, y) => x + y, 0)
   }
 
   return 0
 })
+
+// function cariJumlahPoliTerlayani (kode) {
+//   return store.dataPoliHrIniSdh?.filter(x => x.rs8 === kode).length
+// }
+
+// function cariJumlahPoliBelum (kode) {
+//   return store.dataPoliHrIniBlm?.filter(x => x.rs8 === kode).length
+// }
 const jumlahPoliTahun = computed(() => {
   const poli = store.poliTahun
   if (poli.length > 0) {
-    return poli.map(x => x.jumlah).reduce((x, y) => x + y, 0)
+    return poli.map((x) => x.jumlah).reduce((x, y) => x + y, 0)
+  }
+
+  return 0
+})
+
+const jumlahIgdTahun = computed(() => {
+  const igd = store.igdTahun
+  if (igd.length > 0) {
+    return igd.map((x) => x.jumlah).reduce((x, y) => x + y, 0)
   }
 
   return 0
@@ -136,22 +194,21 @@ onMounted(() => {
 })
 
 function monthToString () {
-  const m = month.value <= 9 ? '0' + (month.value) : (month.value).toString()
+  const m = month.value <= 9 ? '0' + month.value : month.value.toString()
   const mYear = m + '-' + year.value + '-' + d.value
   store.getData(mYear)
 }
 
-function cariJumlahPoli (kode) {
-  const arr = store.dataPoliHrIniSdh
-  return arr.filter(x => x.rs8 === kode).length
-}
+// function cariJumlahPoli (kode) {
+//   const arr = store.dataPoliHrIniSdh
+//   return arr.filter(x => x.rs8 === kode).length
+// }
 
 watch([month, year], (newValue) => {
   console.log('watch', newValue)
   monthToString()
 })
 // console.log('pelayanan', d.value)
-
 </script>
 
 <style lang="scss" scoped>
@@ -159,21 +216,21 @@ watch([month, year], (newValue) => {
   height: 1px;
   width: 100%;
   background-color: black;
-  opacity: .5;
+  opacity: 0.5;
 }
 .grid {
   columns: 12rem;
-  gap: .5rem;
+  gap: 0.5rem;
   counter-reset: grid;
 }
 
 .item + .item {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
 .item {
   break-inside: avoid;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 12 / 12;
   background: $cyan-2;
   // padding: .5rem;
   border-radius: 0.5rem;
@@ -185,12 +242,12 @@ watch([month, year], (newValue) => {
 }
 
 .item:nth-child(3n) {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 15 / 10;
   background: $pink-2;
 }
 
 .item:nth-child(3n - 1) {
-  aspect-ratio: 12 / 9;
+  aspect-ratio: 12 / 10;
   background: $lime-2;
 }
 
