@@ -6,6 +6,8 @@ export const useKepegawaianStore = defineStore('kepegawaian', {
     kategoriPegawai: [],
     statusPegawai: [],
     golonganPegawai: [],
+    dialogkebutuhanpegawai: false,
+    kebutuhanPegawai: [],
     ygMasuk: 0,
     ygIjin: [],
     colorize: [
@@ -57,6 +59,7 @@ export const useKepegawaianStore = defineStore('kepegawaian', {
             this.golonganPegawai = data.golongan.length ? data.golongan : []
             this.ygMasuk = data.yg_absen.length
             this.ygIjin = data.yg_libur.length ? data.yg_libur : []
+            this.kebutuhanPegawai = data.kebutuhanpegawai.length ? data.kebutuhanpegawai : []
 
             this.loading = false
           }

@@ -1,4 +1,5 @@
 <template>
+   <div class="q-card clickable-card" @click="onClick(xxx)">
   <q-card class="my-card __anjay">
     <q-card-section >
       <div class="absolute-bottom bayang">
@@ -32,11 +33,16 @@
         </div>
     </q-card-actions>
   </q-card>
+  <kebutuhan-pegawai />
+  </div>
 </template>
 
 <script setup>
 import { colors } from 'quasar'
+import { useKepegawaianStore } from 'src/stores/kepegawaian'
+import KebutuhanPegawai from './KebutuhanPegawai.vue'
 const { getPaletteColor } = colors
+const store = useKepegawaianStore()
 
 defineProps({
   jumlah: {
@@ -73,6 +79,13 @@ defineProps({
   }
 
 })
+
+function onClick (x) {
+  if (x === 'ALL') {
+    store.dialogkebutuhanpegawai = true
+  }
+}
+
 </script>
 
 <style lang="scss" scoped>
