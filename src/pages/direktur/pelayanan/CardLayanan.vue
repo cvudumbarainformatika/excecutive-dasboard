@@ -120,9 +120,9 @@ function onClick (x) {
   if (x === 'bed') {
     storelayanan.dialogtt = true
   } else if (x === 'jmlpasienpoli') {
-    alert('jmlpasienpoli')
     storelayanan.dialogrincianpoli = true
-    console.log('jmlpasienpoli', storelayanan.dialogrincianpoli)
+  } else if (x === 'IGD') {
+    console.log('ok')
   }
 }
 </script>

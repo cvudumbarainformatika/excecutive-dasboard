@@ -76,6 +76,7 @@
               icon1="hourglass_bottom"
               icon2="done_all"
               color="red"
+              xxx="IGD"
               :jumlah="store.igd"
               :jumlah-terisi="store.igdHrIniBlm"
               :jumlah-tersedia="store.igdHrIniSdh"

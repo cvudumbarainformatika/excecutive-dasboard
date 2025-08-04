@@ -48,6 +48,31 @@ export const useRekammedikStore = defineStore('rekammedik', {
       ]
     },
 
+    borlostoi: {
+      isiborlostoi: [],
+      series: [
+        {
+          name: 'Jumlah Terjual',
+          type: 'bar',
+          data: []
+        }
+      ]
+    },
+
+    pieSeries:
+  {
+    name: '',
+    type: 'pie',
+    radius: ['40%', '70%'],
+    data: [
+      // { value: 1048, name: 'BOR' },
+      // { value: 735, name: 'LOS' },
+      // { value: 580, name: 'TOI' },
+      // { value: 484, name: 'Keramik' },
+      // { value: 300, name: 'Lainnya' }
+    ]
+  },
+
     salesTrendData: {
       trendMonths: [
         'Jan',
@@ -113,7 +138,6 @@ export const useRekammedikStore = defineStore('rekammedik', {
               }))
 
               // Pastikan series adalah array yang berisi objek
-              console.log('sasa', this.topProductsData.series)
               this.topProductsData.series = [
                 {
                   name: 'ICD 10 Ranap',
@@ -219,8 +243,23 @@ export const useRekammedikStore = defineStore('rekammedik', {
                 }
               ]
             }
+            const borloi = resp.data
 
-            this.loading = false
+            if (borloi && borloi.borlostoy && Array.isArray(borloi.borlostoy)) {
+              // Untuk chart horizontal, kita perlu membalik ur
+              const data = {
+                series: [
+                  { name: 'BOR', data: borloi.borlostoy.map((item) => item.bor) },
+                  { name: 'LOS', data: borloi.borlostoy.map((item) => item.los) },
+                  { name: 'TOI', data: borloi.borlostoy.map((item) => item.toi) },
+                  { name: 'BTO', data: borloi.borlostoy.map((item) => item.bto) }
+                ]
+              }
+
+              this.borlostoi = data
+
+              this.loading = false
+            }
           }
 
           this.loading = false

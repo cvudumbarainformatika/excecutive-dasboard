@@ -39,14 +39,27 @@
               </q-card-section>
             </q-card>
           </div>
-           <div class="col-12 col-md-4">
+          <div class="col-12 col-md-4">
             <q-card class="dashboard-card">
               <q-card-section>
                 <EChart
                   :title="`TOP 10 ICD 10 IGD ${year}`"
+                  :show="false"
                   :xAxisData="store.topIcd10Dataigd.icd10igd"
                   :series="store.topIcd10Dataigd.series"
                   :horizontal="true"
+                />
+              </q-card-section>
+            </q-card>
+          </div>
+          <div class="col-12 col-md-12">
+            <q-card class="dashboard-card">
+              <q-card-section>
+                <EChart
+                  :title="`BOR, LOS, TOI, BTO ${year}`"
+                  :show="true"
+                  :xAxisData="store.salesTrendData.trendMonths"
+                  :series="store.borlostoi.series"
                 />
               </q-card-section>
             </q-card>
@@ -82,6 +95,46 @@ function monthToString () {
   const mYear = m + '-' + year.value + '-' + d.value
   store.getData(mYear)
 }
+
+// const pieSeries = ref([
+//   {
+//     name: 'Kategori Produk',
+//     type: 'pie',
+//     radius: ['40%', '70%'],
+//     data: [
+//       { value: 1048, name: 'BOR' },
+//       { value: 735, name: 'LOS' },
+//       { value: 580, name: 'TOI' }
+//       // { value: 484, name: 'Keramik' },
+//       // { value: 300, name: 'Lainnya' }
+//     ]
+//   }
+// ])
+
+// const bar = defineProps({
+//   title: {
+//     type: String,
+//     default: 'ECharts Demo'
+//   },
+//   xAxisData: {
+//     type: Array,
+//     default: () => ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
+//   },
+//   series: {
+//     type: Array,
+//     default: () => [
+//       {
+//         name: 'Data 1',
+//         type: 'bar',
+//         data: [40, 20, 12, 39, 10, 40]
+//       }
+//     ]
+//   },
+//   horizontal: {
+//     type: Boolean,
+//     default: false
+//   }
+// })
 
 // function cariJumlahPoli (kode) {
 //   const arr = store.dataPoliHrIniSdh
