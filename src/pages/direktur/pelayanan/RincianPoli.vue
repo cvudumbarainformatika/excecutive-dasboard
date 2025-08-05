@@ -52,8 +52,9 @@ function cariJumlahPoliBelum (kode) {
 }
 
 function cariJumlahPoli (kode) {
-  const arr = store.dataPoliHrIniSdh
-  return arr.filter(x => x.rs8 === kode).length
+  const jumlahSdh = store.dataPoliHrIniSdh?.filter(x => x.rs8 === kode).length || 0
+  const jumlahBlm = store.dataPoliHrIniBlm?.filter(x => x.rs8 === kode).length || 0
+  return jumlahSdh + jumlahBlm
 }
 </script>
 <style lang="scss" scoped>

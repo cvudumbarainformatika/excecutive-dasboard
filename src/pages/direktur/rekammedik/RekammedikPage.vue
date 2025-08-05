@@ -60,6 +60,7 @@
                   :show="true"
                   :xAxisData="store.salesTrendData.trendMonths"
                   :series="store.borlostoi.series"
+                  :fontSize="10"
                 />
               </q-card-section>
             </q-card>

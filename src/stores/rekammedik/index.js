@@ -186,7 +186,7 @@ export const useRekammedikStore = defineStore('rekammedik', {
 
               this.topIcd10Datarajal.series = [
                 {
-                  name: 'Jumlah',
+                  name: 'Top 10 ICD 10 Rawat Jalan',
                   type: 'bar',
                   data: itemsWithColors,
                   label: {
@@ -232,7 +232,7 @@ export const useRekammedikStore = defineStore('rekammedik', {
 
               this.topIcd10Dataigd.series = [
                 {
-                  name: 'Jumlah',
+                  name: 'Top 10 ICD 10 IGD',
                   type: 'bar',
                   data: itemsWithColors,
                   label: {

@@ -54,6 +54,10 @@ const props = defineProps({
   show: {
     type: Boolean,
     default: false
+  },
+  fontSize: {
+    type: Number,
+    default: 16
   }
 
 })
@@ -66,7 +70,7 @@ const labelOption = {
   verticalAlign: 'middle',
   rotate: 90,
   formatter: '{c}  {name|{a}}',
-  fontSize: 16,
+  fontSize: props.fontSize,
   rich: {
     name: {}
   }

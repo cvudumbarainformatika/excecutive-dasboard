@@ -1,5 +1,5 @@
 <template>
-   <div class="q-card clickable-card" @click="onClick(xxx)">
+   <div class="q-card clickable-card" @click="onClick(txtShort)">
   <q-card class="my-card __anjay">
     <q-card-section >
       <div class="absolute-bottom bayang">
@@ -81,6 +81,7 @@ defineProps({
 })
 
 function onClick (x) {
+  console.log('onClick', x)
   if (x === 'ALL') {
     store.dialogkebutuhanpegawai = true
   }
