@@ -26,10 +26,10 @@
               <td>{{ item?.jabatan }}</td>
               <td class="text-center text-bold">{{ item?.standart }}</td>
               <td class="text-center text-bold">{{ item?.eksisting }}</td>
-              <td class="text-center text-bold" v-if="item.status === 'Kurang'">{{ item?.standart - item?.eksisting}}</td>
-              <td class="text-center text-bold" v-else> - </td>
-              <td class="text-center text-bold" v-if="item.status === 'Kurang'"><q-badge color="red"> {{ item?.status }} </q-badge></td>
-               <td class="text-center text-bold" v-else> <q-badge color="primary"> {{ item?.status }} </q-badge> </td>
+              <td class="text-center text-bold" v-if="item.status === 'Kurang'"> {{ item?.standart - item?.eksisting}} <q-badge rounded outline  color="red"> {{ item?.status }} </q-badge>
+              </td>
+              <td class="text-center text-bold" v-else> - <q-badge rounded outline  color="primary"> {{ item?.status }} </q-badge></td>
+              <td class="text-center text-bold">{{ item?.keterangan }}</td>
             </tr>
           </tbody>
         </q-markup-table>
