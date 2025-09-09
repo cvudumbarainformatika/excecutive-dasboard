@@ -31,7 +31,7 @@
             <q-item-label class="f-18 text-negative">{{txt1}}</q-item-label>
           </q-item-section>
           <q-item-section side>
-            <q-item-label class="text-weight-bold f-20 text-negative">{{jumlahTerisi}}</q-item-label>
+            <q-item-label class="text-weight-bold f-20 text-negative">{{jumlahTerisi}} ({{ pesrsenterisi }}%)</q-item-label>
           </q-item-section>
         </q-item>
         <q-separator inset />
@@ -43,7 +43,7 @@
             <q-item-label class="f-18 text-primary">{{txt2}}</q-item-label>
           </q-item-section>
           <q-item-section side>
-            <q-item-label class="text-weight-bold f-20 text-primary">{{jumlahTersedia}}</q-item-label>
+            <q-item-label class="text-weight-bold f-20 text-primary">{{jumlahTersedia}} ({{ pesrsentersedia }}%)</q-item-label>
           </q-item-section>
         </q-item>
       </q-list>
@@ -60,11 +60,12 @@ import { colors } from 'quasar'
 import RincianTTRanap from './RincianTTRanap.vue'
 import RincianPoli from './RincianPoli.vue'
 import { usePelayananStore } from 'src/stores/pelayanan'
+import { computed } from 'vue'
 const { getPaletteColor } = colors
 
 const storelayanan = usePelayananStore()
 
-defineProps({
+const props = defineProps({
   jumlah: {
     type: Number,
     default: 0
@@ -114,6 +115,14 @@ defineProps({
     default: 'bed'
   }
 
+})
+
+const pesrsenterisi = computed(() => {
+  return ((props.jumlahTerisi / props.jumlah) * 100).toFixed(1)
+})
+
+const pesrsentersedia = computed(() => {
+  return ((props.jumlahTersedia / props.jumlah) * 100).toFixed(1)
 })
 
 function onClick (x) {

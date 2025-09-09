@@ -83,7 +83,8 @@ const menus = ref([
   { nama: 'Kepegawaian', url: '/kepegawaian', icon: 'people' },
   { nama: 'Layanan', url: '/layanan', icon: 'support_agent' },
   { nama: 'Rekam Medik', url: '/rekammedik', icon: 'report' },
-  { nama: 'Keuangan', url: '/keuangan', icon: 'dvr' }
+  { nama: 'Keuangan', url: '/keuangan', icon: 'dvr' },
+  { nama: 'Kinerja', url: '/kinerja', icon: 'assignment_ind' }
   // { nama: 'Sarpras', url: '/sarpras', icon: 'store' }
 ])
 

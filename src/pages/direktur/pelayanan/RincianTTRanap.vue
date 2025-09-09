@@ -24,8 +24,8 @@
                <td>{{ x + 1 }}.</td>
               <td>{{ item?.ruang }}</td>
               <td class="text-center">{{ item?.total }}</td>
-              <td class="text-center text-negative">{{ item?.terisi }}</td>
-              <td class="text-center text-positive">{{ item?.sisa }}</td>
+              <td class="text-center text-negative">{{ item?.terisi }} ({{ ((item?.terisi / item?.total) * 100).toFixed(1) }}%)</td>
+              <td class="text-center text-positive">{{ item?.sisa }} ({{ ((item?.sisa / item?.total) * 100).toFixed(1) }}%)</td>
             </tr>
           </tbody>
         </q-markup-table>
