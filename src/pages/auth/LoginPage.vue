@@ -84,9 +84,9 @@ function onSubmit () {
   }
   store.login(form).then(() => {
     console.log('cek state', auth.token)
-    // setTimeout(() => {
-    //   window.location.reload()
-    // }, 500)
+    setTimeout(() => {
+      window.location.reload()
+    }, 100)
   })
 
   // console.log('')
