@@ -103,7 +103,7 @@ const auth = useLoginXenterStore()
 
 // eslint-disable-next-line no-unused-vars
 const bisaLogin = ref([
-  '3574041305820002@app.com', 'sa@app.com', '3574031107840006@app.com'
+  '3574041305820002@app.com', 'sa@app.com', '3574031107840006@app.com', '3513176806880002@app.com'
 ])
 
 onMounted(() => {
