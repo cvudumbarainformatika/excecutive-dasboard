@@ -32,6 +32,11 @@ export const usePelayananStore = defineStore('pelayanan', {
       month: null,
       year: null,
       tgl: null
+    },
+    penunjang: {
+      laborat: 0,
+      radiologi: 0,
+      hemodialisa: 0
     }
 
   }),
@@ -94,6 +99,9 @@ export const usePelayananStore = defineStore('pelayanan', {
             this.igdTahun = resp.data.igd_tahun
 
             this.masterPoli = resp.data.poli
+            this.penunjang.laborat = resp.data.penunjang_laborat?.total_pasien
+            this.penunjang.radiologi = resp.data.penunjang_radiologi?.total_pasien
+            this.penunjang.hemodialisa = resp.data.penunjang_hd?.total_pasien
 
             this.loading = false
           }

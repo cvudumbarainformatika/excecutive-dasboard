@@ -94,6 +94,15 @@
               label="IGD"
             />
           </div>
+          <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-12">
+            <q-card>
+              <q-card-section>
+                <q-page class="q-pa-md">
+                  <PieChart :data="store.penunjang" :bulan="store.params.month" :tahun="store.params.year"/>
+                </q-page>
+              </q-card-section>
+            </q-card>
+          </div>
 
           <!-- <div class="col-sm-6 col-xs-6 col-md-4 col-lg-4 col-xl-4">
             <q-card class="my-card">
@@ -144,6 +153,7 @@
 import { useAppStore } from 'src/stores/app'
 import { usePelayananStore } from 'src/stores/pelayanan'
 import { onMounted, computed, watch } from 'vue'
+import PieChart from 'src/components/charts/PieChart.vue'
 
 // import EChart from 'src/components/charts/EChart.vue'
 import CardLayanan from './CardLayanan.vue'
@@ -209,6 +219,12 @@ watch([month, year], (newValue) => {
   console.log('watch', newValue)
   monthToString()
 })
+
+// const dummyData = {
+//   laborat: 35,
+//   radiologi: 25,
+//   hemodialisa: 15
+// }
 // console.log('pelayanan', d.value)
 </script>
 
