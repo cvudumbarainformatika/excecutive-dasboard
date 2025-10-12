@@ -86,7 +86,7 @@ function onSubmit () {
     console.log('cek state', auth.token)
     setTimeout(() => {
       window.location.reload()
-    }, 500)
+    }, 100)
   })
 
   // console.log('')
