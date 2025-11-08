@@ -108,8 +108,8 @@ const keRegister = () => {
 }
 
 watch(token, (n, o) => {
-  console.log('new', n)
-  console.log('old', o)
+  // console.log('new', n)
+  // console.log('old', o)
   if (n !== null) {
     // setLocalToken(n)
     // setTimeout(() => {

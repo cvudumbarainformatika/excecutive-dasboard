@@ -1,7 +1,7 @@
 <template>
   <q-page  class="column fit absolute-top flex-center bg-white shadow-4" style="overflow: hidden;">
-    <app-loadingxenter v-show="loading" />
-    <div v-if="!loading" class="absolute-bottom full-width z-top">
+    <!-- <app-loadingxenter v-show="loading" /> -->
+    <div  class="absolute-bottom full-width z-top">
       <q-card>
         <q-card-section>
           <div class="column flex-center">
@@ -10,8 +10,8 @@
               <span v-if="jarak > radius">Kamu Jauh Dari Kantor</span>
               <span v-else>Kamu Berada di Area Kantor</span>
             </div>
-            <q-btn v-if="jarak > radius" class="q-mb-lg" color="negative" to="/absen">Kembali</q-btn>
-            <div v-else class="q-gutter-md">
+            <!-- <q-btn v-if="jarak > radius" class="q-mb-lg" color="negative" to="/absen">Kembali</q-btn> -->
+            <div class="q-gutter-md">
               <q-btn class="q-mb-lg" color="negative" to="/absen">Kembali</q-btn>
               <q-btn class="q-mb-lg" color="primary" @click="scan = !scan">Lanjut Absen</q-btn>
             </div>
@@ -67,7 +67,7 @@ const mapRef = ref()
 const lat = ref(0)
 const lang = ref(0)
 
-const loading = ref(true)
+// const loading = ref(true)
 
 const lokasiKantor = ref({
   lat: -7.745527419472046,
@@ -75,8 +75,8 @@ const lokasiKantor = ref({
 })
 
 const lokasiku = ref({
-  lat: 0,
-  lang: 0
+  lat: -7.745527419472046,
+  lang: 113.21081986255665
 })
 
 const radius = ref(100)
