@@ -35,14 +35,20 @@ export default route(function (/* { store, ssrContext } */) {
   // })
 
   Router.beforeEach((to, from, next) => {
-    console.log(LocalStorage.getItem('token'))
-    if (to.matched.some(record => record.meta.requireAuth) && !LocalStorage.getItem('token')) {
-      next({ path: '/auth' })
-    } else if (!to.matched.some(record => record.meta.requireAuth) && LocalStorage.getItem('token')) {
-      next({ path: '/' })
-    } else {
-      next()
+    const token = LocalStorage.getItem('auth_token')
+    const requireAuth = to.matched.some(
+      record => record.meta.requireAuth
+    )
+
+    if (requireAuth && !token) {
+      return next('/auth')
     }
+
+    if (to.path === '/auth' && token) {
+      return next('/keuangan')
+    }
+
+    next()
   })
 
   Router.onError(error => {

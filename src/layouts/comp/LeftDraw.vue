@@ -39,7 +39,8 @@
       </q-scroll-area>
       <div class="absolute-top bg-primary text-white" :style="`height: ${height}px;` ">
           <div class="absolute-bottom bg-transparent  q-pa-md">
-            <div class="_judul_page text-weight-bold text-h6">Dashboard Executive</div>
+            <div class="_judul_page text-weight-bold text-h6">SI PETA KENCANA</div>
+            <!-- <div class="_judul_page text-weight-bold text-h6">Dashboard Executive</div> -->
             <!-- <div class="_judul_page text-caption text-grey">Dashboard Khusus Direktur</div> -->
             <div class="_judul_page f-12 text-grey-5  ">UOBK RSUD MOHAMAD SALEH KOTA PROBOLINGGO</div>
           </div>

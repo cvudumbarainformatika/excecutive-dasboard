@@ -1,15 +1,20 @@
 <template>
   <q-layout view="lHh Lpr lff">
-
-    <!-- <q-header elevated class="bg-primary text-white" height-hint="98">
+    <q-header elevated class="bg-primary text-white">
       <q-toolbar>
-        <q-btn dense flat round icon="menu" @click="toggleLeftDrawer" />
-
         <q-toolbar-title>
-          Title
+          SI PETA KENCANA
         </q-toolbar-title>
+
+        <q-btn
+          flat
+          no-caps
+          icon="logout"
+          label="Logout"
+          @click="logout"
+        />
       </q-toolbar>
-    </q-header> -->
+    </q-header>
 
     <left-draw v-model="leftDrawerOpen"  />
 
@@ -22,10 +27,24 @@
 
 <script setup>
 import { ref } from 'vue'
+import { LocalStorage, useQuasar } from 'quasar'
+import { useRouter } from 'vue-router'
 import LeftDraw from './comp/LeftDraw.vue'
 
 const leftDrawerOpen = ref(false)
-// function toggleLeftDrawer () {
-//   leftDrawerOpen.value = !leftDrawerOpen.value
-// }
+const $q = useQuasar()
+const router = useRouter()
+
+function logout () {
+  $q.dialog({
+    title: 'Logout',
+    message: 'Yakin ingin keluar dari aplikasi?',
+    cancel: true,
+    persistent: true
+  }).onOk(() => {
+    LocalStorage.remove('auth_token')
+    LocalStorage.remove('auth_user')
+    router.replace('/auth')
+  })
+}
 </script>

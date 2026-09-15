@@ -12,9 +12,10 @@
       </div>
       <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
         <div class="text-right">
-          <div class="txt-h5 text-weight-bold">Dashboard Executive</div>
-          <div class="txt-md text-grey">Dashboard ini Hanya bisa di akses Oleh Direktur</div>
-          <div class="txt-md text-primary">UOBK RSUD MOHAMAD SALEH</div>
+           <div class="txt-h5 text-weight-bold">SI PETA KENCANA</div>
+          <!-- <div class="txt-h5 text-weight-bold">Dashboard Executive</div> -->
+          <!-- <div class="txt-md text-grey">Dashboard ini Hanya bisa di akses Oleh Direktur</div>
+          <div class="txt-md text-primary">UOBK RSUD MOHAMAD SALEH</div> -->
         </div>
       </div>
     </div>
