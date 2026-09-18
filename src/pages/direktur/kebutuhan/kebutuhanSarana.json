@@ -1,0 +1,261 @@
+[
+    {
+        "mark":  "*",
+        "level1":  "Pelayanan Medik dan Keperawatan",
+        "level2":  "",
+        "sarana":  "",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "**",
+        "level1":  "",
+        "level2":  "Pelayanan Bedah Sentral (OK)",
+        "sarana":  "",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "91316",
+        "level1":  "",
+        "level2":  "",
+        "sarana":  "Ruangan Operasi Hybrid",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "*",
+        "level1":  "Penunjang Medik RS",
+        "level2":  "",
+        "sarana":  "",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "**",
+        "level1":  "",
+        "level2":  "Instalasi Radiodiagnostik",
+        "sarana":  "",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "1249",
+        "level1":  "",
+        "level2":  "",
+        "sarana":  "Ruangan MRI (Ruang Pemeriksaan/ Diagnostik)",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "**",
+        "level1":  "",
+        "level2":  "Laboratorium Kedokteran Forensik dan Medikolegal",
+        "sarana":  "",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "1180",
+        "level1":  "",
+        "level2":  "",
+        "sarana":  "Ruangan Penilaian Dokter",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "1183",
+        "level1":  "",
+        "level2":  "",
+        "sarana":  "Ruangan Pendaftaran dan Pendataan",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "1185",
+        "level1":  "",
+        "level2":  "",
+        "sarana":  "Ruangan Administrasi, Keuangan dan Personalia",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "1197",
+        "level1":  "",
+        "level2":  "",
+        "sarana":  "Ruangan Tunggu Pasien dan Pengantar Pasien",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "**",
+        "level1":  "",
+        "level2":  "Instalasi Rehabilitasi Medik",
+        "sarana":  "",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "1307",
+        "level1":  "",
+        "level2":  "",
+        "sarana":  "Ruangan Hidroterapi (Incl R. Ganti, Toilet)",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "1309",
+        "level1":  "",
+        "level2":  "",
+        "sarana":  "Ruangan Terapi Okupasi",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "1316",
+        "level1":  "",
+        "level2":  "",
+        "sarana":  "Ruangan Relaksasi/ Perangsangan Audio-Visual",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "1318",
+        "level1":  "",
+        "level2":  "",
+        "sarana":  "Ruangan Terapi Wicara Vokasional",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "1321",
+        "level1":  "",
+        "level2":  "",
+        "sarana":  "Loker Petugas Bengkel OP",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "1322",
+        "level1":  "",
+        "level2":  "",
+        "sarana":  "Ruangan Bengkel Halus/ Kerja Kayu",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "1323",
+        "level1":  "",
+        "level2":  "",
+        "sarana":  "Ruangan Bengkel Kasar/ kerja pembuatan",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "1324",
+        "level1":  "",
+        "level2":  "",
+        "sarana":  "Ruangan Jahit/ Kulit (OP)",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "1325",
+        "level1":  "",
+        "level2":  "",
+        "sarana":  "Ruangan Penyimpanan Barang Jadi (OP)",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "1327",
+        "level1":  "",
+        "level2":  "",
+        "sarana":  "Ruangan Penyetelan/ Fitting Room; (OP)",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "1330",
+        "level1":  "",
+        "level2":  "",
+        "sarana":  "Ruangan PSM",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "1341",
+        "level1":  "",
+        "level2":  "",
+        "sarana":  "Dapur Kecil (Pantry)",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "1708",
+        "level1":  "",
+        "level2":  "",
+        "sarana":  "Gudang Bahan Baku",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "**",
+        "level1":  "",
+        "level2":  "Bank Darah/ Unit Transfusi Darah (BDRS/UTDRS)",
+        "sarana":  "",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "1154",
+        "level1":  "",
+        "level2":  "",
+        "sarana":  "Ruangan Donor Darah",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "1156",
+        "level1":  "",
+        "level2":  "",
+        "sarana":  "Ruangan Pemberian Makanan Pasca Donor",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "*",
+        "level1":  "Penunjang Non Medik RS",
+        "level2":  "",
+        "sarana":  "",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "**",
+        "level1":  "",
+        "level2":  "Instalasi Pencucian Linen/ Laundri",
+        "sarana":  "",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "1125",
+        "level1":  "",
+        "level2":  "",
+        "sarana":  "Ruangan Kepala Laundri",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "1129",
+        "level1":  "",
+        "level2":  "",
+        "sarana":  "Ruangan Perbaikan Linen / Jahit",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "**",
+        "level1":  "",
+        "level2":  "Instalasi Pemeliharaan Sarana (Workshop)",
+        "sarana":  "",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "1175",
+        "level1":  "",
+        "level2":  "",
+        "sarana":  "Ruangan Studio Gambar dan Arsip Teknis",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "**",
+        "level1":  "",
+        "level2":  "Instalasi Sterilisasi Pusat / CSSD",
+        "sarana":  "",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "1204",
+        "level1":  "",
+        "level2":  "",
+        "sarana":  "Ruangan Kepala Instalasi CSSD",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "::end::",
+        "level1":  "",
+        "level2":  "",
+        "sarana":  "",
+        "tersedia":  ""
+    }
+]

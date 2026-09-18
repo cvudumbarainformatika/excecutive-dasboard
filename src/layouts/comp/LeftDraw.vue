@@ -81,11 +81,12 @@ const height = ref(110)
 const { dateDbFormat } = useDate()
 const date = ref(dateDbFormat(new Date()))
 const menus = ref([
-  { nama: 'Kepegawaian', url: '/kepegawaian', icon: 'people' },
-  { nama: 'Layanan', url: '/layanan', icon: 'support_agent' },
-  { nama: 'Rekam Medik', url: '/rekammedik', icon: 'report' },
-  { nama: 'Keuangan', url: '/keuangan', icon: 'dvr' },
-  { nama: 'Kinerja', url: '/kinerja', icon: 'assignment_ind' }
+  { nama: 'Kepegawaian', url: '/kepegawaian', icon: 'people', roles: ['superadmin', 'inspektorat', 'bpkad', 'baperida', 'dinkes'] },
+  { nama: 'Layanan', url: '/layanan', icon: 'support_agent', roles: ['superadmin', 'dinkes'] },
+  { nama: 'Rekam Medik', url: '/rekammedik', icon: 'report', roles: ['superadmin', 'dinkes'] },
+  { nama: 'Keuangan', url: '/keuangan', icon: 'dvr', roles: ['superadmin', 'bpkad', 'dinkes'] },
+  { nama: 'Kinerja', url: '/kinerja', icon: 'assignment_ind', roles: ['superadmin', 'dinkes'] },
+  { nama: 'Kebutuhan', url: '/kebutuhan', icon: 'inventory_2', roles: ['superadmin', 'inspektorat', 'bpkad', 'baperida', 'dinkes'] }
   // { nama: 'Sarpras', url: '/sarpras', icon: 'store' }
 ])
 

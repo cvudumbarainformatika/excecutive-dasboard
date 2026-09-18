@@ -1,0 +1,128 @@
+[
+    {
+        "mark":  "*",
+        "level1":  "Sumber Listrik",
+        "level2":  "",
+        "prasarana":  "",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "*",
+        "level1":  "Sumber Air",
+        "level2":  "",
+        "prasarana":  "",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "**",
+        "level1":  "",
+        "level2":  "Sumur Dalam/Artesis",
+        "prasarana":  "",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "90143",
+        "level1":  "",
+        "level2":  "",
+        "prasarana":  "Rata-rata Pemakaian Air Sumur Dalam per Hari (M3/Hari)",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "*",
+        "level1":  "Pengolahan Limbah",
+        "level2":  "",
+        "prasarana":  "",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "**",
+        "level1":  "",
+        "level2":  "Kerjasama Pengolahan Limbah Kepihak Berijin",
+        "prasarana":  "",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "1798",
+        "level1":  "",
+        "level2":  "",
+        "prasarana":  "MOU Limbah Cair (Dokumen)",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "*",
+        "level1":  "Gas Medik \u0026 Vakum Medik",
+        "level2":  "",
+        "prasarana":  "",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "**",
+        "level1":  "",
+        "level2":  "Sentral",
+        "prasarana":  "",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "90296",
+        "level1":  "",
+        "level2":  "",
+        "prasarana":  "Sentral Gas Oksigen / Oksigen Generator (Titik)",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "*",
+        "level1":  "Penanggulangan Bahaya Kebakaran",
+        "level2":  "",
+        "prasarana":  "",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "*",
+        "level1":  "Sistem Telekomunikasi",
+        "level2":  "",
+        "prasarana":  "",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "*",
+        "level1":  "Ambulans",
+        "level2":  "",
+        "prasarana":  "",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "**",
+        "level1":  "",
+        "level2":  "Ambulans Transport",
+        "prasarana":  "",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "824",
+        "level1":  "",
+        "level2":  "",
+        "prasarana":  "Jumlah ambulance transport Kondisi Rusak Berat (Unit)",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "**",
+        "level1":  "",
+        "level2":  "Ambulans Gawat Darurat",
+        "prasarana":  "",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "825",
+        "level1":  "",
+        "level2":  "",
+        "prasarana":  "Jumlah Ambulance GaDar Kondisi Rusak Berat (Unit)",
+        "tersedia":  ""
+    },
+    {
+        "mark":  "::end::",
+        "level1":  "",
+        "level2":  "",
+        "prasarana":  "",
+        "tersedia":  ""
+    }
+]

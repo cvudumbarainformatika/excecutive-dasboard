@@ -45,7 +45,8 @@ const menus = ref([
   { nama: 'Keuangan', anim: '116065-wallet-animation.json', active: false },
   { nama: 'SDM', anim: '57946-profile-user-card.json', active: false },
   { nama: 'Layanan', anim: '24897-customer-service.json', active: false },
-  { nama: 'Sarpras', anim: '73799-worker.json', active: false }
+  { nama: 'Sarpras', anim: '73799-worker.json', active: false },
+  { nama: 'Kebutuhan', anim: '73799-worker.json', active: false }
 ])
 
 const emits = defineEmits(['onSelected'])

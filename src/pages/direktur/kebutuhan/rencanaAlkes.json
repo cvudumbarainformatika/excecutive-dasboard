@@ -1,0 +1,3114 @@
+[
+    {
+        "mark":  "*",
+        "level1":  "Pelayanan Medik dan Keperawatan",
+        "level2":  "",
+        "roomCode":  "",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "**",
+        "level1":  "",
+        "level2":  "Pelayanan Gawat Darurat",
+        "roomCode":  "",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Observasi",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "5385",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21403034",
+        "item":  "Pneumatic Splint Set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "**",
+        "level1":  "",
+        "level2":  "Pelayanan Rawat Inap",
+        "roomCode":  "",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Perawatan Anak",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "2096",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10701013",
+        "item":  "Toynbee diagnostic tube",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Perawatan Perinatologi",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "2588",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21102005",
+        "item":  "Fetal phonocardiographic monitor and accessories",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "1780",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10903021",
+        "item":  "Examination light / Examination lamp / Lampu periksa / Hanging lamp",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Perawatan Penyakit Dalam/ Sp. THT/ Sp. Syaraf",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "2135",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10704002",
+        "item":  "THT Unit/Ent Diagnostik unit/ENT Examination set/ENT treatment",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "1780",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10903021",
+        "item":  "Examination light / Examination lamp / Lampu periksa / Hanging lamp",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Perawatan Bedah Umum/ Sp. Bedah Syaraf/ Sp. Ortopedi Umum/ Ortopedi Spesialistik",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "4283",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20903057",
+        "item":  "Emergency Trolley / Resuscitation Crash Cart ",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "1999",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11303011",
+        "item":  "Nonpowered orthopedic traction apparatus and accessories",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "1718",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20902005",
+        "item":  "Electric bed patient",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Perawatan Obstetri dan Ginekologi",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "5341",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20502039",
+        "item":  "Cardiotocograph/CTG",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "1718",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20902005",
+        "item":  "Electric bed patient",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "1797",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20903038",
+        "item":  "Steam sterilizer",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5338",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10902018",
+        "item":  "Antidecubitus Matras",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5340",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20903087",
+        "item":  "Emergency set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5450",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10903104",
+        "item":  "Food trolley",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5451",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10903105",
+        "item":  "Lemari Steril",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5685",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21603031M",
+        "item":  "Lampu Operasi Bergerak/Operating Lamp Mobile",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5465",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10903113",
+        "item":  "Meja Mayo / Meja instrumen / Intrumen table",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "1695",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10901002",
+        "item":  "Bedside Monitor/Bed-patient monitor/Patient monitor/Vitalsign Monitor",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "4546",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10903006",
+        "item":  "Kantong buli - buli",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5456",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10903108",
+        "item":  "Gilyserine Spuit",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5457",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10903109",
+        "item":  "Irigator",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5842",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10102042",
+        "item":  "Gelas ukur",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "1731",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20902018",
+        "item":  "Inkubator Bayi",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "4195",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20903042",
+        "item":  "Wheeled stretcher",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "4283",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20903057",
+        "item":  "Emergency Trolley / Resuscitation Crash Cart ",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Perawatan Isolasi tipe tekanan positive (kelas P)",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "1718",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20902005",
+        "item":  "Electric bed patient",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "1695",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10901002",
+        "item":  "Bedside Monitor/Bed-patient monitor/Patient monitor/Vitalsign Monitor",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "**",
+        "level1":  "",
+        "level2":  "Pelayanan Rawat Jalan",
+        "roomCode":  "",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Klinik Sp. Jantung \u0026 Pembuluh Darah, Sub Spesialis",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "4334",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20502024",
+        "item":  "Hydraulic, pneumatic, or photoelectric plethysmographs.",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "4470",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20505006",
+        "item":  "Enhanced External Counterpulsation (EECP)",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "6678",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10901035",
+        "item":  "ABPM dan HBPM (Ambulatoir dan Hospital Blood Pressure Monitoring)",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "4219",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20502038",
+        "item":  "Holter Monitor",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Klinik Sp. Paru + Pernafasan",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "1780",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10903021",
+        "item":  "Examination light / Examination lamp / Lampu periksa / Hanging lamp",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5337",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20403090",
+        "item":  "Resusitation Set / Resusitation bay / Resusitation kit",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Klinik Sp. Mata \u0026 Sub Spesialistik",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "5203",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11201077",
+        "item":  "Contrast Sensitivity Test",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5194",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21201082",
+        "item":  "Elektroretinogram (ERG)",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5198",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21201086",
+        "item":  "Hertel Oftalmometer",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5184",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21201073",
+        "item":  "Kampimeter automatic",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5183",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21201072",
+        "item":  "Kampimeter Goldman",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5163",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11201071",
+        "item":  "Lensa Gonioskopi dengan 3 cermin",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5191",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21201079",
+        "item":  "Pachymetri",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5205",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11201078",
+        "item":  "Pelli Robson Test",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5188",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21201076",
+        "item":  "Retinometer",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5177",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11201012",
+        "item":  "Set dilator punktum",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5199",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21201087",
+        "item":  "Spekular mikroskop",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5197",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21201085",
+        "item":  "Strabismus diagnostik set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5196",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21201084",
+        "item":  "Synophtofore",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5192",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21201080",
+        "item":  "Topografi kornea",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5195",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21201083",
+        "item":  "Visual Evoked Potential (VEP)",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5293",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21203040",
+        "item":  "Laser Fotocoagulasi Glaukoma Set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5295",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21203042",
+        "item":  "Lasik Set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Tindakan Sp. Bedah Umum/ Bedah",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "1780",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10903021",
+        "item":  "Examination light / Examination lamp / Lampu periksa / Hanging lamp",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "4206",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11303015",
+        "item":  "Alat pembuka gips",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "2038",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21603019",
+        "item":  "Electrosurgical Unit (ESU)",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Klinik Sp. Kebidanan dan Kandungan",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "2989",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21101019",
+        "item":  "Office histeroscopy",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "2983",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21102020",
+        "item":  "USG 4D",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "2850",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20502037",
+        "item":  "Electrocardiograph (ECG/EKG) Monitor",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Klinik dr. Gigi umum, Gigi Spesialis dan Gigi Sub Spesialis ",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "5406",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10602076",
+        "item":  "Stainless steel crown set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5761",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10603029",
+        "item":  "Acrylic trimmer bur",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "4816",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10605001",
+        "item":  "Abrasive device and accessories",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5412",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10605031",
+        "item":  "Bite fork",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5762",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20605054",
+        "item":  "Dental vibrator",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5764",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10605045",
+        "item":  "Feltcone",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5763",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10605044",
+        "item":  "Model trimmer",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5426",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20603018",
+        "item":  "Anasthesi local set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "1989",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11303001",
+        "item":  "Calipers for clinical use",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5430",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20602082",
+        "item":  "Cavity preparation set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5433",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20602083",
+        "item":  "Inlay Indirect set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5429",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10605036",
+        "item":  "Oral Hygiene Set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5435",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20602084",
+        "item":  "Set orthodensi",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5416",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10602070",
+        "item":  "Set preparasi mahkota dan jembatan",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "6285",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10603006DB",
+        "item":  "Bor Intan / Diamond Boor",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "6159",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20602086",
+        "item":  "Implant set untuk dental",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Klinik Sp. THT dan THT",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "5119",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10704008",
+        "item":  "ABR/BERA (Brain Evoke Respon Audiometer)",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5131",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10701021",
+        "item":  "Cermin Risnoskopi Posterior",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "4537",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20701030",
+        "item":  "Diafanoskop",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5126",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11201068",
+        "item":  "Lensa frenzel",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5128",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10701019",
+        "item":  "Parasintesis set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "4522",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20701027",
+        "item":  "Rinomanometer",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "4576",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20703012",
+        "item":  "Trocar anthrum",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Klinik Sp. Bedah Syaraf",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "4149",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21001039",
+        "item":  "Transcranial Doppler (TCD)",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Klinik Sp. Kedokteran Jiwa/ Psikiatri",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "1690",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11403038",
+        "item":  "Electro Convulsion Therapy(ECT)",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Tindakan Sp. Penyakit Dalam",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "4471",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20505007",
+        "item":  "Defibrilator",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5681",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21603069",
+        "item":  "Renal biopsi set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "1811",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20903052",
+        "item":  "Aspirator/Vacuum/Suction pump portable",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "2850",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20502037",
+        "item":  "Electrocardiograph (ECG/EKG) Monitor",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "1759",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20902046",
+        "item":  "Syringe Pump",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "4258",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20501024",
+        "item":  "Trocar",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Tindakan Sp. Paru dan Pernafasan",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "5660",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20502041",
+        "item":  "Astograph",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "1780",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10903021",
+        "item":  "Examination light / Examination lamp / Lampu periksa / Hanging lamp",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5389",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20504033",
+        "item":  "Thoracoscopy",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Tindakan Sp. THT",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "2038",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21603019",
+        "item":  "Electrosurgical Unit (ESU)",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5797",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11603038",
+        "item":  "Mikroskop operasi",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Tindakan Sp. Kulit dan Kelamin",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "4519",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21603016",
+        "item":  "Cryosurgical unit",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5806",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21603071",
+        "item":  "Dioda laser surgical",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5805",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21603070",
+        "item":  "Laser CO2",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5447",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "31602007",
+        "item":  "Peralatan Botox",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5445",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20903095",
+        "item":  "Peralatan Chemical peeling",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5446",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "31602006",
+        "item":  "Peralatan Filler",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "1747",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20902034",
+        "item":  "Phototherapy unit",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5441",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10903102",
+        "item":  "Punch set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5437",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20903093",
+        "item":  "Skin curette",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "6298",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21701043",
+        "item":  "Laser Nd YAG",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "**",
+        "level1":  "",
+        "level2":  "Pelayanan Bedah Sentral (OK)",
+        "roomCode":  "",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Bedah Minor/endoscopy",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "5652",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21603065",
+        "item":  "Colonoscopy",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5653",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21603066",
+        "item":  "Gastroscopy",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Bedah Umum",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "5197",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21201085",
+        "item":  "Strabismus diagnostik set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5210",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21203031",
+        "item":  "Bedah retraktif set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5305",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21201090",
+        "item":  "Chart Projector",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5085",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21203005",
+        "item":  "Cryophthalmic unit",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "4519",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21603016",
+        "item":  "Cryosurgical unit",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5214",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21203034",
+        "item":  "Dakriosistorhinostomi (DCR) Set ",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5194",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21201082",
+        "item":  "Elektroretinogram (ERG)",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5289",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21203038",
+        "item":  "Endolaser unit",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5207",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21203028",
+        "item":  "Glaukoma set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5198",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21201086",
+        "item":  "Hertel Oftalmometer",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5208",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21203029",
+        "item":  "Keratoplasti",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5502",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11201084",
+        "item":  "Lateral set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5351",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "31603036",
+        "item":  "Major Surgery Instrument Set utk abdomen pediatric",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5354",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "31603039",
+        "item":  "Major Surgery Instrument Set utk bedah plastik",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5346",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "31603031",
+        "item":  "Major Surgery Instrument Set utk kepala (Dewasa dan pediatric)",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5347",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "31603032",
+        "item":  "Major Surgery Instrument Set utk leher (Dewasa dan pediatric)",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5349",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "31603034",
+        "item":  "Major Surgery Instrument Set utk thorak dan cardiac Baby",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5348",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "31603033",
+        "item":  "Major Surgery Instrument Set utk thorak dan cardiac Dewasa",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5353",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "31603038",
+        "item":  "Major Surgery Instrument Set utk urologi pediatric",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "1870",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11002022",
+        "item":  "Set Bedah Mikrovaskular",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5356",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "31603041",
+        "item":  "Minimal invasive surgery set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5211",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21203032",
+        "item":  "Okuloplasti set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5212",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21203033",
+        "item":  "Orbitotomy lateral set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5298",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11203030",
+        "item":  "Peralatan Bedah Segmen Posterior",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5304",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21201089",
+        "item":  "Peralatan Diagnostik Retina",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5297",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11203029",
+        "item":  "Peralatan Segmen Anterior",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5306",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11201080",
+        "item":  "Preferential looking",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5689",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10903143",
+        "item":  "Printer video",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5302",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21203046",
+        "item":  "Set Transplantasi Tembus Kornea",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5215",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21203035",
+        "item":  "Simple Vitrioretinal  Surgery",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5303",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21201088",
+        "item":  "Tonopen",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5195",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21201083",
+        "item":  "Visual Evoked Potential (VEP)",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5216",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21203036",
+        "item":  "Vitrectomy unit",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "11347",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20502008-1",
+        "item":  "Intracardiac Echocardiography (ICE) Probe",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "11349",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "30503009-1",
+        "item":  "Left Ventricular Assist Device (LVAD)",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "11350",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21002045",
+        "item":  "Heart Transplant Set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Bedah Besar/Mayor",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "5493",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "31302058",
+        "item":  "Caspar Microlumbar Discectomy",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "4888",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21002010",
+        "item":  "Cryogenic surgical device",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "4519",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21603016",
+        "item":  "Cryosurgical unit",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5481",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11303022",
+        "item":  "Damage Screw Set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "4471",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20505007",
+        "item":  "Defibrilator",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5480",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11303021",
+        "item":  "Instrument Set For Intramedullary Pins Extraction",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5675",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21002041",
+        "item":  "Intraoperatif neurofisiology Monitoring",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5488",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21302068",
+        "item":  "Lumbar Subcutaneous Retractor",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5349",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "31603034",
+        "item":  "Major Surgery Instrument Set utk thorak dan cardiac Baby",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5348",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "31603033",
+        "item":  "Major Surgery Instrument Set utk thorak dan cardiac Dewasa",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5352",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "31603037",
+        "item":  "Major Surgery Instrument Set utk urologi Dewasa",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5694",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20903118",
+        "item":  "Periosteal elevator iga",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5689",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10903143",
+        "item":  "Printer video",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5311",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21203047",
+        "item":  "Probe Lakrimal",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5177",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11201012",
+        "item":  "Set dilator punktum",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5330",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21002040",
+        "item":  "Set Instrumen Bedah Saraf Minimal Invasif",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5171",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21002037",
+        "item":  "Set Instrumen Skullbase",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5513",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21202011",
+        "item":  "Silicon lacrimal tube",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5485",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11303025",
+        "item":  "Spine Endoscopy Instrument",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "4357",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "30503009",
+        "item":  "Ventricular bypass (assist) device",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "4421",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20504018",
+        "item":  "Set ECMO (Jantung)",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Recovery/Pemulihan",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "5661",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20903115",
+        "item":  "Air warming blanket",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "1721",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20902008",
+        "item":  "Infant Warmer",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5662",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11603062",
+        "item":  "Magill forcep",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "**",
+        "level1":  "",
+        "level2":  "Pelayanan Perawatan Tingkat Tinggi (HCU)",
+        "roomCode":  "",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Perawatan HCU",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "5504",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10901023",
+        "item":  "Infusion fluid thermal warmer",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "**",
+        "level1":  "",
+        "level2":  "Pelayanan Rawat Intensif (ICU)",
+        "roomCode":  "",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan rawat pasien Isolasi tipe tekanan standar (kelas S) ICU",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "1780",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10903021",
+        "item":  "Examination light / Examination lamp / Lampu periksa / Hanging lamp",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "ICCU Jantung dan Pembuluh Darah",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "5514",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20403092",
+        "item":  "Cardiac Resuscitation",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "4431",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21501030",
+        "item":  "Image-intensified fluoroscopic x-ray system ",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "4193",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20501039",
+        "item":  "Intra-aortic Ballon Pump (IABP)",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5506",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20501042",
+        "item":  "Pericard Sintesis Set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "**",
+        "level1":  "",
+        "level2":  "Pelayanan Perawatan Intensif  Bayi (NICU)",
+        "roomCode":  "",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruang Rawat Pasien/ NICU",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "2850",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20502037",
+        "item":  "Electrocardiograph (ECG/EKG) Monitor",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "1780",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10903021",
+        "item":  "Examination light / Examination lamp / Lampu periksa / Hanging lamp",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "**",
+        "level1":  "",
+        "level2":  "Pelayanan Perawatan Intensif Anak (PICU)",
+        "roomCode":  "",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Perawatan Pasien PICU",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "1780",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10903021",
+        "item":  "Examination light / Examination lamp / Lampu periksa / Hanging lamp",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "1747",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20902034",
+        "item":  "Phototherapy unit",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "**",
+        "level1":  "",
+        "level2":  "Pelayanan Kebidanan dan Penyakit Kandungan",
+        "roomCode":  "",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruang Bersalin Tanpa Komplikasi (VK/delivery)",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "1788",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20903029",
+        "item":  "Suction pump/Pompa vakum /Vacuum-powered body fluid suction apparatus; Suction Pump Mobile ",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "4307",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10403084",
+        "item":  "Oxygen set+flowmeter",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "2340",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20403078",
+        "item":  "Mesin Anestesi",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5504",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10901023",
+        "item":  "Infusion fluid thermal warmer",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "4950",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20403065",
+        "item":  "Autotransfusion apparatus",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "2050",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21603031",
+        "item":  "Lampu operasi (Ceyling Type)",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "2616",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21104014",
+        "item":  "Tempat Tidur Manual Untuk Persalinan",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "1698",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20901005",
+        "item":  "Spinal fluid manometer",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5505",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10903100",
+        "item":  "Alat pemanas / warmer",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "3009",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21104016",
+        "item":  "Tenakulum (uterine tenaculum)",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5867",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11603076",
+        "item":  "Dressing Forceps/korentang",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5954",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21701014",
+        "item":  "Tromol Kasa / Kain Steril",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5378",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11104024",
+        "item":  "Lampu ginekolog",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "6317",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11104031",
+        "item":  "Busi / Dilatator",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5496",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "31104028",
+        "item":  "Himinoplasti",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5218",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21106013",
+        "item":  "Alat pemecah selaput ketuban atau 1/2 kocher",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5499",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11104027",
+        "item":  "Metal catheter",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5379",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10404010",
+        "item":  "Tabung Oksigen",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Persiapan Bersalin (Observasi) Tanpa Komplikasi/Kala II-III (labour)",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "4950",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20403065",
+        "item":  "Autotransfusion apparatus",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "4471",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20505007",
+        "item":  "Defibrilator",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "2611",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21104009",
+        "item":  "Obstetric forceps",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5685",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21603031M",
+        "item":  "Lampu Operasi Bergerak/Operating Lamp Mobile",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5497",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21104023",
+        "item":  "Sim Utarine Currete Blunt",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "6005",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20903037p",
+        "item":  "Sterilisator Portable",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "2610",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21104008",
+        "item":  "Fetal vacuum extractor",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruang Bayi Normal/Transisi",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "1721",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20902008",
+        "item":  "Infant Warmer",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Pemulihan/Recovery",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "2850",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20502037",
+        "item":  "Electrocardiograph (ECG/EKG) Monitor",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "1718",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20902005",
+        "item":  "Electric bed patient",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Perawatan (Post Partum)",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "5338",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10902018",
+        "item":  "Antidecubitus Matras",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "4283",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20903057",
+        "item":  "Emergency Trolley / Resuscitation Crash Cart ",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "1718",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20902005",
+        "item":  "Electric bed patient",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5465",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10903113",
+        "item":  "Meja Mayo / Meja instrumen / Intrumen table",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Laktasi + KIE",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "4106",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11105004",
+        "item":  "Nonpowered breast pump",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "*",
+        "level1":  "Penunjang Medik RS",
+        "level2":  "",
+        "roomCode":  "",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "**",
+        "level1":  "",
+        "level2":  "Instalasi Radiodiagnostik",
+        "roomCode":  "",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan General X-ray (Ruang Pemeriksaan/ Diagnostik) ",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "4283",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20903057",
+        "item":  "Emergency Trolley / Resuscitation Crash Cart ",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Fluoroskopi (Ruang Pemeriksaan/ Diagnostik)",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "4431",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21501030",
+        "item":  "Image-intensified fluoroscopic x-ray system ",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "1811",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20903052",
+        "item":  "Aspirator/Vacuum/Suction pump portable",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "1780",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10903021",
+        "item":  "Examination light / Examination lamp / Lampu periksa / Hanging lamp",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Ultra Sonografi/ USG (Ruang Pemeriksaan/ Diagnostik)",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "6138",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21102025",
+        "item":  "USG 2D",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Dental X-Ray + Panoramic (Ruang Pemeriksaan/ Diagnostik)",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "2147",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20601007",
+        "item":  "Pesawat Sinar-X, Dental",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Pemeriksaan/ Diagnostik Sp. Jantung \u0026 Pembuluh Darah (Tindakan)/ Kamar Cath Lab",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "4261",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20501028",
+        "item":  "Angiographic injector and syringe",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "2510",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21501025",
+        "item":  "Single plane Angiographic x-ray system",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5706",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10504030",
+        "item":  "Elektrofisiologi set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "2535",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11501050",
+        "item":  "X-Ray Film Viewer",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "11348",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10504030-1",
+        "item":  "Electrophysiology Mapping System (2D dan 3D)",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "11351",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "4050432",
+        "item":  "Pulse Field Ablation System",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "11352",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21603018",
+        "item":  "Cryoablation System",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "10990",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20501025-2",
+        "item":  "IntraVascular Ultrasound (IVUS)",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "4688",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20402008",
+        "item":  "Nitric oxide analyzer",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "11350",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21002045",
+        "item":  "Heart Transplant Set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "11349",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "30503009-1",
+        "item":  "Left Ventricular Assist Device (LVAD)",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "6570",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "4050431",
+        "item":  "Cardiac Ablation System",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan MRI (Ruang Pemeriksaan/ Diagnostik)",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "2486",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21501001",
+        "item":  "MRI/Magnetic Resonance Imaging 1,5 Tesla",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan CT-Scan (R.Operator, R.Mesin, R.Ganti) ; Ruang Pemeriksaan/ Diagnostik",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "2924",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21501068",
+        "item":  "CT-Scan 64 Slices",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "**",
+        "level1":  "",
+        "level2":  "Unit Hemodialisa",
+        "roomCode":  "",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Pencucian Filter (Reuse Filter Cleaning)",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "5767",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20903120",
+        "item":  "Reuse filter machine",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "**",
+        "level1":  "",
+        "level2":  "Instalasi Pemulasaraan Jenazah",
+        "roomCode":  "",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Laboratorium Otopsi",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "1780",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10903021",
+        "item":  "Examination light / Examination lamp / Lampu periksa / Hanging lamp",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "6148",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21701028",
+        "item":  "Weighting machine for weighting dead bodies",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "6149",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21701029",
+        "item":  "Weighting machine for organs",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "**",
+        "level1":  "",
+        "level2":  "Instalasi Laboratorium",
+        "roomCode":  "",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Imunologi (Ruang Pemeriksaan)",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "5600",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20101160",
+        "item":  "EIA Sistem",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "3216",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10102015",
+        "item":  "Electrophoresis apparatus for clinical use",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "3222",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10102021",
+        "item":  "Nephelometer for clinical use",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Kimia Klinik (Ruang Pemeriksaan)",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "3216",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10102015",
+        "item":  "Electrophoresis apparatus for clinical use",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "3218",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10102017",
+        "item":  "Flame Photometer",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5768",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20101161",
+        "item":  "Ultra Centrifuge",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Hematologi (Ruang Pemeriksaan)",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "5591",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20205019",
+        "item":  "Agregometer",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5376",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20205017",
+        "item":  "Analisa Hb (POCT Methode)",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "6348",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "1801029",
+        "item":  "Flow  Cytometer",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "3218",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10102017",
+        "item":  "Flame Photometer",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Mikrobiologi (Ruang Pemeriksaan)",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "3404",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20301003",
+        "item":  "Mesin identifikasi dan uji kepekaan otomatik/microba analyzer",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "3216",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10102015",
+        "item":  "Electrophoresis apparatus for clinical use",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5372",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20101158",
+        "item":  "pH Meter",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5636",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10903136",
+        "item":  "Shaking waterbath",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "3227",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10102026",
+        "item":  "Atomic absorption spectrophotometer for clinical use",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Patologi Anatomi (Ruang Pemeriksaan)",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "3216",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10102015",
+        "item":  "Electrophoresis apparatus for clinical use",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5526",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20903102",
+        "item":  "Autoclave table top",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5621",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10302032",
+        "item":  "Cryostat",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5615",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10203033",
+        "item":  "Cyto spin",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5629",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10203040",
+        "item":  "Teaching microscope",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "6346",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "1801027",
+        "item":  "Lemari Asam",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "3423",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10302018",
+        "item":  "Microbiological incubator",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5617",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10302028",
+        "item":  "Liquid base cytology automatic / machine",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5616",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10302027",
+        "item":  "Liquid base cytology manual",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5153",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11201020",
+        "item":  "Lup/Kaca Pembesar",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5619",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10302030",
+        "item":  "Imunohistokimia (IHK) Set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5618",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10302029",
+        "item":  "Analytical Balance micro",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5375",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10203012",
+        "item":  "Microscope fluoresens",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5609",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10203029",
+        "item":  "Microscope imunofluoresence",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5372",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20101158",
+        "item":  "pH Meter",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "3225",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10102024",
+        "item":  "Pipetting and diluting system for clinical use",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "2004",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11601001",
+        "item":  "Speculum and accessories",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5596",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10203019",
+        "item":  "Mikroskop Stereo",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "1796",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20903037",
+        "item":  "Autoklaf Kering",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5606",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10203027",
+        "item":  "Virtual microscope",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5636",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10903136",
+        "item":  "Shaking waterbath",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "**",
+        "level1":  "",
+        "level2":  "Instalasi Rehabilitasi Medik",
+        "roomCode":  "",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Diagnostik Dokter",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "1780",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10903021",
+        "item":  "Examination light / Examination lamp / Lampu periksa / Hanging lamp",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5741",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11401021",
+        "item":  "Biotrigger Computerize Analizer",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5739",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11401019",
+        "item":  "Cognitive Evaluation and Treatment",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5731",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11401011",
+        "item":  "EN-Tree",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5729",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11401009",
+        "item":  "Gait Analyzer",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "1920",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11301004",
+        "item":  "Goniometer Elektrik",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5735",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11401015",
+        "item":  "Handgrip Streght Dynamometer",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5733",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11401013",
+        "item":  "Handheld Dynamometer",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5734",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11401014",
+        "item":  "Inclinometer",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5732",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11401012",
+        "item":  "Isokinetic Dynamometer",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5737",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11401017",
+        "item":  "Mobility Analyzer",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5803",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "10403086",
+        "item":  "Nebulizer jet",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "2833",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20502020",
+        "item":  "Pulse Oxymeter / Oximeter / Pulse Oximeter / Oksigen Saturasi/SPO2",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "4671",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20401026",
+        "item":  "Peak-flow meter for spirometry",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5740",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11401020",
+        "item":  "Plantar Pressure Analysis",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5730",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11401010",
+        "item":  "Posture Analyzer",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5738",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11401018",
+        "item":  "Seating \u0026 Positioning Analysis",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "2428",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "20801005",
+        "item":  "Video Urodynamic Set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5736",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11401016",
+        "item":  "Voice Analyzer",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Fisioterapi Pasif",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "5565",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21403038",
+        "item":  "Acupunture therapy",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5585",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21403057",
+        "item":  "Ankle / wrist",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5568",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21403040",
+        "item":  "Bath whirl pool",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5741",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11401021",
+        "item":  "Biotrigger Computerize Analizer",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "4306",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11402023",
+        "item":  "Cane, crutch, and walker tips and pads",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5564",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21403037",
+        "item":  "Compression therapy",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5575",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21403047",
+        "item":  "Exercise bicycle",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "4328",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11403017",
+        "item":  "Powered exercise equipment",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5563",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21403036",
+        "item":  "Faradic - Galvanic therapy",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5572",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21403044",
+        "item":  "Finger muscle therapy",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5567",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21403039",
+        "item":  "Hidro therapy",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5579",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21403051",
+        "item":  "Hotpacks \u0026 perculator",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5570",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21403042",
+        "item":  "Isostation for accurate",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5571",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21403043",
+        "item":  "Lymphatic physiotherapy",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5581",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21403053",
+        "item":  "Parallel bars",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5787",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21403059",
+        "item":  "Platform Walker",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5569",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21403041",
+        "item":  "Pulse erator unit",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5788",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21403060",
+        "item":  "Reciprocal Walker",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5789",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21403061",
+        "item":  "Reverse Walker",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5790",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21403062",
+        "item":  "Rolling Triceps Walker",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5791",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21403063",
+        "item":  "Rolling/Gliding Walker",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5574",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21403046",
+        "item":  "Rowing machine",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5794",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21403066",
+        "item":  "Stair-Climbing Walker",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5795",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21403067",
+        "item":  "Standar Walker",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5742",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11403045",
+        "item":  "Therapeutic Position and Equipment Set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5573",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21403045",
+        "item":  "Therapeutical nerve \u0026 muscle stimulation",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5586",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21403058",
+        "item":  "Tilt table",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5578",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21403050",
+        "item":  "Ultraviolet quartz",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "1645",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21402027",
+        "item":  "Kursi roda elektrik/Powered wheelchair",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "***",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "Ruangan Terapi Okupasi",
+        "item":  "",
+        "kebutuhan":  ""
+    },
+    {
+        "mark":  "5785",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11404006",
+        "item":  "Peralatan Latihan ADL",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5792",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21403064",
+        "item":  "Alat Terapi Sensori Integrasi Set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5793",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "21403065",
+        "item":  "Snoozlen Set",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "5796",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "11404009",
+        "item":  "Alat Latihan Sensori",
+        "kebutuhan":  "1"
+    },
+    {
+        "mark":  "::end::",
+        "level1":  "",
+        "level2":  "",
+        "roomCode":  "",
+        "item":  "",
+        "kebutuhan":  ""
+    }
+]

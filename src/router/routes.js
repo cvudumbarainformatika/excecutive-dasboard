@@ -11,7 +11,8 @@ const routes = [
       { path: 'layanan', name: 'layanan', component: () => import('pages/direktur/pelayanan/PelayananPage.vue') },
       { path: 'rekammedik', name: 'rekammedik', component: () => import('pages/direktur/rekammedik/RekammedikPage.vue') },
       { path: 'kinerja', name: 'kinerja', component: () => import('pages/direktur/kinerja/KinerjaPage.vue') },
-      { path: 'sarpras', name: 'sarpras', component: () => import('pages/direktur/sarpras/SarprasPage.vue') }
+      { path: 'sarpras', name: 'sarpras', component: () => import('pages/direktur/sarpras/SarprasPage.vue') },
+      { path: 'kebutuhan', name: 'kebutuhan', component: () => import('pages/direktur/kebutuhan/KebutuhanPage.vue') }
     ]
   },
 
